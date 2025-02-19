@@ -1,4 +1,4 @@
-/*--------------------------------*- C++ -*----------------------------------*\
+/*--------------------------------*- C++ -*----------------------------------* \
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
 |  \\    /   O peration     | Version:  v2406                                 |
@@ -9,37 +9,36 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
-    object      p;
+    class       volVectorField;
+    object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-pOut            12100; //1;
+Uinlet          (762 0 0);//(2.5 0 0);
 
-dimensions      [1 -1 -2 0 0 0 0];
+dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform $pOut;
+internalField   uniform $Uinlet;
 
 boundaryField
 {
     inlet1
     {
         type            fixedValue;
-        value           uniform $pOut;
+        value           uniform $Uinlet;
+
     }
     outlet1
     {
-        /* type            fixedValue;
-        value           uniform $pOut; */
         type            zeroGradient;
     }
     walls
     {
-        type            zeroGradient;
+        type            slip;
     }
     sphere
     {
-        type            zeroGradient;
+        type            noSlip;
     }
 
     #includeEtc "caseDicts/setConstraintTypes"

@@ -10,28 +10,29 @@ FoamFile
     version     2.0;
     format      ascii;
     class       volScalarField;
-    object      p;
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-pOut            12100; //1;
+Tinlet          217;//1;
 
-dimensions      [1 -1 -2 0 0 0 0];
+dimensions      [0 0 0 1 0 0 0];
 
-internalField   uniform $pOut;
+internalField   uniform $Tinlet;
 
 boundaryField
 {
     inlet1
     {
         type            fixedValue;
-        value           uniform $pOut;
+        value           uniform $Tinlet;
     }
     outlet1
     {
-        /* type            fixedValue;
-        value           uniform $pOut; */
         type            zeroGradient;
+ /*        type            inletOutlet;
+        inletValue      uniform $Tinlet;
+        value           uniform $Tinlet; */
     }
     walls
     {

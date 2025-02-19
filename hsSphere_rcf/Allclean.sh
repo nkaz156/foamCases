@@ -1,16 +1,20 @@
-#!/usr/bin/env bash
-cd "$(dirname "$0")"
+#!/bin/bash
+cd "$(dirname "$0")" # Change directory to host directory for runtime of script
 
-echo "Deleting old files"
-rm -r processor*
-rm -r constant/polyMesh
+# List of directories to keep
+KEEP_DIRS=("0.orig" "constant" "system") 
+
+# Loop through all directories
 for dir in */; do
-    # Remove the trailing slash from the directory name
+    # Remove trailing slash
     dir=${dir%/}
-
-    # Check if the name is a number and is not "0"
-    if [[ "$dir" =~ ^[0-9]+$ ]] && [[ "$dir" -ne 0 ]]; then
-        echo "Removing directory: $dir"
-        rm -r "$dir"
+    
+    # Check if directory is NOT in the keep list
+    if [[ ! " ${KEEP_DIRS[@]} " =~ " $dir " ]]; then
+        echo "Removing $dir"
+        rm -rf "$dir"
     fi
 done
+
+# delete constant/polyMesh
+rm -rf "constant/polyMesh"
