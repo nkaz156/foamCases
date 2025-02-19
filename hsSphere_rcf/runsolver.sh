@@ -11,11 +11,11 @@ do
     p)
         numProc="${OPTARG}"
         PAR='true'
-        print "Running with ${numProc} processor cores"
+
         ;;
     s)
         SLURM='true'
-        print "Running with mesher enabled"
+
         ;;
     ?)
         echo "Invalid input argument" >&2

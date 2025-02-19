@@ -1,8 +1,8 @@
 #!/bin/bash
-d "$(dirname "$0")" # Change directory to host directory for runtime of script
+cd "$(dirname "$0")" # Change directory to host directory for runtime of script
 
 # Find latest mesh directory
-highest_dir=""
+highest_dir=0
 highest_num=-INF  # Start with a very low value
 
 # Loop through all directories in the current location
@@ -12,16 +12,7 @@ for dir in */; do
 
     # Check if directory name is a valid number
     if [[ $dir =~ ^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$ ]]; then
-        sed -n -E 's/([+-]?[0-9.]+)[eE]\+?(-?)([0-9]+)/(\1*10^\2\3)/g' <<<"$dir"
-        num=$(echo "$dir" | bc -l)     # Convert to float for comparison
-        #num=$dir
-
-        # Update highest number and directory
-        if (( $(echo "$num > $highest_num" | bc -l) )); then
-            highest_num=$num
-            highest_dir=$dir
-            #echo "$dir"
-        fi
+        highest_dir=$(awk -v c="$dir" -v h="$highest_dir" 'BEGIN {if (c < h) print h; else print c}')
     fi
 done
 

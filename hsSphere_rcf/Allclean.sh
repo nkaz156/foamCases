@@ -6,11 +6,11 @@ do
     case ${OPTION} in
     z)
         KEEPZERO='true'
-        print "Running with mesher enabled"
+
         ;;
     p)
         KEEP_PM='true'
-        print "Running with mesher enabled"
+
         ;;
     ?)
         echo "Invalid input argument" >&2

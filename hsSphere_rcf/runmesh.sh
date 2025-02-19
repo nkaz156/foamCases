@@ -34,8 +34,9 @@ fi
 
 reconstructParMesh
 
-./mvPMesh.sh
+#./mvPMesh.sh
+
 
 # remove processor directories
 
-./Allclean.sh -z -p
+#./Allclean.sh -z -p
