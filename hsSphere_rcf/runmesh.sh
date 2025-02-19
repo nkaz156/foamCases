@@ -20,7 +20,7 @@ do
     esac
 done
 
-./system/updateParDict -p $numProc
+./system/updateParDict.sh -p $numProc
 
 blockMesh
 
