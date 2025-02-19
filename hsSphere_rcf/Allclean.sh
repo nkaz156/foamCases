@@ -22,10 +22,10 @@ done
 
 # List of directories to keep
 
-KEEP_DIRS=("0.orig" "constant" "system") 
+KEEP_DIRS=("0.orig" "constant" "system" "images") 
 if [[ "${KEEPZERO}" = 'true' ]]
 then
-    KEEP_DIRS=("0.orig" "constant" "system" "0") 
+    KEEP_DIRS=("0.orig" "constant" "system" "0" "images") 
 fi
 
 # Loop through all directories

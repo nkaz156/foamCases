@@ -5,6 +5,7 @@
 !system/
 !0.orig/
 !constant/
+!images/
 
 # Re-ignore polyMesh
 constant/polyMesh
