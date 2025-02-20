@@ -10,38 +10,47 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      fvSolution;
+    object      fvSchemes;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+fluxScheme          Kurganov;
+
+ddtSchemes
 {
-    "(rho|rhoU|rhoE)"
-    {
-        solver          diagonal;
-    }
-
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
-
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
+    default         localEuler;
 }
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
+
+gradSchemes
+{
+    default         Gauss linear;
+}
+
+divSchemes
+{
+    default         none;
+
+    div(tauMC)      Gauss linear;
+}
+
+laplacianSchemes
+{
+    default         Gauss linear corrected;
+}
+
+interpolationSchemes
+{
+    default         linear;
+
+    reconstruct(rho) vanLeer;
+    reconstruct(U)  vanLeerV;
+    reconstruct(T)  vanLeer;
+}
+
+snGradSchemes
+{
+    default         corrected;
+}
 
 
 // ************************************************************************* //

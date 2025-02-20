@@ -1,4 +1,4 @@
-/*--------------------------------*- C++ -*----------------------------------*\
+/*--------------------------------*- C++ -*----------------------------------* \
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
 |  \\    /   O peration     | Version:  v2406                                 |
@@ -9,39 +9,44 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      fvSolution;
+    class       volVectorField;
+    object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+Uinlet          (762 0 0);//(2.5 0 0);
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform $Uinlet;
+
+boundaryField
 {
-    "(rho|rhoU|rhoE)"
+    inlet1
     {
-        solver          diagonal;
+        type            fixedValue;
+        value           uniform $Uinlet;
+
+    }
+    outlet1
+    {
+        type            zeroGradient;
+    }
+    farfield
+    {
+        type            zeroGradient;
+    }
+    sphere
+    {
+        type            zeroGradient;
+    }
+    symmetryPlane
+    {
+        type            symmetryPlane;
     }
 
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
-
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
+    #includeEtc "caseDicts/setConstraintTypes"
 }
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
 
 
 // ************************************************************************* //

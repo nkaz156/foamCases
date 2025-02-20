@@ -9,39 +9,46 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    object      fvSolution;
+    class       volScalarField;
+    object      T;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+Tinlet          217;//1;
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform $Tinlet;
+
+boundaryField
 {
-    "(rho|rhoU|rhoE)"
+    inlet1
     {
-        solver          diagonal;
+        type            fixedValue;
+        value           uniform $Tinlet;
+    }
+    outlet1
+    {
+        type            zeroGradient;
+ /*        type            inletOutlet;
+        inletValue      uniform $Tinlet;
+        value           uniform $Tinlet; */
+    }
+    farfield
+    {
+        type            zeroGradient;
+    }
+    sphere
+    {
+        type            zeroGradient;
+    }
+    symmetryPlane
+    {
+        type            symmetryPlane;
     }
 
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
-
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
+    #includeEtc "caseDicts/setConstraintTypes"
 }
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
 
 
 // ************************************************************************* //

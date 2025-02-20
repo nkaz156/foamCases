@@ -1,3 +1,23 @@
+#!/bin/bash
+cd "$(dirname "$0")" # Change directory to host directory for runtime of script
+
+while getopts p: OPTION # colon (:) requires an input with -p
+do
+    case ${OPTION} in
+    p)
+        numProc="${OPTARG}"
+        PAR='true'
+        ;;
+    ?)
+        echo "Invalid input argument" >&2
+        exit 1
+        ;;
+    esac
+done
+
+
+
+cat > decomposeParDict << EOF
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
@@ -10,38 +30,17 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      fvSolution;
+    object      decomposeParDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
+numberOfSubdomains  $numProc;
+
+method  scotch;
+
+scotchCoeffs
 {
-    "(rho|rhoU|rhoE)"
-    {
-        solver          diagonal;
-    }
-
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
-
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
 }
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
-
 
 // ************************************************************************* //
+EOF

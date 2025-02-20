@@ -10,38 +10,46 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      fvSolution;
+    object      controlDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
-{
-    "(rho|rhoU|rhoE)"
-    {
-        solver          diagonal;
-    }
+//DebugSwitches
+//{
+//    fvGeometryScheme    1;
+//    highAspectRatio     1;
+//    basic               1;
+//}
 
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
+application     snappyHexMesh;
 
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
-}
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         3;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   1;
+
+purgeWrite      0;
+
+writeFormat     binary;
+
+writePrecision  15;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   8;
+
+runTimeModifiable false;
 
 
 // ************************************************************************* //

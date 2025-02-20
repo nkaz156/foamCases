@@ -10,38 +10,15 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      fvSolution;
+    object      meshQualityDict;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-solvers
-{
-    "(rho|rhoU|rhoE)"
-    {
-        solver          diagonal;
-    }
+// Include defaults parameters from master dictionary
+#includeEtc "caseDicts/meshQualityDict"
 
-    U
-    {
-        solver          smoothSolver;
-        smoother        GaussSeidel;
-        nSweeps         2;
-        tolerance       1e-09;
-        relTol          0.01;
-    }
-
-    e
-    {
-        $U;
-        relTol          0.1;
-    }
-}
-/* momentumPredictor           yes; 
-nOuterCorrectors            1;
-nCorrector                  3;
-nNonOrthogonalCorrectors    1;
-correctPhi                  no;  */
-//oversetAdjustPhi            no;
+//- minFaceWeight (0 -> 0.5)
+minFaceWeight 0.02;
 
 
 // ************************************************************************* //
