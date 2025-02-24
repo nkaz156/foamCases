@@ -19,7 +19,7 @@ dynamicFvMesh   dynamicRefineFvMesh;
 dynamicRefineFvMeshCoeffs
 {
     // How often to refine
-    refineInterval  20;
+    refineInterval  100; //20;
     // Field to be refinement on
     field           mag(grad(p));
     // Refine field inbetween lower..upper

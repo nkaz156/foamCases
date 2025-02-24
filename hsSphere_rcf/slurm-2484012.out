@@ -1,0 +1,4787 @@
+Please use mpirun instead of srun to run your MPI job
+Running with 60 processor cores
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Feb 18 2025
+Time   : 21:47:16
+Host   : udc-ba02-12c0
+PID    : 509414
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.0496029787234042 .. 0.0496029787234034
+        j : 0.0494351000000001 .. 0.0494351000000001
+        k : 0.0494350999999998 .. 0.0494350999999998
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-1 -0.988702 -0.988702) (3.66268 0.988702 0.988702)
+  nPoints: 159695
+  nCells: 150400
+  nFaces: 460320
+  nInternalFaces: 442080
+----------------
+Patches
+----------------
+  patch 0 (start: 442080 size: 1600) name: inlet1
+  patch 1 (start: 443680 size: 1600) name: outlet1
+  patch 2 (start: 445280 size: 15040) name: walls
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:47:18
+Host   : udc-ba02-12c0
+PID    : 509437
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method scotch [60] (region region0)
+
+Finished decomposition in 3.92 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 2481
+    Number of points = 3237
+    Number of faces shared with processor 1 = 170
+    Number of faces shared with processor 2 = 215
+    Number of faces shared with processor 3 = 120
+    Number of faces shared with processor 4 = 119
+    Number of faces shared with processor 25 = 123
+    Number of faces shared with processor 57 = 5
+    Number of faces shared with processor 58 = 113
+    Number of processor patches = 7
+    Number of processor faces = 865
+    Number of boundary faces = 535
+
+Processor 1
+    Number of cells = 2482
+    Number of points = 3131
+    Number of faces shared with processor 0 = 170
+    Number of faces shared with processor 2 = 193
+    Number of faces shared with processor 3 = 156
+    Number of faces shared with processor 9 = 216
+    Number of faces shared with processor 15 = 16
+    Number of faces shared with processor 22 = 34
+    Number of faces shared with processor 23 = 122
+    Number of faces shared with processor 25 = 105
+    Number of processor patches = 8
+    Number of processor faces = 1012
+    Number of boundary faces = 194
+
+Processor 2
+    Number of cells = 2481
+    Number of points = 3118
+    Number of faces shared with processor 0 = 215
+    Number of faces shared with processor 1 = 193
+    Number of faces shared with processor 3 = 12
+    Number of faces shared with processor 4 = 131
+    Number of faces shared with processor 7 = 158
+    Number of faces shared with processor 9 = 70
+    Number of faces shared with processor 30 = 12
+    Number of faces shared with processor 57 = 143
+    Number of faces shared with processor 58 = 69
+    Number of processor patches = 9
+    Number of processor faces = 1003
+    Number of boundary faces = 179
+
+Processor 3
+    Number of cells = 2522
+    Number of points = 3237
+    Number of faces shared with processor 0 = 120
+    Number of faces shared with processor 1 = 156
+    Number of faces shared with processor 2 = 12
+    Number of faces shared with processor 4 = 215
+    Number of faces shared with processor 5 = 141
+    Number of faces shared with processor 6 = 129
+    Number of faces shared with processor 9 = 48
+    Number of faces shared with processor 11 = 21
+    Number of faces shared with processor 12 = 116
+    Number of faces shared with processor 22 = 71
+    Number of faces shared with processor 25 = 64
+    Number of faces shared with processor 27 = 85
+    Number of faces shared with processor 28 = 86
+    Number of processor patches = 13
+    Number of processor faces = 1264
+    Number of boundary faces = 64
+
+Processor 4
+    Number of cells = 2531
+    Number of points = 3209
+    Number of faces shared with processor 0 = 119
+    Number of faces shared with processor 2 = 131
+    Number of faces shared with processor 3 = 215
+    Number of faces shared with processor 5 = 165
+    Number of faces shared with processor 6 = 81
+    Number of faces shared with processor 7 = 36
+    Number of faces shared with processor 9 = 12
+    Number of faces shared with processor 11 = 9
+    Number of faces shared with processor 12 = 131
+    Number of faces shared with processor 50 = 48
+    Number of faces shared with processor 51 = 52
+    Number of faces shared with processor 57 = 105
+    Number of faces shared with processor 58 = 64
+    Number of processor patches = 13
+    Number of processor faces = 1168
+    Number of boundary faces = 92
+
+Processor 5
+    Number of cells = 2531
+    Number of points = 3236
+    Number of faces shared with processor 3 = 141
+    Number of faces shared with processor 4 = 165
+    Number of faces shared with processor 6 = 316
+    Number of faces shared with processor 27 = 116
+    Number of faces shared with processor 50 = 133
+    Number of processor patches = 5
+    Number of processor faces = 871
+    Number of boundary faces = 443
+
+Processor 6
+    Number of cells = 2531
+    Number of points = 3234
+    Number of faces shared with processor 3 = 129
+    Number of faces shared with processor 4 = 81
+    Number of faces shared with processor 5 = 316
+    Number of faces shared with processor 11 = 218
+    Number of faces shared with processor 27 = 74
+    Number of faces shared with processor 28 = 89
+    Number of faces shared with processor 50 = 32
+    Number of faces shared with processor 51 = 92
+    Number of processor patches = 8
+    Number of processor faces = 1031
+    Number of boundary faces = 277
+
+Processor 7
+    Number of cells = 2515
+    Number of points = 3197
+    Number of faces shared with processor 2 = 158
+    Number of faces shared with processor 4 = 36
+    Number of faces shared with processor 8 = 262
+    Number of faces shared with processor 9 = 184
+    Number of faces shared with processor 10 = 27
+    Number of faces shared with processor 12 = 102
+    Number of faces shared with processor 13 = 33
+    Number of faces shared with processor 30 = 137
+    Number of faces shared with processor 31 = 129
+    Number of faces shared with processor 35 = 54
+    Number of faces shared with processor 57 = 17
+    Number of processor patches = 11
+    Number of processor faces = 1139
+    Number of boundary faces = 129
+
+Processor 8
+    Number of cells = 2481
+    Number of points = 3191
+    Number of faces shared with processor 7 = 262
+    Number of faces shared with processor 9 = 41
+    Number of faces shared with processor 10 = 287
+    Number of faces shared with processor 13 = 90
+    Number of faces shared with processor 31 = 173
+    Number of faces shared with processor 33 = 5
+    Number of processor patches = 6
+    Number of processor faces = 858
+    Number of boundary faces = 458
+
+Processor 9
+    Number of cells = 2509
+    Number of points = 3185
+    Number of faces shared with processor 1 = 216
+    Number of faces shared with processor 2 = 70
+    Number of faces shared with processor 3 = 48
+    Number of faces shared with processor 4 = 12
+    Number of faces shared with processor 7 = 184
+    Number of faces shared with processor 8 = 41
+    Number of faces shared with processor 10 = 259
+    Number of faces shared with processor 12 = 140
+    Number of faces shared with processor 15 = 138
+    Number of faces shared with processor 16 = 6
+    Number of faces shared with processor 19 = 39
+    Number of faces shared with processor 28 = 15
+    Number of processor patches = 12
+    Number of processor faces = 1168
+    Number of boundary faces = 90
+
+Processor 10
+    Number of cells = 2531
+    Number of points = 3228
+    Number of faces shared with processor 7 = 27
+    Number of faces shared with processor 8 = 287
+    Number of faces shared with processor 9 = 259
+    Number of faces shared with processor 12 = 8
+    Number of faces shared with processor 13 = 138
+    Number of faces shared with processor 16 = 214
+    Number of faces shared with processor 18 = 21
+    Number of faces shared with processor 19 = 23
+    Number of processor patches = 8
+    Number of processor faces = 977
+    Number of boundary faces = 321
+
+Processor 11
+    Number of cells = 2513
+    Number of points = 3179
+    Number of faces shared with processor 3 = 21
+    Number of faces shared with processor 4 = 9
+    Number of faces shared with processor 6 = 218
+    Number of faces shared with processor 12 = 257
+    Number of faces shared with processor 13 = 3
+    Number of faces shared with processor 14 = 205
+    Number of faces shared with processor 20 = 108
+    Number of faces shared with processor 28 = 35
+    Number of faces shared with processor 36 = 66
+    Number of faces shared with processor 51 = 68
+    Number of processor patches = 10
+    Number of processor faces = 990
+    Number of boundary faces = 246
+
+Processor 12
+    Number of cells = 2522
+    Number of points = 3188
+    Number of faces shared with processor 3 = 116
+    Number of faces shared with processor 4 = 131
+    Number of faces shared with processor 7 = 102
+    Number of faces shared with processor 9 = 140
+    Number of faces shared with processor 10 = 8
+    Number of faces shared with processor 11 = 257
+    Number of faces shared with processor 13 = 220
+    Number of faces shared with processor 14 = 33
+    Number of faces shared with processor 19 = 75
+    Number of faces shared with processor 20 = 2
+    Number of faces shared with processor 28 = 21
+    Number of faces shared with processor 33 = 11
+    Number of faces shared with processor 35 = 87
+    Number of faces shared with processor 36 = 22
+    Number of faces shared with processor 51 = 13
+    Number of processor patches = 15
+    Number of processor faces = 1238
+    Number of boundary faces = 0
+
+Processor 13
+    Number of cells = 2481
+    Number of points = 3176
+    Number of faces shared with processor 7 = 33
+    Number of faces shared with processor 8 = 90
+    Number of faces shared with processor 10 = 138
+    Number of faces shared with processor 11 = 3
+    Number of faces shared with processor 12 = 220
+    Number of faces shared with processor 14 = 279
+    Number of faces shared with processor 18 = 80
+    Number of faces shared with processor 19 = 45
+    Number of faces shared with processor 20 = 27
+    Number of faces shared with processor 33 = 109
+    Number of processor patches = 10
+    Number of processor faces = 1024
+    Number of boundary faces = 268
+
+Processor 14
+    Number of cells = 2510
+    Number of points = 3206
+    Number of faces shared with processor 11 = 205
+    Number of faces shared with processor 12 = 33
+    Number of faces shared with processor 13 = 279
+    Number of faces shared with processor 18 = 14
+    Number of faces shared with processor 20 = 141
+    Number of faces shared with processor 21 = 6
+    Number of faces shared with processor 33 = 38
+    Number of faces shared with processor 34 = 80
+    Number of faces shared with processor 36 = 8
+    Number of processor patches = 9
+    Number of processor faces = 804
+    Number of boundary faces = 486
+
+Processor 15
+    Number of cells = 2492
+    Number of points = 3167
+    Number of faces shared with processor 1 = 16
+    Number of faces shared with processor 9 = 138
+    Number of faces shared with processor 16 = 197
+    Number of faces shared with processor 17 = 193
+    Number of faces shared with processor 19 = 112
+    Number of faces shared with processor 22 = 149
+    Number of faces shared with processor 23 = 260
+    Number of faces shared with processor 28 = 18
+    Number of processor patches = 8
+    Number of processor faces = 1083
+    Number of boundary faces = 169
+
+Processor 16
+    Number of cells = 2481
+    Number of points = 3102
+    Number of faces shared with processor 9 = 6
+    Number of faces shared with processor 10 = 214
+    Number of faces shared with processor 15 = 197
+    Number of faces shared with processor 17 = 227
+    Number of faces shared with processor 18 = 89
+    Number of faces shared with processor 19 = 67
+    Number of processor patches = 6
+    Number of processor faces = 800
+    Number of boundary faces = 354
+
+Processor 17
+    Number of cells = 2522
+    Number of points = 3198
+    Number of faces shared with processor 15 = 193
+    Number of faces shared with processor 16 = 227
+    Number of faces shared with processor 18 = 105
+    Number of faces shared with processor 19 = 72
+    Number of faces shared with processor 22 = 21
+    Number of faces shared with processor 23 = 36
+    Number of processor patches = 6
+    Number of processor faces = 654
+    Number of boundary faces = 604
+
+Processor 18
+    Number of cells = 2528
+    Number of points = 3239
+    Number of faces shared with processor 10 = 21
+    Number of faces shared with processor 13 = 80
+    Number of faces shared with processor 14 = 14
+    Number of faces shared with processor 16 = 89
+    Number of faces shared with processor 17 = 105
+    Number of faces shared with processor 19 = 266
+    Number of faces shared with processor 20 = 85
+    Number of faces shared with processor 21 = 211
+    Number of processor patches = 8
+    Number of processor faces = 871
+    Number of boundary faces = 447
+
+Processor 19
+    Number of cells = 2528
+    Number of points = 3250
+    Number of faces shared with processor 9 = 39
+    Number of faces shared with processor 10 = 23
+    Number of faces shared with processor 12 = 75
+    Number of faces shared with processor 13 = 45
+    Number of faces shared with processor 15 = 112
+    Number of faces shared with processor 16 = 67
+    Number of faces shared with processor 17 = 72
+    Number of faces shared with processor 18 = 266
+    Number of faces shared with processor 20 = 175
+    Number of faces shared with processor 21 = 113
+    Number of faces shared with processor 22 = 102
+    Number of faces shared with processor 28 = 148
+    Number of faces shared with processor 29 = 48
+    Number of processor patches = 13
+    Number of processor faces = 1285
+    Number of boundary faces = 55
+
+Processor 20
+    Number of cells = 2531
+    Number of points = 3210
+    Number of faces shared with processor 11 = 108
+    Number of faces shared with processor 12 = 2
+    Number of faces shared with processor 13 = 27
+    Number of faces shared with processor 14 = 141
+    Number of faces shared with processor 18 = 85
+    Number of faces shared with processor 19 = 175
+    Number of faces shared with processor 21 = 247
+    Number of faces shared with processor 28 = 181
+    Number of faces shared with processor 29 = 56
+    Number of processor patches = 9
+    Number of processor faces = 1022
+    Number of boundary faces = 238
+
+Processor 21
+    Number of cells = 2501
+    Number of points = 3223
+    Number of faces shared with processor 14 = 6
+    Number of faces shared with processor 18 = 211
+    Number of faces shared with processor 19 = 113
+    Number of faces shared with processor 20 = 247
+    Number of faces shared with processor 29 = 154
+    Number of processor patches = 5
+    Number of processor faces = 731
+    Number of boundary faces = 605
+
+Processor 22
+    Number of cells = 2504
+    Number of points = 3200
+    Number of faces shared with processor 1 = 34
+    Number of faces shared with processor 3 = 71
+    Number of faces shared with processor 15 = 149
+    Number of faces shared with processor 17 = 21
+    Number of faces shared with processor 19 = 102
+    Number of faces shared with processor 23 = 211
+    Number of faces shared with processor 24 = 88
+    Number of faces shared with processor 25 = 108
+    Number of faces shared with processor 26 = 37
+    Number of faces shared with processor 27 = 36
+    Number of faces shared with processor 28 = 187
+    Number of faces shared with processor 29 = 134
+    Number of processor patches = 12
+    Number of processor faces = 1178
+    Number of boundary faces = 116
+
+Processor 23
+    Number of cells = 2481
+    Number of points = 3150
+    Number of faces shared with processor 1 = 122
+    Number of faces shared with processor 15 = 260
+    Number of faces shared with processor 17 = 36
+    Number of faces shared with processor 22 = 211
+    Number of faces shared with processor 24 = 157
+    Number of faces shared with processor 25 = 112
+    Number of processor patches = 6
+    Number of processor faces = 898
+    Number of boundary faces = 342
+
+Processor 24
+    Number of cells = 2494
+    Number of points = 3140
+    Number of faces shared with processor 22 = 88
+    Number of faces shared with processor 23 = 157
+    Number of faces shared with processor 25 = 223
+    Number of faces shared with processor 26 = 132
+    Number of processor patches = 4
+    Number of processor faces = 600
+    Number of boundary faces = 600
+
+Processor 25
+    Number of cells = 2531
+    Number of points = 3190
+    Number of faces shared with processor 0 = 123
+    Number of faces shared with processor 1 = 105
+    Number of faces shared with processor 3 = 64
+    Number of faces shared with processor 22 = 108
+    Number of faces shared with processor 23 = 112
+    Number of faces shared with processor 24 = 223
+    Number of faces shared with processor 26 = 29
+    Number of faces shared with processor 27 = 104
+    Number of processor patches = 8
+    Number of processor faces = 868
+    Number of boundary faces = 358
+
+Processor 26
+    Number of cells = 2484
+    Number of points = 3124
+    Number of faces shared with processor 22 = 37
+    Number of faces shared with processor 24 = 132
+    Number of faces shared with processor 25 = 29
+    Number of faces shared with processor 27 = 189
+    Number of faces shared with processor 28 = 40
+    Number of faces shared with processor 29 = 208
+    Number of processor patches = 6
+    Number of processor faces = 635
+    Number of boundary faces = 553
+
+Processor 27
+    Number of cells = 2511
+    Number of points = 3139
+    Number of faces shared with processor 3 = 85
+    Number of faces shared with processor 5 = 116
+    Number of faces shared with processor 6 = 74
+    Number of faces shared with processor 22 = 36
+    Number of faces shared with processor 25 = 104
+    Number of faces shared with processor 26 = 189
+    Number of faces shared with processor 28 = 206
+    Number of processor patches = 7
+    Number of processor faces = 810
+    Number of boundary faces = 358
+
+Processor 28
+    Number of cells = 2528
+    Number of points = 3269
+    Number of faces shared with processor 3 = 86
+    Number of faces shared with processor 6 = 89
+    Number of faces shared with processor 9 = 15
+    Number of faces shared with processor 11 = 35
+    Number of faces shared with processor 12 = 21
+    Number of faces shared with processor 15 = 18
+    Number of faces shared with processor 19 = 148
+    Number of faces shared with processor 20 = 181
+    Number of faces shared with processor 22 = 187
+    Number of faces shared with processor 26 = 40
+    Number of faces shared with processor 27 = 206
+    Number of faces shared with processor 29 = 205
+    Number of processor patches = 12
+    Number of processor faces = 1231
+    Number of boundary faces = 147
+
+Processor 29
+    Number of cells = 2531
+    Number of points = 3179
+    Number of faces shared with processor 19 = 48
+    Number of faces shared with processor 20 = 56
+    Number of faces shared with processor 21 = 154
+    Number of faces shared with processor 22 = 134
+    Number of faces shared with processor 26 = 208
+    Number of faces shared with processor 28 = 205
+    Number of processor patches = 6
+    Number of processor faces = 805
+    Number of boundary faces = 401
+
+Processor 30
+    Number of cells = 2510
+    Number of points = 3210
+    Number of faces shared with processor 2 = 12
+    Number of faces shared with processor 7 = 137
+    Number of faces shared with processor 31 = 156
+    Number of faces shared with processor 32 = 185
+    Number of faces shared with processor 35 = 186
+    Number of faces shared with processor 41 = 123
+    Number of faces shared with processor 56 = 165
+    Number of faces shared with processor 57 = 170
+    Number of processor patches = 8
+    Number of processor faces = 1134
+    Number of boundary faces = 168
+
+Processor 31
+    Number of cells = 2486
+    Number of points = 3131
+    Number of faces shared with processor 7 = 129
+    Number of faces shared with processor 8 = 173
+    Number of faces shared with processor 30 = 156
+    Number of faces shared with processor 32 = 228
+    Number of faces shared with processor 33 = 119
+    Number of faces shared with processor 35 = 61
+    Number of processor patches = 6
+    Number of processor faces = 866
+    Number of boundary faces = 332
+
+Processor 32
+    Number of cells = 2482
+    Number of points = 3143
+    Number of faces shared with processor 30 = 185
+    Number of faces shared with processor 31 = 228
+    Number of faces shared with processor 33 = 117
+    Number of faces shared with processor 35 = 71
+    Number of faces shared with processor 39 = 6
+    Number of faces shared with processor 41 = 63
+    Number of faces shared with processor 43 = 219
+    Number of processor patches = 7
+    Number of processor faces = 889
+    Number of boundary faces = 337
+
+Processor 33
+    Number of cells = 2531
+    Number of points = 3252
+    Number of faces shared with processor 8 = 5
+    Number of faces shared with processor 12 = 11
+    Number of faces shared with processor 13 = 109
+    Number of faces shared with processor 14 = 38
+    Number of faces shared with processor 31 = 119
+    Number of faces shared with processor 32 = 117
+    Number of faces shared with processor 34 = 292
+    Number of faces shared with processor 35 = 163
+    Number of faces shared with processor 36 = 104
+    Number of faces shared with processor 37 = 12
+    Number of faces shared with processor 39 = 86
+    Number of processor patches = 11
+    Number of processor faces = 1056
+    Number of boundary faces = 288
+
+Processor 34
+    Number of cells = 2531
+    Number of points = 3237
+    Number of faces shared with processor 14 = 80
+    Number of faces shared with processor 33 = 292
+    Number of faces shared with processor 36 = 307
+    Number of faces shared with processor 37 = 24
+    Number of faces shared with processor 39 = 28
+    Number of faces shared with processor 40 = 109
+    Number of processor patches = 6
+    Number of processor faces = 840
+    Number of boundary faces = 474
+
+Processor 35
+    Number of cells = 2496
+    Number of points = 3170
+    Number of faces shared with processor 7 = 54
+    Number of faces shared with processor 12 = 87
+    Number of faces shared with processor 30 = 186
+    Number of faces shared with processor 31 = 61
+    Number of faces shared with processor 32 = 71
+    Number of faces shared with processor 33 = 163
+    Number of faces shared with processor 36 = 232
+    Number of faces shared with processor 37 = 88
+    Number of faces shared with processor 41 = 27
+    Number of faces shared with processor 43 = 3
+    Number of faces shared with processor 49 = 43
+    Number of faces shared with processor 51 = 78
+    Number of faces shared with processor 56 = 53
+    Number of faces shared with processor 57 = 104
+    Number of processor patches = 14
+    Number of processor faces = 1250
+    Number of boundary faces = 0
+
+Processor 36
+    Number of cells = 2531
+    Number of points = 3291
+    Number of faces shared with processor 11 = 66
+    Number of faces shared with processor 12 = 22
+    Number of faces shared with processor 14 = 8
+    Number of faces shared with processor 33 = 104
+    Number of faces shared with processor 34 = 307
+    Number of faces shared with processor 35 = 232
+    Number of faces shared with processor 37 = 138
+    Number of faces shared with processor 49 = 190
+    Number of faces shared with processor 51 = 223
+    Number of processor patches = 9
+    Number of processor faces = 1290
+    Number of boundary faces = 126
+
+Processor 37
+    Number of cells = 2522
+    Number of points = 3241
+    Number of faces shared with processor 33 = 12
+    Number of faces shared with processor 34 = 24
+    Number of faces shared with processor 35 = 88
+    Number of faces shared with processor 36 = 138
+    Number of faces shared with processor 38 = 181
+    Number of faces shared with processor 39 = 155
+    Number of faces shared with processor 40 = 140
+    Number of faces shared with processor 41 = 123
+    Number of faces shared with processor 42 = 24
+    Number of faces shared with processor 43 = 38
+    Number of faces shared with processor 44 = 5
+    Number of faces shared with processor 45 = 190
+    Number of faces shared with processor 49 = 79
+    Number of faces shared with processor 52 = 81
+    Number of processor patches = 14
+    Number of processor faces = 1278
+    Number of boundary faces = 58
+
+Processor 38
+    Number of cells = 2487
+    Number of points = 3178
+    Number of faces shared with processor 37 = 181
+    Number of faces shared with processor 39 = 131
+    Number of faces shared with processor 40 = 183
+    Number of faces shared with processor 42 = 88
+    Number of faces shared with processor 44 = 22
+    Number of faces shared with processor 45 = 237
+    Number of faces shared with processor 46 = 48
+    Number of faces shared with processor 52 = 73
+    Number of processor patches = 8
+    Number of processor faces = 963
+    Number of boundary faces = 321
+
+Processor 39
+    Number of cells = 2481
+    Number of points = 3163
+    Number of faces shared with processor 32 = 6
+    Number of faces shared with processor 33 = 86
+    Number of faces shared with processor 34 = 28
+    Number of faces shared with processor 37 = 155
+    Number of faces shared with processor 38 = 131
+    Number of faces shared with processor 40 = 222
+    Number of faces shared with processor 43 = 140
+    Number of faces shared with processor 44 = 131
+    Number of processor patches = 8
+    Number of processor faces = 899
+    Number of boundary faces = 367
+
+Processor 40
+    Number of cells = 2481
+    Number of points = 3138
+    Number of faces shared with processor 34 = 109
+    Number of faces shared with processor 37 = 140
+    Number of faces shared with processor 38 = 183
+    Number of faces shared with processor 39 = 222
+    Number of processor patches = 4
+    Number of processor faces = 654
+    Number of boundary faces = 566
+
+Processor 41
+    Number of cells = 2530
+    Number of points = 3170
+    Number of faces shared with processor 30 = 123
+    Number of faces shared with processor 32 = 63
+    Number of faces shared with processor 35 = 27
+    Number of faces shared with processor 37 = 123
+    Number of faces shared with processor 42 = 204
+    Number of faces shared with processor 43 = 242
+    Number of faces shared with processor 44 = 12
+    Number of faces shared with processor 52 = 75
+    Number of faces shared with processor 55 = 118
+    Number of faces shared with processor 56 = 66
+    Number of processor patches = 10
+    Number of processor faces = 1053
+    Number of boundary faces = 137
+
+Processor 42
+    Number of cells = 2522
+    Number of points = 3162
+    Number of faces shared with processor 37 = 24
+    Number of faces shared with processor 38 = 88
+    Number of faces shared with processor 41 = 204
+    Number of faces shared with processor 43 = 8
+    Number of faces shared with processor 44 = 258
+    Number of faces shared with processor 52 = 76
+    Number of faces shared with processor 55 = 186
+    Number of processor patches = 7
+    Number of processor faces = 844
+    Number of boundary faces = 346
+
+Processor 43
+    Number of cells = 2481
+    Number of points = 3136
+    Number of faces shared with processor 32 = 219
+    Number of faces shared with processor 35 = 3
+    Number of faces shared with processor 37 = 38
+    Number of faces shared with processor 39 = 140
+    Number of faces shared with processor 41 = 242
+    Number of faces shared with processor 42 = 8
+    Number of faces shared with processor 44 = 194
+    Number of processor patches = 7
+    Number of processor faces = 844
+    Number of boundary faces = 372
+
+Processor 44
+    Number of cells = 2483
+    Number of points = 3121
+    Number of faces shared with processor 37 = 5
+    Number of faces shared with processor 38 = 22
+    Number of faces shared with processor 39 = 131
+    Number of faces shared with processor 41 = 12
+    Number of faces shared with processor 42 = 258
+    Number of faces shared with processor 43 = 194
+    Number of processor patches = 6
+    Number of processor faces = 622
+    Number of boundary faces = 564
+
+Processor 45
+    Number of cells = 2494
+    Number of points = 3207
+    Number of faces shared with processor 37 = 190
+    Number of faces shared with processor 38 = 237
+    Number of faces shared with processor 46 = 209
+    Number of faces shared with processor 47 = 184
+    Number of faces shared with processor 49 = 160
+    Number of faces shared with processor 52 = 88
+    Number of processor patches = 6
+    Number of processor faces = 1068
+    Number of boundary faces = 256
+
+Processor 46
+    Number of cells = 2481
+    Number of points = 3165
+    Number of faces shared with processor 38 = 48
+    Number of faces shared with processor 45 = 209
+    Number of faces shared with processor 47 = 246
+    Number of faces shared with processor 52 = 88
+    Number of faces shared with processor 53 = 82
+    Number of processor patches = 5
+    Number of processor faces = 673
+    Number of boundary faces = 599
+
+Processor 47
+    Number of cells = 2481
+    Number of points = 3134
+    Number of faces shared with processor 45 = 184
+    Number of faces shared with processor 46 = 246
+    Number of faces shared with processor 48 = 189
+    Number of faces shared with processor 49 = 46
+    Number of faces shared with processor 52 = 70
+    Number of faces shared with processor 53 = 147
+    Number of processor patches = 6
+    Number of processor faces = 882
+    Number of boundary faces = 328
+
+Processor 48
+    Number of cells = 2481
+    Number of points = 3114
+    Number of faces shared with processor 47 = 189
+    Number of faces shared with processor 49 = 235
+    Number of faces shared with processor 50 = 184
+    Number of faces shared with processor 51 = 8
+    Number of faces shared with processor 52 = 18
+    Number of faces shared with processor 53 = 42
+    Number of faces shared with processor 56 = 22
+    Number of faces shared with processor 59 = 95
+    Number of processor patches = 8
+    Number of processor faces = 793
+    Number of boundary faces = 379
+
+Processor 49
+    Number of cells = 2531
+    Number of points = 3219
+    Number of faces shared with processor 35 = 43
+    Number of faces shared with processor 36 = 190
+    Number of faces shared with processor 37 = 79
+    Number of faces shared with processor 45 = 160
+    Number of faces shared with processor 47 = 46
+    Number of faces shared with processor 48 = 235
+    Number of faces shared with processor 50 = 15
+    Number of faces shared with processor 51 = 169
+    Number of faces shared with processor 52 = 66
+    Number of faces shared with processor 56 = 98
+    Number of faces shared with processor 57 = 19
+    Number of processor patches = 11
+    Number of processor faces = 1120
+    Number of boundary faces = 160
+
+Processor 50
+    Number of cells = 2484
+    Number of points = 3120
+    Number of faces shared with processor 4 = 48
+    Number of faces shared with processor 5 = 133
+    Number of faces shared with processor 6 = 32
+    Number of faces shared with processor 48 = 184
+    Number of faces shared with processor 49 = 15
+    Number of faces shared with processor 51 = 238
+    Number of faces shared with processor 56 = 4
+    Number of faces shared with processor 57 = 72
+    Number of faces shared with processor 58 = 80
+    Number of faces shared with processor 59 = 14
+    Number of processor patches = 10
+    Number of processor faces = 820
+    Number of boundary faces = 362
+
+Processor 51
+    Number of cells = 2531
+    Number of points = 3183
+    Number of faces shared with processor 4 = 52
+    Number of faces shared with processor 6 = 92
+    Number of faces shared with processor 11 = 68
+    Number of faces shared with processor 12 = 13
+    Number of faces shared with processor 35 = 78
+    Number of faces shared with processor 36 = 223
+    Number of faces shared with processor 48 = 8
+    Number of faces shared with processor 49 = 169
+    Number of faces shared with processor 50 = 238
+    Number of faces shared with processor 57 = 84
+    Number of processor patches = 10
+    Number of processor faces = 1025
+    Number of boundary faces = 189
+
+Processor 52
+    Number of cells = 2520
+    Number of points = 3246
+    Number of faces shared with processor 37 = 81
+    Number of faces shared with processor 38 = 73
+    Number of faces shared with processor 41 = 75
+    Number of faces shared with processor 42 = 76
+    Number of faces shared with processor 45 = 88
+    Number of faces shared with processor 46 = 88
+    Number of faces shared with processor 47 = 70
+    Number of faces shared with processor 48 = 18
+    Number of faces shared with processor 49 = 66
+    Number of faces shared with processor 53 = 223
+    Number of faces shared with processor 54 = 8
+    Number of faces shared with processor 55 = 224
+    Number of faces shared with processor 56 = 130
+    Number of faces shared with processor 59 = 31
+    Number of processor patches = 14
+    Number of processor faces = 1251
+    Number of boundary faces = 95
+
+Processor 53
+    Number of cells = 2503
+    Number of points = 3187
+    Number of faces shared with processor 46 = 82
+    Number of faces shared with processor 47 = 147
+    Number of faces shared with processor 48 = 42
+    Number of faces shared with processor 52 = 223
+    Number of faces shared with processor 54 = 229
+    Number of faces shared with processor 55 = 58
+    Number of faces shared with processor 59 = 102
+    Number of processor patches = 7
+    Number of processor faces = 883
+    Number of boundary faces = 389
+
+Processor 54
+    Number of cells = 2531
+    Number of points = 3192
+    Number of faces shared with processor 52 = 8
+    Number of faces shared with processor 53 = 229
+    Number of faces shared with processor 55 = 253
+    Number of faces shared with processor 56 = 10
+    Number of faces shared with processor 59 = 115
+    Number of processor patches = 5
+    Number of processor faces = 615
+    Number of boundary faces = 615
+
+Processor 55
+    Number of cells = 2481
+    Number of points = 3135
+    Number of faces shared with processor 41 = 118
+    Number of faces shared with processor 42 = 186
+    Number of faces shared with processor 52 = 224
+    Number of faces shared with processor 53 = 58
+    Number of faces shared with processor 54 = 253
+    Number of faces shared with processor 56 = 84
+    Number of processor patches = 6
+    Number of processor faces = 923
+    Number of boundary faces = 293
+
+Processor 56
+    Number of cells = 2527
+    Number of points = 3209
+    Number of faces shared with processor 30 = 165
+    Number of faces shared with processor 35 = 53
+    Number of faces shared with processor 41 = 66
+    Number of faces shared with processor 48 = 22
+    Number of faces shared with processor 49 = 98
+    Number of faces shared with processor 50 = 4
+    Number of faces shared with processor 52 = 130
+    Number of faces shared with processor 54 = 10
+    Number of faces shared with processor 55 = 84
+    Number of faces shared with processor 57 = 215
+    Number of faces shared with processor 58 = 20
+    Number of faces shared with processor 59 = 266
+    Number of processor patches = 12
+    Number of processor faces = 1133
+    Number of boundary faces = 133
+
+Processor 57
+    Number of cells = 2514
+    Number of points = 3195
+    Number of faces shared with processor 0 = 5
+    Number of faces shared with processor 2 = 143
+    Number of faces shared with processor 4 = 105
+    Number of faces shared with processor 7 = 17
+    Number of faces shared with processor 30 = 170
+    Number of faces shared with processor 35 = 104
+    Number of faces shared with processor 49 = 19
+    Number of faces shared with processor 50 = 72
+    Number of faces shared with processor 51 = 84
+    Number of faces shared with processor 56 = 215
+    Number of faces shared with processor 58 = 256
+    Number of faces shared with processor 59 = 11
+    Number of processor patches = 12
+    Number of processor faces = 1201
+    Number of boundary faces = 63
+
+Processor 58
+    Number of cells = 2488
+    Number of points = 3155
+    Number of faces shared with processor 0 = 113
+    Number of faces shared with processor 2 = 69
+    Number of faces shared with processor 4 = 64
+    Number of faces shared with processor 50 = 80
+    Number of faces shared with processor 56 = 20
+    Number of faces shared with processor 57 = 256
+    Number of faces shared with processor 59 = 221
+    Number of processor patches = 7
+    Number of processor faces = 823
+    Number of boundary faces = 415
+
+Processor 59
+    Number of cells = 2531
+    Number of points = 3194
+    Number of faces shared with processor 48 = 95
+    Number of faces shared with processor 50 = 14
+    Number of faces shared with processor 52 = 31
+    Number of faces shared with processor 53 = 102
+    Number of faces shared with processor 54 = 115
+    Number of faces shared with processor 56 = 266
+    Number of faces shared with processor 57 = 11
+    Number of faces shared with processor 58 = 221
+    Number of processor patches = 8
+    Number of processor faces = 855
+    Number of boundary faces = 379
+
+Number of processor faces = 28715
+Max number of cells = 2531 (0.97074468085107% above average 2506.66666666667)
+Max number of processor patches = 15 (75.78125% above average 8.53333333333333)
+Max number of faces between processors = 1290 (34.7727668465959% above average 957.166666666667)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+Processor 12: field transfer
+Processor 13: field transfer
+Processor 14: field transfer
+Processor 15: field transfer
+Processor 16: field transfer
+Processor 17: field transfer
+Processor 18: field transfer
+Processor 19: field transfer
+Processor 20: field transfer
+Processor 21: field transfer
+Processor 22: field transfer
+Processor 23: field transfer
+Processor 24: field transfer
+Processor 25: field transfer
+Processor 26: field transfer
+Processor 27: field transfer
+Processor 28: field transfer
+Processor 29: field transfer
+Processor 30: field transfer
+Processor 31: field transfer
+Processor 32: field transfer
+Processor 33: field transfer
+Processor 34: field transfer
+Processor 35: field transfer
+Processor 36: field transfer
+Processor 37: field transfer
+Processor 38: field transfer
+Processor 39: field transfer
+Processor 40: field transfer
+Processor 41: field transfer
+Processor 42: field transfer
+Processor 43: field transfer
+Processor 44: field transfer
+Processor 45: field transfer
+Processor 46: field transfer
+Processor 47: field transfer
+Processor 48: field transfer
+Processor 49: field transfer
+Processor 50: field transfer
+Processor 51: field transfer
+Processor 52: field transfer
+Processor 53: field transfer
+Processor 54: field transfer
+Processor 55: field transfer
+Processor 56: field transfer
+Processor 57: field transfer
+Processor 58: field transfer
+Processor 59: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : snappyHexMesh -parallel
+Date   : Feb 18 2025
+Time   : 21:48:06
+Host   : udc-ba02-12c0
+PID    : 509609
+I/O    : uncollated
+Case   : /sfs/weka/scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 60
+Hosts  :
+(
+    (udc-ba02-12c0 32)
+    (udc-ba02-12c1 28)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 0.32 s
+
+Overall mesh bounding box  : (-1 -0.988702 -0.988702) (3.66268 0.988702 0.988702)
+Relative tolerance         : 1e-06
+Absolute matching distance : 5.43698794746062e-06
+
+Reading refinement surfaces.
+Read refinement surfaces in = 0.01 s
+
+Reading refinement shells.
+Read refinement shells in = 0 s
+
+Setting refinement level of surface to be consistent with shells.
+Checked shell refinement in = 0 s
+
+Reading features.
+Read features in = 0 s
+
+
+Determining initial surface intersections
+-----------------------------------------
+
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 0
+    Number of intersected edges : 0
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 460320
+    Number of intersected edges : 248
+Calculated surface intersections in = 0.04 s
+
+Initial mesh : cells:150400  faces:460320  points:159695  unbalance:0.0102393617021276
+Cells per refinement level:
+    0	150400
+Setting refinement level of surface to be consistent with curvature.
+Checked curvature refinement in = 0 s
+
+
+Adding patches for surface regions
+----------------------------------
+
+Patch Type                Region                        
+----- ----                ------                        
+sphere:
+
+3     wall                sphere                        
+
+Added patches in = 0 s
+
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 0
+    Number of intersected edges : 248
+Decomposition method scotch [60]
+
+Refinement phase
+----------------
+
+Found point (0 0.5 0.5) in cell 133 on processor 54
+
+Surface refinement iteration 0
+------------------------------
+
+Marked for refinement due to surface intersection          : 272 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 272 cells (out of 150400)
+Edge intersection testing:
+    Number of edges             : 466812
+    Number of edges to retest   : 8428
+    Number of intersected edges : 984
+Refined mesh in = 0.02 s
+After refinement surface refinement iteration 0 : cells:152304  faces:466812  points:162391  unbalance:0.36306334699023
+Cells per refinement level:
+    0	150128
+    1	2176
+Balancing since max unbalance 0.36306334699023 is larger than allowable 0.2
+Balanced mesh in = 3.15 s
+After balancing surface refinement iteration 0 : cells:152304  faces:466812  points:162391  unbalance:0.0100063031831075
+Cells per refinement level:
+    0	150128
+    1	2176
+
+Surface refinement iteration 1
+------------------------------
+
+Marked for refinement due to surface intersection          : 1092 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 1232 cells (out of 152304)
+Edge intersection testing:
+    Number of edges             : 495708
+    Number of edges to retest   : 37632
+    Number of intersected edges : 3968
+Refined mesh in = 0.04 s
+After refinement surface refinement iteration 1 : cells:160928  faces:495708  points:174057  unbalance:3.02217140584609
+Cells per refinement level:
+    0	149984
+    1	2240
+    2	8704
+Balancing since max unbalance 3.02217140584609 is larger than allowable 0.2
+Balanced mesh in = 3.44 s
+After balancing surface refinement iteration 1 : cells:160928  faces:495708  points:174057  unbalance:0.00974348777092859
+Cells per refinement level:
+    0	149984
+    1	2240
+    2	8704
+
+Surface refinement iteration 2
+------------------------------
+
+Marked for refinement due to surface intersection          : 4420 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 4936 cells (out of 160928)
+Edge intersection testing:
+    Number of edges             : 611376
+    Number of edges to retest   : 151252
+    Number of intersected edges : 15912
+Refined mesh in = 0.04 s
+After refinement surface refinement iteration 2 : cells:195480  faces:611376  points:220638  unbalance:2.28974831184776
+Cells per refinement level:
+    0	149928
+    1	2192
+    2	8288
+    3	35072
+Balancing since max unbalance 2.28974831184776 is larger than allowable 0.2
+Balanced mesh in = 3.45 s
+After balancing surface refinement iteration 2 : cells:195480  faces:611376  points:220638  unbalance:0.00982197667280538
+Cells per refinement level:
+    0	149928
+    1	2192
+    2	8288
+    3	35072
+
+Surface refinement iteration 3
+------------------------------
+
+Marked for refinement due to surface intersection          : 144 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0 s
+Selected for refinement : 160 cells (out of 195480)
+Edge intersection testing:
+    Number of edges             : 614736
+    Number of edges to retest   : 15024
+    Number of intersected edges : 15948
+Refined mesh in = 0.03 s
+After refinement surface refinement iteration 3 : cells:196600  faces:614736  points:221758  unbalance:0.0467955239064091
+Cells per refinement level:
+    0	149928
+    1	2176
+    2	8272
+    3	36224
+Skipping balancing since max unbalance 0.0467955239064091 is less than allowable 0.2
+
+Surface refinement iteration 4
+------------------------------
+
+Marked for refinement due to surface intersection          : 0 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0 s
+Selected for refinement : 0 cells (out of 196600)
+Stopping refining since too few cells selected.
+
+
+Removing mesh beyond surface intersections
+------------------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 2 regions.
+--> FOAM Warning : 
+    From void Foam::meshRefinement::nearestFace(const labelUList&, const Foam::bitSet&, Foam::autoPtr<Foam::mapDistribute>&, Foam::labelList&, Foam::label) const
+    in file meshRefinement/meshRefinement.C at line 515
+    Did not visit some faces, e.g. face 0 at (0.190471489361702 -0.96398445 -0.51906855)
+Keeping all cells containing inside points
+Selected for keeping : 189880 cells.
+Edge intersection testing:
+    Number of edges             : 596936
+    Number of edges to retest   : 12112
+    Number of intersected edges : 15948
+
+Shell refinement iteration 0
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.03 s
+Selected for internal refinement : 4197 cells (out of 189880)
+Edge intersection testing:
+    Number of edges             : 686336
+    Number of edges to retest   : 194276
+    Number of intersected edges : 15948
+Refined mesh in = 0.04 s
+After refinement shell refinement iteration 0 : cells:219259  faces:686336  points:247698  unbalance:0.534897085182364
+Cells per refinement level:
+    0	149669
+    1	2673
+    2	7453
+    3	59464
+Balancing since max unbalance 0.534897085182364 is larger than allowable 0.2
+Balanced mesh in = 3.07 s
+After balancing shell refinement iteration 0 : cells:219259  faces:686336  points:247766  unbalance:0.00993801850779219
+Cells per refinement level:
+    0	149669
+    1	2673
+    2	7453
+    3	59464
+
+Shell refinement iteration 1
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for internal refinement : 914 cells (out of 219259)
+Edge intersection testing:
+    Number of edges             : 705923
+    Number of edges to retest   : 61430
+    Number of intersected edges : 15948
+Refined mesh in = 0.02 s
+After refinement shell refinement iteration 1 : cells:225657  faces:705923  points:254559  unbalance:0.0803121551735599
+Cells per refinement level:
+    0	149478
+    1	3704
+    2	11203
+    3	61272
+Skipping balancing since max unbalance 0.0803121551735599 is less than allowable 0.2
+
+Shell refinement iteration 2
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for internal refinement : 171 cells (out of 225657)
+Edge intersection testing:
+    Number of edges             : 709583
+    Number of edges to retest   : 13808
+    Number of intersected edges : 15948
+Refined mesh in = 0.02 s
+After refinement shell refinement iteration 2 : cells:226854  faces:709583  points:255825  unbalance:0.103969954243698
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	61272
+Skipping balancing since max unbalance 0.103969954243698 is less than allowable 0.2
+
+Shell refinement iteration 3
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for internal refinement : 10 cells (out of 226854)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.15 s
+Selected for refinement : 0 cells (out of 226854)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.18 s
+Selected for refinement : 0 cells (out of 226854)
+Stopping refining since too few cells selected.
+
+
+Refinement transition refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.33 s
+Selected for refinement : 0 cells (out of 226854)
+Stopping refining since too few cells selected.
+
+
+Splitting mesh at surface intersections
+---------------------------------------
+
+Introducing baffles for 15948 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 2 regions.
+Edge intersection testing:
+    Number of edges             : 725531
+    Number of edges to retest   : 85068
+    Number of intersected edges : 31896
+Created baffles in = 0.18 s
+
+
+After introducing baffles : cells:226854  faces:725531  points:255827  unbalance:0.103969954243698
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	61272
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 23429 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.02 s
+
+
+Introducing baffles to delete problem cells.
+
+Edge intersection testing:
+    Number of edges             : 748960
+    Number of edges to retest   : 81792
+    Number of intersected edges : 31896
+Created baffles in = 0.15 s
+
+
+After introducing baffles : cells:226854  faces:748960  points:257101  unbalance:0.103969954243698
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	61272
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 10556 regions.
+Edge intersection testing:
+    Number of edges             : 748960
+    Number of edges to retest   : 93699
+    Number of intersected edges : 31896
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Keeping all cells containing points 1((0 0.5 0.5))
+Selected for keeping : 207710 cells.
+Edge intersection testing:
+    Number of edges             : 651459
+    Number of edges to retest   : 0
+    Number of intersected edges : 15960
+Split mesh in = 0.17 s
+
+
+After subsetting : cells:207710  faces:651459  points:236215  unbalance:0.166915410909441
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+
+Introducing zones for interfaces
+--------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Setting faceZones according to neighbouring cellZones:
+
+Edge intersection testing:
+    Number of edges             : 651459
+    Number of edges to retest   : 0
+    Number of intersected edges : 15960
+
+Handling cells with snap problems
+---------------------------------
+
+Introducing baffles for 15960 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 651459
+    Number of edges to retest   : 43640
+    Number of intersected edges : 15960
+Created baffles in = 0.18 s
+
+
+After introducing baffles : cells:207710  faces:651459  points:236215  unbalance:0.166915410909441
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 0 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.02 s
+
+
+Introducing baffles to delete problem cells.
+
+Created baffles in = 0 s
+
+
+After introducing baffles : cells:207710  faces:651459  points:236215  unbalance:0.166915410909441
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 651459
+    Number of edges to retest   : 43640
+    Number of intersected edges : 15960
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Split mesh in = 0.17 s
+
+
+After subsetting : cells:207710  faces:651459  points:236215  unbalance:0.166915410909441
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+
+Merge free-standing baffles
+---------------------------
+
+freeStandingBaffles : detected 12 free-standing baffles out of 12
+
+freeStandingBaffles : detected 12 planar (within 30 degrees) free-standing baffles out of 12
+
+Detected free-standing baffles : 12
+Edge intersection testing:
+    Number of edges             : 651447
+    Number of edges to retest   : 12
+    Number of intersected edges : 15948
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 0 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.04 s
+
+
+Introducing baffles to delete problem cells.
+
+Created baffles in = 0 s
+
+
+After introducing baffles : cells:207710  faces:651447  points:236215  unbalance:0.166915410909441
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Merged free-standing baffles in = 0 s
+
+
+dupNonManifoldPoints : Found : 0 non-manifold points (out of 273550)
+Detected unsplittable baffles : 0
+
+Merge refined boundary faces
+----------------------------
+
+Merging 0 sets of faces.
+
+No faces merged ...
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.707106781186548.
+
+No straight edges simplified and no points removed ...
+
+Doing final balancing
+---------------------
+
+Found 0 zoned faces to keep together.
+Found 0 separated coupled faces to keep together.
+Refined mesh : cells:207710  faces:651447  points:236215  unbalance:0.0100621058206153
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+Writing mesh to time 1e-07
+Wrote mesh in = 0.25 s.
+Mesh refined in = 18.45 s.
+
+Morphing phase
+--------------
+
+Duplicating 0 points on faceZones of type boundary
+Snapping to features in 15 iterations ...
+Constructing mesh displacer ...
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.02;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Checked initial mesh in = 3.48 s
+
+
+Smoothing patch points ...
+Smoothing iteration 0
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 1
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 2
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 3
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 4
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Patch points smoothed in = 0.33 s
+
+
+
+Morph iteration 0
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.00112636789482428 min:2.83798535462728e-06 max:0.00290424228791391
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.00289778408886376 3.61841118891234e-20 0.000193573348463602) avg:(-1.54596355418923e-05 3.20430788886668e-18 4.04718018137292e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.07 s
+
+
+
+Morph iteration 1
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.00105436699768001 min:6.18458717949995e-06 max:0.0027631426593053
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.00275699521915349 0.000184213781345531 1.08708884896611e-19) avg:(-1.44303276530926e-05 2.99533128741886e-18 3.70585173234147e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.08 s
+
+
+
+Morph iteration 2
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000920681135148678 min:1.45288961641612e-06 max:0.0024945043533424
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00139897799832364 -0.00150165202677771 -0.00141790469338561) avg:(-1.25081107497695e-05 2.31267438935595e-18 3.28093264273089e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.02 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.05 s
+
+
+
+Morph iteration 3
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000748116907739467 min:2.68318140538495e-06 max:0.00219958452919477
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00123358098322131 -0.00132411159773299 -0.0012502713848028) avg:(-1.00074102353718e-05 2.01314126061407e-18 2.65400283838741e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.05 s
+
+
+
+Morph iteration 4
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000569521597412761 min:4.98336202958727e-07 max:0.00184618938783735
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00103539063983758 -0.00104940195925081 0.00111136717902795) avg:(-7.33755316659387e-06 1.59518805771841e-18 1.89820412981776e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.02 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.05 s
+
+
+
+Morph iteration 5
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000415489412594999 min:5.69538847569928e-07 max:0.00146920041401234
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00082396771069701 -0.000884421233132579 0.000835120440803014) avg:(-4.88787443295001e-06 9.96121800234643e-19 1.04488300723914e-18)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.06 s
+
+
+
+Morph iteration 6
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000296103814214471 min:1.00459026724679e-07 max:0.00110226109963147
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000618179368073596 0.000663529159651732 -0.000626548366002802) avg:(-2.9267648252714e-06 5.36373277049423e-19 7.4534987849725e-19)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.02 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.07 s
+
+
+
+Morph iteration 7
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000207478725536545 min:2.17086639064949e-07 max:0.000772740250416907
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000433375010348222 -0.000439242886347765 0.000465165864840647) avg:(-1.55404753794674e-06 2.83859883633299e-19 4.17953202895654e-19)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-3.99654666491276e-06 4.56444728996506e-06 8.42968054242089e-06) at mesh point 99 coord (-0.0107085327479634 0.0585613298436109 0.16973628853848) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.04 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.09 s
+
+
+
+Morph iteration 8
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000139586813914998 min:8.28819653079426e-08 max:0.000509838614812392
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000233327345550607 0.000375136534032428 -0.000254492325633335) avg:(-7.18773835699902e-07 1.45412885174113e-19 9.14272631334244e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-4.36171256375485e-06 1.09594469631056e-05 2.80335699782485e-05) at mesh point 99 coord (-0.0107125292946284 0.0585658942909009 0.169744718219023) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.08 s
+
+
+
+Morph iteration 9
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:8.65922801248677e-05 min:1.05275103912038e-07 max:0.000321958390225906
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.00013138635816777 0.000259083387963238 -0.000138818687523537) avg:(-2.82519329410704e-07 2.01575346813217e-19 9.66516781696201e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-3.45442563697824e-06 1.17082656491307e-05 3.18755829725998e-05) at mesh point 99 coord (-0.0107168910071921 0.058576853737864 0.169772751789001) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.08 s
+
+
+
+Morph iteration 10
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:4.72186991191571e-05 min:1.28414324167894e-07 max:0.000177966840927699
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(7.26244338040277e-05 -0.000143212941209836 7.67329235364933e-05) avg:(-9.09913716723333e-08 -2.06799761849412e-20 -7.30329685268188e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-2.17258067873809e-06 8.97637047115933e-06 2.52485382340198e-05) at mesh point 99 coord (-0.0107203454328291 0.0585885620035131 0.169804627371974) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.09 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.11 s
+
+
+
+Morph iteration 11
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:2.15519792192721e-05 min:1.7042129002331e-08 max:8.22417682472759e-05
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(3.35608985682218e-05 3.54595193606533e-05 6.61815459055137e-05) avg:(-2.26352273148669e-08 2.48159714219295e-20 -5.69787764885091e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-1.11007631643153e-06 5.26185870977772e-06 1.50842565409884e-05) at mesh point 99 coord (-0.0107225180135078 0.0585975383739843 0.169829875910208) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.02 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.12 s
+
+
+
+Morph iteration 12
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:7.68279333336984e-06 min:2.64226168337214e-09 max:2.96758322824138e-05
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(1.21099798855995e-05 1.27950701697271e-05 -2.38807367594907e-05) avg:(-3.89264197112319e-09 6.36725582536348e-21 7.49377031754318e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (-1.73953902835635e-10 1.46586234548197e-08 3.45377101614694e-08) at mesh point 21 coord (0.00447496690436079 0.0676316721357739 0.16675089545313) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.03 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.09 s
+
+
+
+Morph iteration 13
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:1.89525935149209e-06 min:8.31242260088248e-10 max:7.41017802713892e-06
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(3.02391142585623e-06 -5.96311948711237e-06 -3.19498107426153e-06) avg:(-3.50883887387586e-10 7.25976006071358e-20 1.21304386621668e-19)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (2.97473019829005e-09 4.69016240066415e-08 1.17806528983893e-07) at mesh point 21 coord (0.00447496673040688 0.0676316867943973 0.16675092999084) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.02 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.1 s
+
+
+
+Morph iteration 14
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:2.42228946074134e-07 min:6.6038529862803e-10 max:9.58178615879251e-07
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 17191 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 33109 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+Initially selected 0 mesh points out of 17191 for reverse attraction.
+Selected 0 mesh points out of 17191 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(3.91009125508268e-07 4.13129408585733e-07 7.71065636284707e-07) avg:(-5.32768645637358e-13 -2.29656577632768e-20 -1.13195659117573e-20)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15938 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15938
+
+--> FOAM Warning : Displacement (6.50517176584153e-10 4.12366063518022e-09 1.01962403520339e-08) at mesh point 15 coord (0.0106276656356209 0.0673692994866647 0.166578588790455) points through the surrounding patch faces
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.11 s
+
+
+Repatching faces according to nearest surface ...
+Repatched 0 faces in = 0 s
+
+
+Edge intersection testing:
+    Number of edges             : 651447
+    Number of edges to retest   : 276372
+    Number of intersected edges : 15936
+Merging 4808 sets of faces.
+
+Edge intersection testing:
+    Number of edges             : 644575
+    Number of edges to retest   : 19428
+    Number of intersected edges : 9064
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.866025403784439.
+
+Removing 2630 straight edge points ...
+
+Edge intersection testing:
+    Number of edges             : 644575
+    Number of edges to retest   : 14948
+    Number of intersected edges : 9064
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Snapped mesh : cells:207710  faces:644575  points:231603  unbalance:0.0100621058206153
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	42128
+Writing mesh to time 2e-07
+Wrote mesh in = 0.47 s.
+Mesh snapped in = 3.1 s.
+Layer specification as
+- final layer thickness ('finalLayerThickness')
+- expansion ratio ('expansionRatio')
+
+Shrinking and layer addition phase
+----------------------------------
+
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.02;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+
+
+Merging all faces of a cell
+---------------------------
+    - which are on the same patch
+    - which make an angle < 60 degrees (cos:0.5)
+    - as long as the resulting face doesn't become concave by more than 90 degrees
+      (0=straight, 180=fully concave)
+
+Merging 0 sets of faces.
+
+No faces merged ...
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.5.
+
+No straight edges simplified and no points removed ...
+
+Checking mesh manifoldness ...
+Outside of mesh is multiply connected across edges or points.
+This is not a fatal error but might cause some unexpected behaviour.
+
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+
+Before layer addition : cells:207710  faces:644575  points:231603  unbalance:0.0100621058206153
+Ideal layer addition : cells:253030  unbalance:0.556732403272339
+
+Duplicating 0 points on faceZones of type boundary
+
+Handling points with inconsistent layer specification ...
+dupNonManifoldPoints : Found : 0 non-manifold points (out of 268472)
+
+Handling points with inconsistent layer specification ...
+
+Handling non-manifold points ...
+
+Checking patch manifoldness ...
+Outside of local patch is multiply connected across edges or points at 0 points.
+Set displacement to zero for all 0 non-manifold points
+
+Handling feature edges (angle < 60) ...
+Set displacement to zero for points on 0 feature edges
+
+Handling cells with warped patch faces ...
+Set displacement to zero on 0 warped faces since layer would be > 0.5 of the size of the bounding box.
+
+patch  faces    layers avg thickness[m]
+                       near-wall overall
+-----  -----    ------ --------- -------
+sphere 9064     5      0.00108   0.00978 
+
+
+Outer iteration : 0
+-------------------
+
+Adding in total 0 inter-processor patches to handle extrusion of non-manifold processor boundaries.
+Selecting externalDisplacementMeshMover displacementMedialAxis
+displacementMedialAxis : Calculating distance to Medial Axis ...
+fieldSmoother : Smoothing normals ...
+    Iteration 0   residual 0.00301742280358484
+displacementMedialAxis : Inserting points on patch inlet1 if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch outlet1 if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch walls if angle to nearest layer patch > 30 degrees.
+fieldSmoother : Smoothing normals in interior ...
+    Iteration 0   residual 0.0273891689240329
+
+Layer addition iteration 0
+--------------------------
+
+Determining displacement for added points according to pointNormal ...
+Detected 0 points with point normal pointing through faces.
+Reset displacement at 0 points to average of surrounding points.
+
+displacementMedialAxis : Smoothing using Medial Axis ...
+displacementMedialAxis : Reducing layer thickness at 0 nodes where thickness to medial axis distance is large 
+displacementMedialAxis : Removing isolated regions ...
+- if partially extruded faces make angle < 30
+- if exclusively surrounded by non-extruded faces
+displacementMedialAxis : Number of isolated points extrusion stopped : 0
+fieldSmoother : Smoothing field ...
+    Iteration 0   residual 3.22867480783958e-19
+displacementMedialAxis : Moving mesh ...
+displacementMedialAxis : Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+displacementMedialAxis : Successfully moved mesh
+displacementMedialAxis : Finished moving mesh ...
+truncateDisplacement : Unextruded 0 faces due to non-consecutive vertices being extruded.
+truncateDisplacement : Unextruded 0 faces due to stringed edges with inconsistent extrusion.
+
+Setting up information for layer truncation ...
+Detected 0 baffles across faceZones of type internal
+
+
+Checking mesh with layer ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Extruding 9064 out of 9064 faces (100%). Removed extrusion at 0 faces.
+Added 45320 out of 45320 cells (100%).
+Edge intersection testing:
+    Number of edges             : 791835
+    Number of edges to retest   : 0
+    Number of intersected edges : 54384
+Mesh with layers : cells:253030  faces:791835  points:288233  unbalance:0.556732403272339
+
+patch  faces        layers        overall thickness
+                target   mesh     [m]       [%]
+-----  -----    -----    ----     ---       ---
+sphere 9064     5        5        0.00978   100     
+
+
+Doing final balancing
+---------------------
+
+Writing 45320 added cells to cellSet addedCells
+Writing 36233 faces inside added layer to faceSet layerFaces
+
+Writing fields with layer information:
+    nSurfaceLayers    : actual number of layers
+    thickness         : overall layer thickness
+    thicknessFraction : overall layer thickness (fraction of desired thickness)
+
+Layer mesh : cells:253030  faces:791835  points:288233  unbalance:0.00999881436983763
+Cells per refinement level:
+    0	149361
+    1	4586
+    2	11635
+    3	87448
+Writing mesh to time 3e-07
+Wrote mesh in = 0.06 s.
+Layers added in = 4.86 s.
+Checking final mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Finished meshing without any errors
+Finished meshing in = 26.82 s.
+End
+
+Finalising parallel run
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh
+Date   : Feb 18 2025
+Time   : 21:48:39
+Host   : udc-ba02-12c0
+PID    : 510404
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 60 processor directories
+    Reading database "hsSphere_rcf/processor0"
+    Reading database "hsSphere_rcf/processor1"
+    Reading database "hsSphere_rcf/processor2"
+    Reading database "hsSphere_rcf/processor3"
+    Reading database "hsSphere_rcf/processor4"
+    Reading database "hsSphere_rcf/processor5"
+    Reading database "hsSphere_rcf/processor6"
+    Reading database "hsSphere_rcf/processor7"
+    Reading database "hsSphere_rcf/processor8"
+    Reading database "hsSphere_rcf/processor9"
+    Reading database "hsSphere_rcf/processor10"
+    Reading database "hsSphere_rcf/processor11"
+    Reading database "hsSphere_rcf/processor12"
+    Reading database "hsSphere_rcf/processor13"
+    Reading database "hsSphere_rcf/processor14"
+    Reading database "hsSphere_rcf/processor15"
+    Reading database "hsSphere_rcf/processor16"
+    Reading database "hsSphere_rcf/processor17"
+    Reading database "hsSphere_rcf/processor18"
+    Reading database "hsSphere_rcf/processor19"
+    Reading database "hsSphere_rcf/processor20"
+    Reading database "hsSphere_rcf/processor21"
+    Reading database "hsSphere_rcf/processor22"
+    Reading database "hsSphere_rcf/processor23"
+    Reading database "hsSphere_rcf/processor24"
+    Reading database "hsSphere_rcf/processor25"
+    Reading database "hsSphere_rcf/processor26"
+    Reading database "hsSphere_rcf/processor27"
+    Reading database "hsSphere_rcf/processor28"
+    Reading database "hsSphere_rcf/processor29"
+    Reading database "hsSphere_rcf/processor30"
+    Reading database "hsSphere_rcf/processor31"
+    Reading database "hsSphere_rcf/processor32"
+    Reading database "hsSphere_rcf/processor33"
+    Reading database "hsSphere_rcf/processor34"
+    Reading database "hsSphere_rcf/processor35"
+    Reading database "hsSphere_rcf/processor36"
+    Reading database "hsSphere_rcf/processor37"
+    Reading database "hsSphere_rcf/processor38"
+    Reading database "hsSphere_rcf/processor39"
+    Reading database "hsSphere_rcf/processor40"
+    Reading database "hsSphere_rcf/processor41"
+    Reading database "hsSphere_rcf/processor42"
+    Reading database "hsSphere_rcf/processor43"
+    Reading database "hsSphere_rcf/processor44"
+    Reading database "hsSphere_rcf/processor45"
+    Reading database "hsSphere_rcf/processor46"
+    Reading database "hsSphere_rcf/processor47"
+    Reading database "hsSphere_rcf/processor48"
+    Reading database "hsSphere_rcf/processor49"
+    Reading database "hsSphere_rcf/processor50"
+    Reading database "hsSphere_rcf/processor51"
+    Reading database "hsSphere_rcf/processor52"
+    Reading database "hsSphere_rcf/processor53"
+    Reading database "hsSphere_rcf/processor54"
+    Reading database "hsSphere_rcf/processor55"
+    Reading database "hsSphere_rcf/processor56"
+    Reading database "hsSphere_rcf/processor57"
+    Reading database "hsSphere_rcf/processor58"
+    Reading database "hsSphere_rcf/processor59"
+
+Time = 1e-07
+
+
+Writing merged mesh to "1e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 30
+Read processor mesh: "hsSphere_rcf/processor30"
+Writing addressing : "hsSphere_rcf/processor30/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 31
+Read processor mesh: "hsSphere_rcf/processor31"
+Writing addressing : "hsSphere_rcf/processor31/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 32
+Read processor mesh: "hsSphere_rcf/processor32"
+Writing addressing : "hsSphere_rcf/processor32/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 33
+Read processor mesh: "hsSphere_rcf/processor33"
+Writing addressing : "hsSphere_rcf/processor33/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 34
+Read processor mesh: "hsSphere_rcf/processor34"
+Writing addressing : "hsSphere_rcf/processor34/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 35
+Read processor mesh: "hsSphere_rcf/processor35"
+Writing addressing : "hsSphere_rcf/processor35/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 36
+Read processor mesh: "hsSphere_rcf/processor36"
+Writing addressing : "hsSphere_rcf/processor36/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 37
+Read processor mesh: "hsSphere_rcf/processor37"
+Writing addressing : "hsSphere_rcf/processor37/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 38
+Read processor mesh: "hsSphere_rcf/processor38"
+Writing addressing : "hsSphere_rcf/processor38/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 39
+Read processor mesh: "hsSphere_rcf/processor39"
+Writing addressing : "hsSphere_rcf/processor39/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 40
+Read processor mesh: "hsSphere_rcf/processor40"
+Writing addressing : "hsSphere_rcf/processor40/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 41
+Read processor mesh: "hsSphere_rcf/processor41"
+Writing addressing : "hsSphere_rcf/processor41/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 42
+Read processor mesh: "hsSphere_rcf/processor42"
+Writing addressing : "hsSphere_rcf/processor42/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 43
+Read processor mesh: "hsSphere_rcf/processor43"
+Writing addressing : "hsSphere_rcf/processor43/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 44
+Read processor mesh: "hsSphere_rcf/processor44"
+Writing addressing : "hsSphere_rcf/processor44/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 45
+Read processor mesh: "hsSphere_rcf/processor45"
+Writing addressing : "hsSphere_rcf/processor45/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 46
+Read processor mesh: "hsSphere_rcf/processor46"
+Writing addressing : "hsSphere_rcf/processor46/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 47
+Read processor mesh: "hsSphere_rcf/processor47"
+Writing addressing : "hsSphere_rcf/processor47/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 48
+Read processor mesh: "hsSphere_rcf/processor48"
+Writing addressing : "hsSphere_rcf/processor48/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 49
+Read processor mesh: "hsSphere_rcf/processor49"
+Writing addressing : "hsSphere_rcf/processor49/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 50
+Read processor mesh: "hsSphere_rcf/processor50"
+Writing addressing : "hsSphere_rcf/processor50/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 51
+Read processor mesh: "hsSphere_rcf/processor51"
+Writing addressing : "hsSphere_rcf/processor51/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 52
+Read processor mesh: "hsSphere_rcf/processor52"
+Writing addressing : "hsSphere_rcf/processor52/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 53
+Read processor mesh: "hsSphere_rcf/processor53"
+Writing addressing : "hsSphere_rcf/processor53/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 54
+Read processor mesh: "hsSphere_rcf/processor54"
+Writing addressing : "hsSphere_rcf/processor54/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 55
+Read processor mesh: "hsSphere_rcf/processor55"
+Writing addressing : "hsSphere_rcf/processor55/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 56
+Read processor mesh: "hsSphere_rcf/processor56"
+Writing addressing : "hsSphere_rcf/processor56/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 57
+Read processor mesh: "hsSphere_rcf/processor57"
+Writing addressing : "hsSphere_rcf/processor57/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 58
+Read processor mesh: "hsSphere_rcf/processor58"
+Writing addressing : "hsSphere_rcf/processor58/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 59
+Read processor mesh: "hsSphere_rcf/processor59"
+Writing addressing : "hsSphere_rcf/processor59/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Time = 2e-07
+
+
+Writing merged mesh to "2e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 30
+Read processor mesh: "hsSphere_rcf/processor30"
+Writing addressing : "hsSphere_rcf/processor30/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 31
+Read processor mesh: "hsSphere_rcf/processor31"
+Writing addressing : "hsSphere_rcf/processor31/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 32
+Read processor mesh: "hsSphere_rcf/processor32"
+Writing addressing : "hsSphere_rcf/processor32/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 33
+Read processor mesh: "hsSphere_rcf/processor33"
+Writing addressing : "hsSphere_rcf/processor33/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 34
+Read processor mesh: "hsSphere_rcf/processor34"
+Writing addressing : "hsSphere_rcf/processor34/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 35
+Read processor mesh: "hsSphere_rcf/processor35"
+Writing addressing : "hsSphere_rcf/processor35/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 36
+Read processor mesh: "hsSphere_rcf/processor36"
+Writing addressing : "hsSphere_rcf/processor36/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 37
+Read processor mesh: "hsSphere_rcf/processor37"
+Writing addressing : "hsSphere_rcf/processor37/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 38
+Read processor mesh: "hsSphere_rcf/processor38"
+Writing addressing : "hsSphere_rcf/processor38/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 39
+Read processor mesh: "hsSphere_rcf/processor39"
+Writing addressing : "hsSphere_rcf/processor39/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 40
+Read processor mesh: "hsSphere_rcf/processor40"
+Writing addressing : "hsSphere_rcf/processor40/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 41
+Read processor mesh: "hsSphere_rcf/processor41"
+Writing addressing : "hsSphere_rcf/processor41/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 42
+Read processor mesh: "hsSphere_rcf/processor42"
+Writing addressing : "hsSphere_rcf/processor42/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 43
+Read processor mesh: "hsSphere_rcf/processor43"
+Writing addressing : "hsSphere_rcf/processor43/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 44
+Read processor mesh: "hsSphere_rcf/processor44"
+Writing addressing : "hsSphere_rcf/processor44/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 45
+Read processor mesh: "hsSphere_rcf/processor45"
+Writing addressing : "hsSphere_rcf/processor45/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 46
+Read processor mesh: "hsSphere_rcf/processor46"
+Writing addressing : "hsSphere_rcf/processor46/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 47
+Read processor mesh: "hsSphere_rcf/processor47"
+Writing addressing : "hsSphere_rcf/processor47/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 48
+Read processor mesh: "hsSphere_rcf/processor48"
+Writing addressing : "hsSphere_rcf/processor48/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 49
+Read processor mesh: "hsSphere_rcf/processor49"
+Writing addressing : "hsSphere_rcf/processor49/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 50
+Read processor mesh: "hsSphere_rcf/processor50"
+Writing addressing : "hsSphere_rcf/processor50/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 51
+Read processor mesh: "hsSphere_rcf/processor51"
+Writing addressing : "hsSphere_rcf/processor51/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 52
+Read processor mesh: "hsSphere_rcf/processor52"
+Writing addressing : "hsSphere_rcf/processor52/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 53
+Read processor mesh: "hsSphere_rcf/processor53"
+Writing addressing : "hsSphere_rcf/processor53/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 54
+Read processor mesh: "hsSphere_rcf/processor54"
+Writing addressing : "hsSphere_rcf/processor54/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 55
+Read processor mesh: "hsSphere_rcf/processor55"
+Writing addressing : "hsSphere_rcf/processor55/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 56
+Read processor mesh: "hsSphere_rcf/processor56"
+Writing addressing : "hsSphere_rcf/processor56/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 57
+Read processor mesh: "hsSphere_rcf/processor57"
+Writing addressing : "hsSphere_rcf/processor57/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 58
+Read processor mesh: "hsSphere_rcf/processor58"
+Writing addressing : "hsSphere_rcf/processor58/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 59
+Read processor mesh: "hsSphere_rcf/processor59"
+Writing addressing : "hsSphere_rcf/processor59/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Time = 3e-07
+
+
+Writing merged mesh to "3e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 30
+Read processor mesh: "hsSphere_rcf/processor30"
+Writing addressing : "hsSphere_rcf/processor30/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 31
+Read processor mesh: "hsSphere_rcf/processor31"
+Writing addressing : "hsSphere_rcf/processor31/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 32
+Read processor mesh: "hsSphere_rcf/processor32"
+Writing addressing : "hsSphere_rcf/processor32/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 33
+Read processor mesh: "hsSphere_rcf/processor33"
+Writing addressing : "hsSphere_rcf/processor33/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 34
+Read processor mesh: "hsSphere_rcf/processor34"
+Writing addressing : "hsSphere_rcf/processor34/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 35
+Read processor mesh: "hsSphere_rcf/processor35"
+Writing addressing : "hsSphere_rcf/processor35/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 36
+Read processor mesh: "hsSphere_rcf/processor36"
+Writing addressing : "hsSphere_rcf/processor36/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 37
+Read processor mesh: "hsSphere_rcf/processor37"
+Writing addressing : "hsSphere_rcf/processor37/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 38
+Read processor mesh: "hsSphere_rcf/processor38"
+Writing addressing : "hsSphere_rcf/processor38/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 39
+Read processor mesh: "hsSphere_rcf/processor39"
+Writing addressing : "hsSphere_rcf/processor39/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 40
+Read processor mesh: "hsSphere_rcf/processor40"
+Writing addressing : "hsSphere_rcf/processor40/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 41
+Read processor mesh: "hsSphere_rcf/processor41"
+Writing addressing : "hsSphere_rcf/processor41/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 42
+Read processor mesh: "hsSphere_rcf/processor42"
+Writing addressing : "hsSphere_rcf/processor42/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 43
+Read processor mesh: "hsSphere_rcf/processor43"
+Writing addressing : "hsSphere_rcf/processor43/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 44
+Read processor mesh: "hsSphere_rcf/processor44"
+Writing addressing : "hsSphere_rcf/processor44/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 45
+Read processor mesh: "hsSphere_rcf/processor45"
+Writing addressing : "hsSphere_rcf/processor45/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 46
+Read processor mesh: "hsSphere_rcf/processor46"
+Writing addressing : "hsSphere_rcf/processor46/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 47
+Read processor mesh: "hsSphere_rcf/processor47"
+Writing addressing : "hsSphere_rcf/processor47/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 48
+Read processor mesh: "hsSphere_rcf/processor48"
+Writing addressing : "hsSphere_rcf/processor48/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 49
+Read processor mesh: "hsSphere_rcf/processor49"
+Writing addressing : "hsSphere_rcf/processor49/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 50
+Read processor mesh: "hsSphere_rcf/processor50"
+Writing addressing : "hsSphere_rcf/processor50/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 51
+Read processor mesh: "hsSphere_rcf/processor51"
+Writing addressing : "hsSphere_rcf/processor51/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 52
+Read processor mesh: "hsSphere_rcf/processor52"
+Writing addressing : "hsSphere_rcf/processor52/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 53
+Read processor mesh: "hsSphere_rcf/processor53"
+Writing addressing : "hsSphere_rcf/processor53/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 54
+Read processor mesh: "hsSphere_rcf/processor54"
+Writing addressing : "hsSphere_rcf/processor54/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 55
+Read processor mesh: "hsSphere_rcf/processor55"
+Writing addressing : "hsSphere_rcf/processor55/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 56
+Read processor mesh: "hsSphere_rcf/processor56"
+Writing addressing : "hsSphere_rcf/processor56/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 57
+Read processor mesh: "hsSphere_rcf/processor57"
+Writing addressing : "hsSphere_rcf/processor57/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 58
+Read processor mesh: "hsSphere_rcf/processor58"
+Writing addressing : "hsSphere_rcf/processor58/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 59
+Read processor mesh: "hsSphere_rcf/processor59"
+Writing addressing : "hsSphere_rcf/processor59/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+End
+
+./mvPMesh.sh: line 2: d: command not found
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+(standard_in) 1: syntax error
+Highest numbered directory: 0. Moving to constant/polyMesh
+mv: cannot stat '0/polyMesh': No such file or directory
+./Allclean.sh: line 9: print: command not found
+./Allclean.sh: line 13: print: command not found
+Removing 1e-07
+Removing 2e-07
+Removing 3e-07
+Removing processor0
+Removing processor1
+Removing processor10
+Removing processor11
+Removing processor12
+Removing processor13
+Removing processor14
+Removing processor15
+Removing processor16
+Removing processor17
+Removing processor18
+Removing processor19
+Removing processor2
+Removing processor20
+Removing processor21
+Removing processor22
+Removing processor23
+Removing processor24
+Removing processor25
+Removing processor26
+Removing processor27
+Removing processor28
+Removing processor29
+Removing processor3
+Removing processor30
+Removing processor31
+Removing processor32
+Removing processor33
+Removing processor34
+Removing processor35
+Removing processor36
+Removing processor37
+Removing processor38
+Removing processor39
+Removing processor4
+Removing processor40
+Removing processor41
+Removing processor42
+Removing processor43
+Removing processor44
+Removing processor45
+Removing processor46
+Removing processor47
+Removing processor48
+Removing processor49
+Removing processor5
+Removing processor50
+Removing processor51
+Removing processor52
+Removing processor53
+Removing processor54
+Removing processor55
+Removing processor56
+Removing processor57
+Removing processor58
+Removing processor59
+Removing processor6
+Removing processor7
+Removing processor8
+Removing processor9
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:51:28
+Host   : udc-ba02-12c0
+PID    : 511073
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+Cannot find file "points" in directory "polyMesh" in times "0" down to constant
+
+    From virtual Foam::IOobject Foam::fileOperation::findInstance(const Foam::IOobject&, Foam::scalar, const Foam::word&) const
+    in file global/fileOperations/fileOperation/fileOperation.C at line 1211.
+
+FOAM exiting
+
+./runsolver.sh: line 18: print: command not found
+./runsolver.sh: line 14: print: command not found
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:51:29
+Host   : udc-ba02-12c0
+PID    : 511079
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+Cannot find file "points" in directory "polyMesh" in times "0" down to constant
+
+    From virtual Foam::IOobject Foam::fileOperation::findInstance(const Foam::IOobject&, Foam::scalar, const Foam::word&) const
+    in file global/fileOperations/fileOperation/fileOperation.C at line 1211.
+
+FOAM exiting
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : rhoCentralFoam -parallel
+Date   : Feb 18 2025
+Time   : 21:51:39
+Host   : udc-ba02-12c0
+PID    : 511107
+I/O    : uncollated
+Case   : /sfs/weka/scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 60
+Hosts  :
+(
+    (udc-ba02-12c0 32)
+    (udc-ba02-12c1 28)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: (openfoam-2312)
+[0] rhoCentralFoam: cannot open case directory "/sfs/weka/scratch/ndk9pg/foamCases/hsSphere_rcf/processor0"
+[0] 
+[0] 
+FOAM parallel run exiting
+[0] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructPar
+Date   : Feb 18 2025
+Time   : 21:51:47
+Host   : udc-ba02-12c0
+PID    : 511257
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+No processor* directories found
+
+    From int main(int, char**)
+    in file reconstructPar.C at line 227.
+
+FOAM exiting
+
+rm: cannot remove 'processor*/': No such file or directory

@@ -1,0 +1,466 @@
+Please use mpirun instead of srun to run your MPI job
+Running with 60 processor cores
+./runmesh.sh: line 23: ./system/updateParDict: No such file or directory
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Feb 18 2025
+Time   : 21:40:18
+Host   : udc-ba04-3c0
+PID    : 375584
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.0496029787234042 .. 0.0496029787234034
+        j : 0.0494351000000001 .. 0.0494351000000001
+        k : 0.0494350999999998 .. 0.0494350999999998
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-1 -0.988702 -0.988702) (3.66268 0.988702 0.988702)
+  nPoints: 159695
+  nCells: 150400
+  nFaces: 460320
+  nInternalFaces: 442080
+----------------
+Patches
+----------------
+  patch 0 (start: 442080 size: 1600) name: inlet1
+  patch 1 (start: 443680 size: 1600) name: outlet1
+  patch 2 (start: 445280 size: 15040) name: walls
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:40:19
+Host   : udc-ba04-3c0
+PID    : 375591
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method scotch [8] (region region0)
+
+Finished decomposition in 2.84 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 18614
+    Number of points = 21006
+    Number of faces shared with processor 1 = 929
+    Number of faces shared with processor 2 = 525
+    Number of faces shared with processor 3 = 534
+    Number of faces shared with processor 5 = 408
+    Number of processor patches = 4
+    Number of processor faces = 2396
+    Number of boundary faces = 2206
+
+Processor 1
+    Number of cells = 18987
+    Number of points = 21443
+    Number of faces shared with processor 0 = 929
+    Number of faces shared with processor 2 = 456
+    Number of faces shared with processor 3 = 518
+    Number of faces shared with processor 5 = 400
+    Number of faces shared with processor 6 = 89
+    Number of processor patches = 5
+    Number of processor faces = 2392
+    Number of boundary faces = 2338
+
+Processor 2
+    Number of cells = 18612
+    Number of points = 21009
+    Number of faces shared with processor 0 = 525
+    Number of faces shared with processor 1 = 456
+    Number of faces shared with processor 3 = 738
+    Number of faces shared with processor 5 = 188
+    Number of faces shared with processor 6 = 870
+    Number of processor patches = 5
+    Number of processor faces = 2777
+    Number of boundary faces = 1833
+
+Processor 3
+    Number of cells = 18699
+    Number of points = 21028
+    Number of faces shared with processor 0 = 534
+    Number of faces shared with processor 1 = 518
+    Number of faces shared with processor 2 = 738
+    Number of processor patches = 3
+    Number of processor faces = 1790
+    Number of boundary faces = 2696
+
+Processor 4
+    Number of cells = 18986
+    Number of points = 21304
+    Number of faces shared with processor 5 = 753
+    Number of faces shared with processor 6 = 130
+    Number of faces shared with processor 7 = 894
+    Number of processor patches = 3
+    Number of processor faces = 1777
+    Number of boundary faces = 2689
+
+Processor 5
+    Number of cells = 18803
+    Number of points = 21219
+    Number of faces shared with processor 0 = 408
+    Number of faces shared with processor 1 = 400
+    Number of faces shared with processor 2 = 188
+    Number of faces shared with processor 4 = 753
+    Number of faces shared with processor 6 = 892
+    Number of faces shared with processor 7 = 105
+    Number of processor patches = 6
+    Number of processor faces = 2746
+    Number of boundary faces = 1906
+
+Processor 6
+    Number of cells = 18724
+    Number of points = 21215
+    Number of faces shared with processor 1 = 89
+    Number of faces shared with processor 2 = 870
+    Number of faces shared with processor 4 = 130
+    Number of faces shared with processor 5 = 892
+    Number of faces shared with processor 7 = 967
+    Number of processor patches = 5
+    Number of processor faces = 2948
+    Number of boundary faces = 1846
+
+Processor 7
+    Number of cells = 18975
+    Number of points = 21412
+    Number of faces shared with processor 4 = 894
+    Number of faces shared with processor 5 = 105
+    Number of faces shared with processor 6 = 967
+    Number of processor patches = 3
+    Number of processor faces = 1966
+    Number of boundary faces = 2726
+
+Number of processor faces = 9396
+Max number of cells = 18987 (0.99468085106383% above average 18800)
+Max number of processor patches = 6 (41.1764705882353% above average 4.25)
+Max number of faces between processors = 2948 (25.5002128565347% above average 2349)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : snappyHexMesh -parallel
+Date   : Feb 18 2025
+Time   : 21:40:27
+Host   : udc-ba04-3c0
+PID    : 375708
+I/O    : uncollated
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: (openfoam-2312)
+[0] number of processor directories = 8 is not equal to the number of processors = 60
+[0] 
+FOAM parallel run exiting
+[0] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh
+Date   : Feb 18 2025
+Time   : 21:40:29
+Host   : udc-ba04-3c0
+PID    : 375785
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 8 processor directories
+    Reading database "hsSphere_rcf/processor0"
+    Reading database "hsSphere_rcf/processor1"
+    Reading database "hsSphere_rcf/processor2"
+    Reading database "hsSphere_rcf/processor3"
+    Reading database "hsSphere_rcf/processor4"
+    Reading database "hsSphere_rcf/processor5"
+    Reading database "hsSphere_rcf/processor6"
+    Reading database "hsSphere_rcf/processor7"
+
+End
+
+./mvPMesh.sh: line 2: d: command not found
+No valid numbered directories found.
+mv: cannot stat '/polyMesh': No such file or directory
+./Allclean.sh: line 9: print: command not found
+./Allclean.sh: line 13: print: command not found
+Removing processor0
+Removing processor1
+Removing processor2
+Removing processor3
+Removing processor4
+Removing processor5
+Removing processor6
+Removing processor7
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:40:32
+Host   : udc-ba04-3c0
+PID    : 375819
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+Cannot find file "points" in directory "polyMesh" in times "0" down to constant
+
+    From virtual Foam::IOobject Foam::fileOperation::findInstance(const Foam::IOobject&, Foam::scalar, const Foam::word&) const
+    in file global/fileOperations/fileOperation/fileOperation.C at line 1211.
+
+FOAM exiting
+
+./runsolver.sh: line 18: print: command not found
+./runsolver.sh: line 14: print: command not found
+./runsolver.sh: line 28: ./system/updateParDict: No such file or directory
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 21:40:32
+Host   : udc-ba04-3c0
+PID    : 375823
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+Cannot find file "points" in directory "polyMesh" in times "0" down to constant
+
+    From virtual Foam::IOobject Foam::fileOperation::findInstance(const Foam::IOobject&, Foam::scalar, const Foam::word&) const
+    in file global/fileOperations/fileOperation/fileOperation.C at line 1211.
+
+FOAM exiting
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : rhoCentralFoam -parallel
+Date   : Feb 18 2025
+Time   : 21:40:35
+Host   : udc-ba04-3c0
+PID    : 375834
+I/O    : uncollated
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: (openfoam-2312)
+[0] number of processor directories = 0 is not equal to the number of processors = 60
+[0] 
+FOAM parallel run exiting
+[0] 
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructPar
+Date   : Feb 18 2025
+Time   : 21:40:37
+Host   : udc-ba04-3c0
+PID    : 375898
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+--> FOAM FATAL ERROR: (openfoam-2312)
+No processor* directories found
+
+    From int main(int, char**)
+    in file reconstructPar.C at line 227.
+
+FOAM exiting
+
+rm: cannot remove 'processor*/': No such file or directory

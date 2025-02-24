@@ -1,0 +1,3311 @@
+Please use mpirun instead of srun to run your MPI job
+Running with 30 processor cores
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Feb 18 2025
+Time   : 22:07:39
+Host   : udc-aw34-5c0
+PID    : 481830
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.0496029787234042 .. 0.0496029787234034
+        j : 0.0494351000000001 .. 0.0494351000000001
+        k : 0.0494350999999998 .. 0.0494350999999998
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-1 -0.988702 -0.988702) (3.66268 0.988702 0.988702)
+  nPoints: 159695
+  nCells: 150400
+  nFaces: 460320
+  nInternalFaces: 442080
+----------------
+Patches
+----------------
+  patch 0 (start: 442080 size: 1600) name: inlet1
+  patch 1 (start: 443680 size: 1600) name: outlet1
+  patch 2 (start: 445280 size: 15040) name: walls
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Feb 18 2025
+Time   : 22:07:40
+Host   : udc-aw34-5c0
+PID    : 481831
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method scotch [30] (region region0)
+
+Finished decomposition in 2.77 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 5037
+    Number of points = 6075
+    Number of faces shared with processor 1 = 422
+    Number of faces shared with processor 3 = 130
+    Number of faces shared with processor 4 = 137
+    Number of faces shared with processor 10 = 176
+    Number of faces shared with processor 12 = 114
+    Number of faces shared with processor 27 = 38
+    Number of faces shared with processor 28 = 110
+    Number of faces shared with processor 29 = 201
+    Number of processor patches = 8
+    Number of processor faces = 1328
+    Number of boundary faces = 632
+
+Processor 1
+    Number of cells = 4978
+    Number of points = 6030
+    Number of faces shared with processor 0 = 422
+    Number of faces shared with processor 2 = 263
+    Number of faces shared with processor 3 = 113
+    Number of faces shared with processor 4 = 96
+    Number of faces shared with processor 5 = 207
+    Number of faces shared with processor 10 = 250
+    Number of faces shared with processor 12 = 60
+    Number of faces shared with processor 14 = 52
+    Number of faces shared with processor 22 = 57
+    Number of faces shared with processor 27 = 226
+    Number of faces shared with processor 28 = 34
+    Number of processor patches = 11
+    Number of processor faces = 1780
+    Number of boundary faces = 202
+
+Processor 2
+    Number of cells = 5050
+    Number of points = 6053
+    Number of faces shared with processor 1 = 263
+    Number of faces shared with processor 5 = 386
+    Number of faces shared with processor 7 = 86
+    Number of faces shared with processor 8 = 227
+    Number of faces shared with processor 10 = 47
+    Number of faces shared with processor 27 = 261
+    Number of processor patches = 6
+    Number of processor faces = 1270
+    Number of boundary faces = 622
+
+Processor 3
+    Number of cells = 4976
+    Number of points = 5982
+    Number of faces shared with processor 0 = 130
+    Number of faces shared with processor 1 = 113
+    Number of faces shared with processor 4 = 408
+    Number of faces shared with processor 5 = 74
+    Number of faces shared with processor 6 = 116
+    Number of faces shared with processor 22 = 111
+    Number of faces shared with processor 24 = 236
+    Number of faces shared with processor 25 = 107
+    Number of faces shared with processor 28 = 104
+    Number of processor patches = 9
+    Number of processor faces = 1399
+    Number of boundary faces = 499
+
+Processor 4
+    Number of cells = 5059
+    Number of points = 6068
+    Number of faces shared with processor 0 = 137
+    Number of faces shared with processor 1 = 96
+    Number of faces shared with processor 3 = 408
+    Number of faces shared with processor 5 = 114
+    Number of faces shared with processor 6 = 156
+    Number of faces shared with processor 11 = 168
+    Number of faces shared with processor 12 = 102
+    Number of faces shared with processor 14 = 174
+    Number of processor patches = 8
+    Number of processor faces = 1355
+    Number of boundary faces = 549
+
+Processor 5
+    Number of cells = 4963
+    Number of points = 6004
+    Number of faces shared with processor 1 = 207
+    Number of faces shared with processor 2 = 386
+    Number of faces shared with processor 3 = 74
+    Number of faces shared with processor 4 = 114
+    Number of faces shared with processor 6 = 374
+    Number of faces shared with processor 7 = 120
+    Number of faces shared with processor 14 = 101
+    Number of faces shared with processor 22 = 261
+    Number of faces shared with processor 27 = 45
+    Number of processor patches = 9
+    Number of processor faces = 1682
+    Number of boundary faces = 282
+
+Processor 6
+    Number of cells = 5016
+    Number of points = 6093
+    Number of faces shared with processor 3 = 116
+    Number of faces shared with processor 4 = 156
+    Number of faces shared with processor 5 = 374
+    Number of faces shared with processor 7 = 21
+    Number of faces shared with processor 13 = 119
+    Number of faces shared with processor 14 = 189
+    Number of faces shared with processor 22 = 68
+    Number of faces shared with processor 25 = 185
+    Number of processor patches = 8
+    Number of processor faces = 1228
+    Number of boundary faces = 798
+
+Processor 7
+    Number of cells = 5055
+    Number of points = 6118
+    Number of faces shared with processor 2 = 86
+    Number of faces shared with processor 5 = 120
+    Number of faces shared with processor 6 = 21
+    Number of faces shared with processor 8 = 432
+    Number of faces shared with processor 9 = 112
+    Number of faces shared with processor 10 = 81
+    Number of faces shared with processor 12 = 76
+    Number of faces shared with processor 13 = 322
+    Number of faces shared with processor 14 = 243
+    Number of processor patches = 9
+    Number of processor faces = 1493
+    Number of boundary faces = 515
+
+Processor 8
+    Number of cells = 4965
+    Number of points = 5963
+    Number of faces shared with processor 2 = 227
+    Number of faces shared with processor 7 = 432
+    Number of faces shared with processor 9 = 171
+    Number of faces shared with processor 10 = 141
+    Number of processor patches = 4
+    Number of processor faces = 971
+    Number of boundary faces = 911
+
+Processor 9
+    Number of cells = 4963
+    Number of points = 5973
+    Number of faces shared with processor 7 = 112
+    Number of faces shared with processor 8 = 171
+    Number of faces shared with processor 10 = 338
+    Number of faces shared with processor 12 = 335
+    Number of processor patches = 4
+    Number of processor faces = 956
+    Number of boundary faces = 950
+
+Processor 10
+    Number of cells = 5009
+    Number of points = 6010
+    Number of faces shared with processor 0 = 176
+    Number of faces shared with processor 1 = 250
+    Number of faces shared with processor 2 = 47
+    Number of faces shared with processor 7 = 81
+    Number of faces shared with processor 8 = 141
+    Number of faces shared with processor 9 = 338
+    Number of faces shared with processor 12 = 255
+    Number of faces shared with processor 14 = 63
+    Number of processor patches = 8
+    Number of processor faces = 1351
+    Number of boundary faces = 537
+
+Processor 11
+    Number of cells = 4972
+    Number of points = 5982
+    Number of faces shared with processor 4 = 168
+    Number of faces shared with processor 12 = 414
+    Number of faces shared with processor 13 = 150
+    Number of faces shared with processor 14 = 226
+    Number of processor patches = 4
+    Number of processor faces = 958
+    Number of boundary faces = 946
+
+Processor 12
+    Number of cells = 5063
+    Number of points = 6171
+    Number of faces shared with processor 0 = 114
+    Number of faces shared with processor 1 = 60
+    Number of faces shared with processor 4 = 102
+    Number of faces shared with processor 7 = 76
+    Number of faces shared with processor 9 = 335
+    Number of faces shared with processor 10 = 255
+    Number of faces shared with processor 11 = 414
+    Number of faces shared with processor 13 = 85
+    Number of faces shared with processor 14 = 214
+    Number of processor patches = 9
+    Number of processor faces = 1655
+    Number of boundary faces = 437
+
+Processor 13
+    Number of cells = 5002
+    Number of points = 6117
+    Number of faces shared with processor 6 = 119
+    Number of faces shared with processor 7 = 322
+    Number of faces shared with processor 11 = 150
+    Number of faces shared with processor 12 = 85
+    Number of faces shared with processor 14 = 440
+    Number of processor patches = 5
+    Number of processor faces = 1116
+    Number of boundary faces = 984
+
+Processor 14
+    Number of cells = 5017
+    Number of points = 6067
+    Number of faces shared with processor 1 = 52
+    Number of faces shared with processor 4 = 174
+    Number of faces shared with processor 5 = 101
+    Number of faces shared with processor 6 = 189
+    Number of faces shared with processor 7 = 243
+    Number of faces shared with processor 10 = 63
+    Number of faces shared with processor 11 = 226
+    Number of faces shared with processor 12 = 214
+    Number of faces shared with processor 13 = 440
+    Number of processor patches = 9
+    Number of processor faces = 1702
+    Number of boundary faces = 278
+
+Processor 15
+    Number of cells = 4990
+    Number of points = 6020
+    Number of faces shared with processor 16 = 168
+    Number of faces shared with processor 17 = 148
+    Number of faces shared with processor 18 = 423
+    Number of faces shared with processor 23 = 36
+    Number of faces shared with processor 26 = 268
+    Number of processor patches = 5
+    Number of processor faces = 1043
+    Number of boundary faces = 901
+
+Processor 16
+    Number of cells = 5063
+    Number of points = 6094
+    Number of faces shared with processor 15 = 168
+    Number of faces shared with processor 17 = 430
+    Number of faces shared with processor 18 = 103
+    Number of faces shared with processor 20 = 180
+    Number of faces shared with processor 21 = 5
+    Number of faces shared with processor 23 = 18
+    Number of faces shared with processor 26 = 113
+    Number of faces shared with processor 28 = 189
+    Number of faces shared with processor 29 = 217
+    Number of processor patches = 9
+    Number of processor faces = 1423
+    Number of boundary faces = 523
+
+Processor 17
+    Number of cells = 5007
+    Number of points = 6046
+    Number of faces shared with processor 15 = 148
+    Number of faces shared with processor 16 = 430
+    Number of faces shared with processor 18 = 163
+    Number of faces shared with processor 20 = 30
+    Number of faces shared with processor 21 = 223
+    Number of processor patches = 5
+    Number of processor faces = 994
+    Number of boundary faces = 964
+
+Processor 18
+    Number of cells = 5063
+    Number of points = 6127
+    Number of faces shared with processor 15 = 423
+    Number of faces shared with processor 16 = 103
+    Number of faces shared with processor 17 = 163
+    Number of faces shared with processor 19 = 352
+    Number of faces shared with processor 20 = 140
+    Number of faces shared with processor 21 = 112
+    Number of faces shared with processor 23 = 272
+    Number of processor patches = 7
+    Number of processor faces = 1565
+    Number of boundary faces = 445
+
+Processor 19
+    Number of cells = 5063
+    Number of points = 6080
+    Number of faces shared with processor 18 = 352
+    Number of faces shared with processor 20 = 226
+    Number of faces shared with processor 21 = 186
+    Number of faces shared with processor 23 = 137
+    Number of faces shared with processor 25 = 80
+    Number of processor patches = 5
+    Number of processor faces = 981
+    Number of boundary faces = 939
+
+Processor 20
+    Number of cells = 5019
+    Number of points = 6147
+    Number of faces shared with processor 16 = 180
+    Number of faces shared with processor 17 = 30
+    Number of faces shared with processor 18 = 140
+    Number of faces shared with processor 19 = 226
+    Number of faces shared with processor 21 = 433
+    Number of faces shared with processor 23 = 142
+    Number of faces shared with processor 24 = 272
+    Number of faces shared with processor 25 = 122
+    Number of faces shared with processor 28 = 115
+    Number of processor patches = 9
+    Number of processor faces = 1660
+    Number of boundary faces = 464
+
+Processor 21
+    Number of cells = 5028
+    Number of points = 6019
+    Number of faces shared with processor 16 = 5
+    Number of faces shared with processor 17 = 223
+    Number of faces shared with processor 18 = 112
+    Number of faces shared with processor 19 = 186
+    Number of faces shared with processor 20 = 433
+    Number of processor patches = 5
+    Number of processor faces = 959
+    Number of boundary faces = 911
+
+Processor 22
+    Number of cells = 5015
+    Number of points = 6009
+    Number of faces shared with processor 1 = 57
+    Number of faces shared with processor 3 = 111
+    Number of faces shared with processor 5 = 261
+    Number of faces shared with processor 6 = 68
+    Number of faces shared with processor 23 = 385
+    Number of faces shared with processor 24 = 36
+    Number of faces shared with processor 25 = 259
+    Number of faces shared with processor 26 = 97
+    Number of faces shared with processor 27 = 215
+    Number of faces shared with processor 28 = 164
+    Number of faces shared with processor 29 = 7
+    Number of processor patches = 11
+    Number of processor faces = 1660
+    Number of boundary faces = 216
+
+Processor 23
+    Number of cells = 5063
+    Number of points = 6115
+    Number of faces shared with processor 15 = 36
+    Number of faces shared with processor 16 = 18
+    Number of faces shared with processor 18 = 272
+    Number of faces shared with processor 19 = 137
+    Number of faces shared with processor 20 = 142
+    Number of faces shared with processor 22 = 385
+    Number of faces shared with processor 24 = 66
+    Number of faces shared with processor 25 = 308
+    Number of faces shared with processor 26 = 230
+    Number of faces shared with processor 28 = 170
+    Number of processor patches = 10
+    Number of processor faces = 1764
+    Number of boundary faces = 224
+
+Processor 24
+    Number of cells = 5010
+    Number of points = 5970
+    Number of faces shared with processor 3 = 236
+    Number of faces shared with processor 20 = 272
+    Number of faces shared with processor 22 = 36
+    Number of faces shared with processor 23 = 66
+    Number of faces shared with processor 25 = 212
+    Number of faces shared with processor 28 = 341
+    Number of processor patches = 6
+    Number of processor faces = 1163
+    Number of boundary faces = 649
+
+Processor 25
+    Number of cells = 4963
+    Number of points = 6031
+    Number of faces shared with processor 3 = 107
+    Number of faces shared with processor 6 = 185
+    Number of faces shared with processor 19 = 80
+    Number of faces shared with processor 20 = 122
+    Number of faces shared with processor 22 = 259
+    Number of faces shared with processor 23 = 308
+    Number of faces shared with processor 24 = 212
+    Number of processor patches = 7
+    Number of processor faces = 1273
+    Number of boundary faces = 741
+
+Processor 26
+    Number of cells = 4995
+    Number of points = 5976
+    Number of faces shared with processor 15 = 268
+    Number of faces shared with processor 16 = 113
+    Number of faces shared with processor 22 = 97
+    Number of faces shared with processor 23 = 230
+    Number of faces shared with processor 27 = 333
+    Number of faces shared with processor 28 = 30
+    Number of faces shared with processor 29 = 205
+    Number of processor patches = 7
+    Number of processor faces = 1276
+    Number of boundary faces = 576
+
+Processor 27
+    Number of cells = 4970
+    Number of points = 5991
+    Number of faces shared with processor 0 = 38
+    Number of faces shared with processor 1 = 226
+    Number of faces shared with processor 2 = 261
+    Number of faces shared with processor 5 = 45
+    Number of faces shared with processor 22 = 215
+    Number of faces shared with processor 26 = 333
+    Number of faces shared with processor 28 = 34
+    Number of faces shared with processor 29 = 239
+    Number of processor patches = 8
+    Number of processor faces = 1391
+    Number of boundary faces = 533
+
+Processor 28
+    Number of cells = 5063
+    Number of points = 6118
+    Number of faces shared with processor 0 = 110
+    Number of faces shared with processor 1 = 34
+    Number of faces shared with processor 3 = 104
+    Number of faces shared with processor 16 = 189
+    Number of faces shared with processor 20 = 115
+    Number of faces shared with processor 22 = 164
+    Number of faces shared with processor 23 = 170
+    Number of faces shared with processor 24 = 341
+    Number of faces shared with processor 26 = 30
+    Number of faces shared with processor 27 = 34
+    Number of faces shared with processor 29 = 397
+    Number of processor patches = 11
+    Number of processor faces = 1688
+    Number of boundary faces = 304
+
+Processor 29
+    Number of cells = 4963
+    Number of points = 6012
+    Number of faces shared with processor 0 = 201
+    Number of faces shared with processor 16 = 217
+    Number of faces shared with processor 22 = 7
+    Number of faces shared with processor 26 = 205
+    Number of faces shared with processor 27 = 239
+    Number of faces shared with processor 28 = 397
+    Number of processor patches = 6
+    Number of processor faces = 1266
+    Number of boundary faces = 708
+
+Number of processor faces = 20175
+Max number of cells = 5063 (0.990691489361708% above average 5013.33333333333)
+Max number of processor patches = 11 (48.6486486486486% above average 7.4)
+Max number of faces between processors = 1780 (32.3420074349442% above average 1345)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+Processor 6: field transfer
+Processor 7: field transfer
+Processor 8: field transfer
+Processor 9: field transfer
+Processor 10: field transfer
+Processor 11: field transfer
+Processor 12: field transfer
+Processor 13: field transfer
+Processor 14: field transfer
+Processor 15: field transfer
+Processor 16: field transfer
+Processor 17: field transfer
+Processor 18: field transfer
+Processor 19: field transfer
+Processor 20: field transfer
+Processor 21: field transfer
+Processor 22: field transfer
+Processor 23: field transfer
+Processor 24: field transfer
+Processor 25: field transfer
+Processor 26: field transfer
+Processor 27: field transfer
+Processor 28: field transfer
+Processor 29: field transfer
+
+End
+
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : snappyHexMesh -parallel
+Date   : Feb 18 2025
+Time   : 22:07:44
+Host   : udc-aw34-5c0
+PID    : 481875
+I/O    : uncollated
+Case   : /sfs/weka/scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 30
+Hosts  :
+(
+    (udc-aw34-5c0 30)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 0.02 s
+
+Overall mesh bounding box  : (-1 -0.988702 -0.988702) (3.66268 0.988702 0.988702)
+Relative tolerance         : 1e-06
+Absolute matching distance : 5.43698794746062e-06
+
+Reading refinement surfaces.
+Read refinement surfaces in = 0 s
+
+Reading refinement shells.
+Read refinement shells in = 0 s
+
+Setting refinement level of surface to be consistent with shells.
+Checked shell refinement in = 0 s
+
+Reading features.
+Read features in = 0 s
+
+
+Determining initial surface intersections
+-----------------------------------------
+
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 0
+    Number of intersected edges : 0
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 460320
+    Number of intersected edges : 248
+Calculated surface intersections in = 0.04 s
+
+Initial mesh : cells:150400  faces:460320  points:159695  unbalance:0.0100398936170212
+Cells per refinement level:
+    0	150400
+Setting refinement level of surface to be consistent with curvature.
+Checked curvature refinement in = 0 s
+
+
+Adding patches for surface regions
+----------------------------------
+
+Patch Type                Region                        
+----- ----                ------                        
+sphere:
+
+3     wall                sphere                        
+
+Added patches in = 0 s
+
+Edge intersection testing:
+    Number of edges             : 460320
+    Number of edges to retest   : 0
+    Number of intersected edges : 248
+Decomposition method scotch [30]
+
+Refinement phase
+----------------
+
+Found point (0 0.5 0.5) in cell 2309 on processor 20
+
+Surface refinement iteration 0
+------------------------------
+
+Marked for refinement due to surface intersection          : 272 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 272 cells (out of 150400)
+Edge intersection testing:
+    Number of edges             : 466812
+    Number of edges to retest   : 8428
+    Number of intersected edges : 984
+Refined mesh in = 0.05 s
+After refinement surface refinement iteration 0 : cells:152304  faces:466812  points:162391  unbalance:0.169634415379767
+Cells per refinement level:
+    0	150128
+    1	2176
+Skipping balancing since max unbalance 0.169634415379767 is less than allowable 0.2
+
+Surface refinement iteration 1
+------------------------------
+
+Marked for refinement due to surface intersection          : 1092 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 1232 cells (out of 152304)
+Edge intersection testing:
+    Number of edges             : 495708
+    Number of edges to retest   : 37632
+    Number of intersected edges : 3968
+Refined mesh in = 0.06 s
+After refinement surface refinement iteration 1 : cells:160928  faces:495708  points:174057  unbalance:0.85076555975343
+Cells per refinement level:
+    0	149984
+    1	2240
+    2	8704
+Balancing since max unbalance 0.85076555975343 is larger than allowable 0.2
+Balanced mesh in = 2.01 s
+After balancing surface refinement iteration 1 : cells:160928  faces:495708  points:174057  unbalance:0.00992990654205606
+Cells per refinement level:
+    0	149984
+    1	2240
+    2	8704
+
+Surface refinement iteration 2
+------------------------------
+
+Marked for refinement due to surface intersection          : 4420 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.01 s
+Selected for refinement : 4936 cells (out of 160928)
+Edge intersection testing:
+    Number of edges             : 611376
+    Number of edges to retest   : 151252
+    Number of intersected edges : 15912
+Refined mesh in = 0.14 s
+After refinement surface refinement iteration 2 : cells:195480  faces:611376  points:220638  unbalance:2.24969306322897
+Cells per refinement level:
+    0	149928
+    1	2192
+    2	8288
+    3	35072
+Balancing since max unbalance 2.24969306322897 is larger than allowable 0.2
+Balanced mesh in = 2.1 s
+After balancing surface refinement iteration 2 : cells:195480  faces:611376  points:220638  unbalance:0.00997544505831804
+Cells per refinement level:
+    0	149928
+    1	2192
+    2	8288
+    3	35072
+
+Surface refinement iteration 3
+------------------------------
+
+Marked for refinement due to surface intersection          : 144 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.02 s
+Selected for refinement : 160 cells (out of 195480)
+Edge intersection testing:
+    Number of edges             : 614736
+    Number of edges to retest   : 15024
+    Number of intersected edges : 15948
+Refined mesh in = 0.05 s
+After refinement surface refinement iteration 3 : cells:196600  faces:614736  points:221758  unbalance:0.0351983723296032
+Cells per refinement level:
+    0	149928
+    1	2176
+    2	8272
+    3	36224
+Skipping balancing since max unbalance 0.0351983723296032 is less than allowable 0.2
+
+Surface refinement iteration 4
+------------------------------
+
+Marked for refinement due to surface intersection          : 0 cells.
+Marked for refinement due to curvature/regions             : 0 cells.
+Determined cells to refine in = 0.02 s
+Selected for refinement : 0 cells (out of 196600)
+Stopping refining since too few cells selected.
+
+
+Removing mesh beyond surface intersections
+------------------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 2 regions.
+--> FOAM Warning : 
+    From void Foam::meshRefinement::nearestFace(const labelUList&, const Foam::bitSet&, Foam::autoPtr<Foam::mapDistribute>&, Foam::labelList&, Foam::label) const
+    in file meshRefinement/meshRefinement.C at line 515
+    Did not visit some faces, e.g. face 0 at (2.5218114893617 -0.12358775 0.37076325)
+Keeping all cells containing inside points
+Selected for keeping : 189880 cells.
+Edge intersection testing:
+    Number of edges             : 596936
+    Number of edges to retest   : 12112
+    Number of intersected edges : 15948
+
+Shell refinement iteration 0
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.05 s
+Selected for internal refinement : 4196 cells (out of 189880)
+Edge intersection testing:
+    Number of edges             : 686300
+    Number of edges to retest   : 194255
+    Number of intersected edges : 15948
+Refined mesh in = 0.09 s
+After refinement shell refinement iteration 0 : cells:219252  faces:686300  points:247654  unbalance:0.421651797931148
+Cells per refinement level:
+    0	149668
+    1	2675
+    2	7509
+    3	59400
+Balancing since max unbalance 0.421651797931148 is larger than allowable 0.2
+Balanced mesh in = 2.14 s
+After balancing shell refinement iteration 0 : cells:219252  faces:686300  points:247693  unbalance:0.0100432379180121
+Cells per refinement level:
+    0	149668
+    1	2675
+    2	7509
+    3	59400
+
+Shell refinement iteration 1
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.02 s
+Selected for internal refinement : 898 cells (out of 219252)
+Edge intersection testing:
+    Number of edges             : 705554
+    Number of edges to retest   : 61436
+    Number of intersected edges : 15948
+Refined mesh in = 0.06 s
+After refinement shell refinement iteration 1 : cells:225538  faces:705554  points:254377  unbalance:0.0576044835016716
+Cells per refinement level:
+    0	149475
+    1	3746
+    2	11061
+    3	61256
+Skipping balancing since max unbalance 0.0576044835016716 is less than allowable 0.2
+
+Shell refinement iteration 2
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.02 s
+Selected for internal refinement : 156 cells (out of 225538)
+Edge intersection testing:
+    Number of edges             : 708905
+    Number of edges to retest   : 13271
+    Number of intersected edges : 15948
+Refined mesh in = 0.06 s
+After refinement shell refinement iteration 2 : cells:226630  faces:708905  points:255544  unbalance:0.0728941446410449
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	61256
+Skipping balancing since max unbalance 0.0728941446410449 is less than allowable 0.2
+
+Shell refinement iteration 3
+----------------------------
+
+Marked for refinement due to distance to explicit features : 0 cells.
+Marked for refinement due to refinement shells             : 0 cells.
+Determined cells to refine in = 0.02 s
+Selected for internal refinement : 12 cells (out of 226630)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0 s
+Selected for refinement : 0 cells (out of 226630)
+Stopping refining since too few cells selected.
+
+
+Dangling coarse cells refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.02 s
+Selected for refinement : 0 cells (out of 226630)
+Stopping refining since too few cells selected.
+
+
+Refinement transition refinement iteration 0
+--------------------------------------------
+
+Determined cells to refine in = 0.01 s
+Selected for refinement : 0 cells (out of 226630)
+Stopping refining since too few cells selected.
+
+
+Splitting mesh at surface intersections
+---------------------------------------
+
+Introducing baffles for 15948 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 2 regions.
+Edge intersection testing:
+    Number of edges             : 724853
+    Number of edges to retest   : 85068
+    Number of intersected edges : 31896
+Created baffles in = 0.06 s
+
+
+After introducing baffles : cells:226630  faces:724853  points:255545  unbalance:0.0728941446410449
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	61256
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 23466 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.04 s
+
+
+Introducing baffles to delete problem cells.
+
+Edge intersection testing:
+    Number of edges             : 748319
+    Number of edges to retest   : 81876
+    Number of intersected edges : 31896
+Created baffles in = 0.05 s
+
+
+After introducing baffles : cells:226630  faces:748319  points:256386  unbalance:0.0728941446410449
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	61256
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 10574 regions.
+Edge intersection testing:
+    Number of edges             : 748319
+    Number of edges to retest   : 93710
+    Number of intersected edges : 31896
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Keeping all cells containing points 1((0 0.5 0.5))
+Selected for keeping : 207486 cells.
+Edge intersection testing:
+    Number of edges             : 650781
+    Number of edges to retest   : 0
+    Number of intersected edges : 15960
+Split mesh in = 0.12 s
+
+
+After subsetting : cells:207486  faces:650781  points:235987  unbalance:0.137821346982447
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+
+Introducing zones for interfaces
+--------------------------------
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Setting faceZones according to neighbouring cellZones:
+
+Edge intersection testing:
+    Number of edges             : 650781
+    Number of edges to retest   : 0
+    Number of intersected edges : 15960
+
+Handling cells with snap problems
+---------------------------------
+
+Introducing baffles for 15960 faces that are intersected by the surface.
+
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 650781
+    Number of edges to retest   : 43640
+    Number of intersected edges : 15960
+Created baffles in = 0.12 s
+
+
+After introducing baffles : cells:207486  faces:650781  points:235987  unbalance:0.137821346982447
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 0 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.04 s
+
+
+Introducing baffles to delete problem cells.
+
+Created baffles in = 0 s
+
+
+After introducing baffles : cells:207486  faces:650781  points:235987  unbalance:0.137821346982447
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+Setting cellZones according to locationsInMesh:
+Location : (0 0.5 0.5)
+    cellZone : none
+
+For cellZone none found point (0 0.5 0.5) in global region 0 out of 1 regions.
+Edge intersection testing:
+    Number of edges             : 650781
+    Number of edges to retest   : 43640
+    Number of intersected edges : 15960
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Split mesh in = 0.05 s
+
+
+After subsetting : cells:207486  faces:650781  points:235987  unbalance:0.137821346982447
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+
+Merge free-standing baffles
+---------------------------
+
+freeStandingBaffles : detected 10 free-standing baffles out of 10
+
+freeStandingBaffles : detected 10 planar (within 30 degrees) free-standing baffles out of 10
+
+Detected free-standing baffles : 10
+Edge intersection testing:
+    Number of edges             : 650771
+    Number of edges to retest   : 10
+    Number of intersected edges : 15950
+
+Introducing baffles to block off problem cells
+----------------------------------------------
+
+markFacesOnProblemCells : marked 0 additional internal faces to be converted into baffles.
+Analyzed problem cells in = 0.1 s
+
+
+Introducing baffles to delete problem cells.
+
+Created baffles in = 0 s
+
+
+After introducing baffles : cells:207486  faces:650771  points:235987  unbalance:0.137821346982447
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+
+Remove unreachable sections of mesh
+-----------------------------------
+
+Merged free-standing baffles in = 0.01 s
+
+
+dupNonManifoldPoints : Found : 0 non-manifold points (out of 261223)
+Detected unsplittable baffles : 0
+
+Merge refined boundary faces
+----------------------------
+
+Merging 0 sets of faces.
+
+No faces merged ...
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.707106781186548.
+
+No straight edges simplified and no points removed ...
+
+Doing final balancing
+---------------------
+
+Found 0 zoned faces to keep together.
+Found 0 separated coupled faces to keep together.
+Refined mesh : cells:207486  faces:650771  points:235987  unbalance:0.0100054943466065
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+Writing mesh to time 1e-07
+Wrote mesh in = 0.02 s.
+Mesh refined in = 9.59 s.
+
+Morphing phase
+--------------
+
+Duplicating 0 points on faceZones of type boundary
+Snapping to features in 15 iterations ...
+Constructing mesh displacer ...
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.02;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Checked initial mesh in = 2.08 s
+
+
+Smoothing patch points ...
+Smoothing iteration 0
+Found 4 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 1
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 2
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 3
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Smoothing iteration 4
+Found 0 non-manifold point(s).
+
+Scaling iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+
+Patch points smoothed in = 0.19 s
+
+
+
+Morph iteration 0
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.0011263300311036 min:9.02821923886291e-07 max:0.00290424228791394
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.00289778408886379 2.7275096821612e-20 0.000193573348463608) avg:(-1.56703294109413e-05 -1.97990432544897e-07 -5.51033534569039e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.07 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 1
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.00105429757450657 min:2.79330527344478e-06 max:0.00276314265930533
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.00275699521915351 2.52459384696199e-20 0.000184213781345534) avg:(-1.46292287922809e-05 -1.86469598926096e-07 -5.18608743137521e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.05 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 2
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000920572745611822 min:1.45288961641612e-06 max:0.00249450435335385
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00139897799833003 -0.00150165202678462 -0.00141790469339213) avg:(-1.26846548331903e-05 -1.64714398936805e-07 -4.57425251294193e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 3
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000747996345752458 min:2.6831814054259e-06 max:0.00219958452919477
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00123358098322131 0.00132411159773299 -0.0012502713848028) avg:(-1.01542963322881e-05 -1.36006021476066e-07 -3.76746437156955e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 4
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000569413787001273 min:3.21302719855362e-07 max:0.00184618938783879
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.00103539063983839 0.00104940195925164 0.00111136717902881) avg:(-7.45188127416579e-06 -1.04718933129091e-07 -2.8891539637253e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.05 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.04 s
+
+
+
+Morph iteration 5
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000415415871984913 min:5.69538847569928e-07 max:0.00146920041402859
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000823967710706142 -0.000835120440812229 0.000884421233142363) avg:(-4.97104920121786e-06 -7.50870136349432e-08 -2.05890927462023e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.05 s
+
+
+
+Morph iteration 6
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000296061129926572 min:1.0045902657667e-07 max:0.00110226110029974
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000618179368449545 -0.000626548366381832 -0.000663529160053702) avg:(-2.98332607165258e-06 -5.01353623253433e-08 -1.36230803985458e-08)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 7
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000207458928519757 min:2.01663841082171e-07 max:0.000772740254865729
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000433375012844003 -0.000465165867518352 -0.000439242888876201) avg:(-1.58999718245861e-06 -3.11889599188361e-08 -8.36817147450254e-09)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 8
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:0.000139578092036483 min:8.28818991885122e-08 max:0.000509838632470868
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000233327353632198 -0.000254492334446563 -0.000375136547026145) avg:(-7.40067614114875e-07 -1.80579718512705e-08 -4.76680644530526e-09)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.05 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 9
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:8.65916384501497e-05 min:1.05268637432013e-07 max:0.000321958402595242
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(0.000131386363212763 -0.00013881869286031 -0.000259083397916499) avg:(-2.9415244635985e-07 -9.65890040469895e-09 -2.50253308083164e-09)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 10
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:4.72203873428787e-05 min:1.28395084428364e-07 max:0.000178210712039475
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-0.000160828454358247 3.02205635106615e-21 7.67676113628268e-05) avg:(-9.67160636281446e-08 -4.67529883740807e-09 -1.18902161434651e-09)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.07 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 11
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:2.1553329595073e-05 min:1.70421290655619e-08 max:8.39416017284528e-05
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-7.57541790267491e-05 1.52059177764153e-21 3.61593260545801e-05) avg:(-2.50655211083689e-08 -1.96460460157442e-09 -4.91784963923587e-10)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.05 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 12
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:7.68354409572262e-06 min:2.64226168350889e-09 max:3.07966110809452e-05
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-2.77927952263557e-05 5.65486111805351e-22 1.32661896404679e-05) avg:(-4.72081490036007e-09 -6.66702503108172e-10 -1.64983878209872e-10)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 13
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:1.89553448678192e-06 min:8.31242231463633e-10 max:7.80217398569376e-06
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-7.04117059069365e-06 1.44361097024702e-22 3.36092779092134e-06) avg:(-5.5035732061148e-10 -1.60650912482831e-10 -3.94794368768848e-11)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.06 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.03 s
+
+
+
+Morph iteration 14
+-----------------
+Calculating patchDisplacement as distance to nearest surface point ...
+    non-zone points : attract to nearest of all non-zone surfaces
+    zone points     : attract to zone surface only
+
+Wanted displacement : average:2.42273312081316e-07 min:3.96378182198459e-10 max:1.02178996436507e-06
+Calculated surface displacement in = 0 s
+
+
+Detecting near surfaces ...
+Overriding nearest with intersection of close gaps at 0 out of 16813 points.
+Overriding displacement on features :
+   implicit features    : false
+   explicit features    : true
+   multi-patch features : false
+
+Detected 0 baffle edges out of 32744 edges.
+Baffle points     : 0 of which attracted to :
+    feature point : 0
+    feature edge  : 0
+    rest          : 0
+
+--> FOAM Warning : 
+    From Foam::treeBoundBox::treeBoundBox(const Foam::UList<Foam::Vector<double> >&)
+    in file meshes/treeBoundBox/treeBoundBox.C at line 70
+    No bounding box for zero-sized pointField
+Initially selected 0 mesh points out of 16813 for reverse attraction.
+Selected 0 mesh points out of 16813 for reverse attraction.
+Stringing feature edges : changed 0 points
+Attraction:
+    linear   : max:(-9.22127225494451e-07 1.81987179266681e-23 4.40154644731905e-07) avg:(-2.5780859691137e-11 -2.04003934281774e-11 -4.9975182985748e-12)
+    feature  : max:(0 0 0) avg:(0 0 0)
+Feature analysis : total master points :15942 of which attracted to :
+    feature point   : 0
+    feature edge    : 0
+    nearest surface : 0
+    rest            : 15942
+
+Smoothing displacement ...
+Iteration 0
+Iteration 10
+Iteration 20
+Displacement smoothed in = 0.05 s
+
+
+Moving mesh ...
+
+Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Successfully moved mesh
+Moved mesh in = 0.04 s
+
+
+Repatching faces according to nearest surface ...
+Repatched 0 faces in = 0.01 s
+
+
+Edge intersection testing:
+    Number of edges             : 650771
+    Number of edges to retest   : 231243
+    Number of intersected edges : 15940
+Merging 4808 sets of faces.
+
+Edge intersection testing:
+    Number of edges             : 643895
+    Number of edges to retest   : 19426
+    Number of intersected edges : 9064
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.866025403784439.
+
+Removing 2638 straight edge points ...
+
+Edge intersection testing:
+    Number of edges             : 643895
+    Number of edges to retest   : 14946
+    Number of intersected edges : 9064
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Snapped mesh : cells:207486  faces:643895  points:231373  unbalance:0.0100054943466065
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	42112
+Writing mesh to time 2e-07
+Wrote mesh in = 0.01 s.
+Mesh snapped in = 1.81 s.
+Layer specification as
+- final layer thickness ('finalLayerThickness')
+- expansion ratio ('expansionRatio')
+
+Shrinking and layer addition phase
+----------------------------------
+
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   1e-15;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.02;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+
+
+Merging all faces of a cell
+---------------------------
+    - which are on the same patch
+    - which make an angle < 60 degrees (cos:0.5)
+    - as long as the resulting face doesn't become concave by more than 90 degrees
+      (0=straight, 180=fully concave)
+
+Merging 0 sets of faces.
+
+No faces merged ...
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.5.
+
+No straight edges simplified and no points removed ...
+
+Checking mesh manifoldness ...
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+
+Before layer addition : cells:207486  faces:643895  points:231373  unbalance:0.0100054943466065
+Ideal layer addition : cells:252806  unbalance:0.485130890880754
+
+Duplicating 0 points on faceZones of type boundary
+
+Handling points with inconsistent layer specification ...
+dupNonManifoldPoints : Found : 0 non-manifold points (out of 256273)
+
+Handling points with inconsistent layer specification ...
+
+Handling non-manifold points ...
+
+Checking patch manifoldness ...
+Outside of local patch is multiply connected across edges or points at 0 points.
+Set displacement to zero for all 0 non-manifold points
+
+Handling feature edges (angle < 60) ...
+Set displacement to zero for points on 0 feature edges
+
+Handling cells with warped patch faces ...
+Set displacement to zero on 0 warped faces since layer would be > 0.5 of the size of the bounding box.
+
+patch  faces    layers avg thickness[m]
+                       near-wall overall
+-----  -----    ------ --------- -------
+sphere 9064     5      0.00108   0.00978 
+
+
+Outer iteration : 0
+-------------------
+
+Adding in total 0 inter-processor patches to handle extrusion of non-manifold processor boundaries.
+Selecting externalDisplacementMeshMover displacementMedialAxis
+displacementMedialAxis : Calculating distance to Medial Axis ...
+fieldSmoother : Smoothing normals ...
+    Iteration 0   residual 0.00301573293478736
+displacementMedialAxis : Inserting points on patch inlet1 if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch outlet1 if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch walls if angle to nearest layer patch > 30 degrees.
+fieldSmoother : Smoothing normals in interior ...
+    Iteration 0   residual 0.028225221821014
+
+Layer addition iteration 0
+--------------------------
+
+Determining displacement for added points according to pointNormal ...
+Detected 0 points with point normal pointing through faces.
+Reset displacement at 0 points to average of surrounding points.
+
+displacementMedialAxis : Smoothing using Medial Axis ...
+displacementMedialAxis : Reducing layer thickness at 0 nodes where thickness to medial axis distance is large 
+displacementMedialAxis : Removing isolated regions ...
+- if partially extruded faces make angle < 30
+- if exclusively surrounded by non-extruded faces
+displacementMedialAxis : Number of isolated points extrusion stopped : 0
+fieldSmoother : Smoothing field ...
+    Iteration 0   residual 3.1791012854236e-19
+displacementMedialAxis : Moving mesh ...
+displacementMedialAxis : Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+displacementMedialAxis : Successfully moved mesh
+displacementMedialAxis : Finished moving mesh ...
+truncateDisplacement : Unextruded 0 faces due to non-consecutive vertices being extruded.
+truncateDisplacement : Unextruded 0 faces due to stringed edges with inconsistent extrusion.
+
+Setting up information for layer truncation ...
+Detected 0 baffles across faceZones of type internal
+
+
+Checking mesh with layer ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Extruding 9064 out of 9064 faces (100%). Removed extrusion at 0 faces.
+Added 45320 out of 45320 cells (100%).
+Edge intersection testing:
+    Number of edges             : 791155
+    Number of edges to retest   : 0
+    Number of intersected edges : 54384
+Mesh with layers : cells:252806  faces:791155  points:288013  unbalance:0.485130890880754
+
+patch  faces        layers        overall thickness
+                target   mesh     [m]       [%]
+-----  -----    -----    ----     ---       ---
+sphere 9064     5        5        0.00978   100     
+
+
+Doing final balancing
+---------------------
+
+Writing 45320 added cells to cellSet addedCells
+Writing 36253 faces inside added layer to faceSet layerFaces
+
+Writing fields with layer information:
+    nSurfaceLayers    : actual number of layers
+    thickness         : overall layer thickness
+    thicknessFraction : overall layer thickness (fraction of desired thickness)
+
+Layer mesh : cells:252806  faces:791155  points:288013  unbalance:0.010070963505613
+Cells per refinement level:
+    0	149379
+    1	4454
+    2	11541
+    3	87432
+Writing mesh to time 3e-07
+Wrote mesh in = 0.02 s.
+Layers added in = 2.71 s.
+Checking final mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1e-15      : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 0.001                : 0
+Finished meshing without any errors
+Finished meshing in = 14.21 s.
+End
+
+Finalising parallel run
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _1d8f0d55f7-20231221 OPENFOAM=2312 version=v2312
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh
+Date   : Feb 18 2025
+Time   : 22:07:59
+Host   : udc-aw34-5c0
+PID    : 482200
+I/O    : uncollated
+Case   : /scratch/ndk9pg/foamCases/hsSphere_rcf
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 30 processor directories
+    Reading database "hsSphere_rcf/processor0"
+    Reading database "hsSphere_rcf/processor1"
+    Reading database "hsSphere_rcf/processor2"
+    Reading database "hsSphere_rcf/processor3"
+    Reading database "hsSphere_rcf/processor4"
+    Reading database "hsSphere_rcf/processor5"
+    Reading database "hsSphere_rcf/processor6"
+    Reading database "hsSphere_rcf/processor7"
+    Reading database "hsSphere_rcf/processor8"
+    Reading database "hsSphere_rcf/processor9"
+    Reading database "hsSphere_rcf/processor10"
+    Reading database "hsSphere_rcf/processor11"
+    Reading database "hsSphere_rcf/processor12"
+    Reading database "hsSphere_rcf/processor13"
+    Reading database "hsSphere_rcf/processor14"
+    Reading database "hsSphere_rcf/processor15"
+    Reading database "hsSphere_rcf/processor16"
+    Reading database "hsSphere_rcf/processor17"
+    Reading database "hsSphere_rcf/processor18"
+    Reading database "hsSphere_rcf/processor19"
+    Reading database "hsSphere_rcf/processor20"
+    Reading database "hsSphere_rcf/processor21"
+    Reading database "hsSphere_rcf/processor22"
+    Reading database "hsSphere_rcf/processor23"
+    Reading database "hsSphere_rcf/processor24"
+    Reading database "hsSphere_rcf/processor25"
+    Reading database "hsSphere_rcf/processor26"
+    Reading database "hsSphere_rcf/processor27"
+    Reading database "hsSphere_rcf/processor28"
+    Reading database "hsSphere_rcf/processor29"
+
+Time = 1e-07
+
+
+Writing merged mesh to "1e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/1e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Time = 2e-07
+
+
+Writing merged mesh to "2e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/2e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Time = 3e-07
+
+
+Writing merged mesh to "3e-07/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "hsSphere_rcf/processor0"
+Writing addressing : "hsSphere_rcf/processor0/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "hsSphere_rcf/processor1"
+Writing addressing : "hsSphere_rcf/processor1/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "hsSphere_rcf/processor2"
+Writing addressing : "hsSphere_rcf/processor2/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "hsSphere_rcf/processor3"
+Writing addressing : "hsSphere_rcf/processor3/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "hsSphere_rcf/processor4"
+Writing addressing : "hsSphere_rcf/processor4/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "hsSphere_rcf/processor5"
+Writing addressing : "hsSphere_rcf/processor5/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "hsSphere_rcf/processor6"
+Writing addressing : "hsSphere_rcf/processor6/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "hsSphere_rcf/processor7"
+Writing addressing : "hsSphere_rcf/processor7/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 8
+Read processor mesh: "hsSphere_rcf/processor8"
+Writing addressing : "hsSphere_rcf/processor8/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 9
+Read processor mesh: "hsSphere_rcf/processor9"
+Writing addressing : "hsSphere_rcf/processor9/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 10
+Read processor mesh: "hsSphere_rcf/processor10"
+Writing addressing : "hsSphere_rcf/processor10/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 11
+Read processor mesh: "hsSphere_rcf/processor11"
+Writing addressing : "hsSphere_rcf/processor11/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 12
+Read processor mesh: "hsSphere_rcf/processor12"
+Writing addressing : "hsSphere_rcf/processor12/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 13
+Read processor mesh: "hsSphere_rcf/processor13"
+Writing addressing : "hsSphere_rcf/processor13/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 14
+Read processor mesh: "hsSphere_rcf/processor14"
+Writing addressing : "hsSphere_rcf/processor14/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 15
+Read processor mesh: "hsSphere_rcf/processor15"
+Writing addressing : "hsSphere_rcf/processor15/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 16
+Read processor mesh: "hsSphere_rcf/processor16"
+Writing addressing : "hsSphere_rcf/processor16/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 17
+Read processor mesh: "hsSphere_rcf/processor17"
+Writing addressing : "hsSphere_rcf/processor17/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 18
+Read processor mesh: "hsSphere_rcf/processor18"
+Writing addressing : "hsSphere_rcf/processor18/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 19
+Read processor mesh: "hsSphere_rcf/processor19"
+Writing addressing : "hsSphere_rcf/processor19/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 20
+Read processor mesh: "hsSphere_rcf/processor20"
+Writing addressing : "hsSphere_rcf/processor20/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 21
+Read processor mesh: "hsSphere_rcf/processor21"
+Writing addressing : "hsSphere_rcf/processor21/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 22
+Read processor mesh: "hsSphere_rcf/processor22"
+Writing addressing : "hsSphere_rcf/processor22/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 23
+Read processor mesh: "hsSphere_rcf/processor23"
+Writing addressing : "hsSphere_rcf/processor23/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 24
+Read processor mesh: "hsSphere_rcf/processor24"
+Writing addressing : "hsSphere_rcf/processor24/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 25
+Read processor mesh: "hsSphere_rcf/processor25"
+Writing addressing : "hsSphere_rcf/processor25/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 26
+Read processor mesh: "hsSphere_rcf/processor26"
+Writing addressing : "hsSphere_rcf/processor26/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 27
+Read processor mesh: "hsSphere_rcf/processor27"
+Writing addressing : "hsSphere_rcf/processor27/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 28
+Read processor mesh: "hsSphere_rcf/processor28"
+Writing addressing : "hsSphere_rcf/processor28/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 29
+Read processor mesh: "hsSphere_rcf/processor29"
+Writing addressing : "hsSphere_rcf/processor29/3e-07/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+End
+

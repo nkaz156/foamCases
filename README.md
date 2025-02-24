@@ -4,6 +4,7 @@
 
 ## SLURM:
 - `seff` <job id> gives info on cpu time and efficiency of the job once it's finished
+ - `salloc -A aecapstonedesign -N 1 -n 8 -G 1 -t 01:00:00 -p interactive`
 
 ## Adaptive Mesh Refinement (AMR)
 https://www.wolfdynamics.com/training/movingbodies/OF2021/dynamicmeshes_2021_OF8.pdf

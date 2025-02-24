@@ -10,3 +10,7 @@
 # Re-ignore polyMesh
 constant/polyMesh
 
+# Ignore slurm output files
+slurm-*.out
+*.slurm
+
