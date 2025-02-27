@@ -1,0 +1,70 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2406                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _be01ca78-20240625 OPENFOAM=2406 version=2406
+Arch   : "LSB;label=32;scalar=64"
+Exec   : rhoCentralFoam -parallel
+Date   : Feb 24 2025
+Time   : 23:27:27
+Host   : DESKTOP-D65JE2G
+PID    : 595344
+I/O    : uncollated
+Case   : /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/hsSphere_rcf
+nProcs : 8
+Hosts  :
+(
+    (DESKTOP-D65JE2G 8)
+)
+Pstream initialized with:
+    floatTransfer      : false
+    maxCommsSize       : 0
+    nProcsSimpleSum    : 0
+    nonBlockingExchange: 0 (tuning: 0)
+    exchange algorithm : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting dynamicFvMesh dynamicRefineFvMesh
+Detected 21808 cells that are protected from refinement. Writing these to cellSet protectedCells.
+Using LTS
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       sutherland;
+    thermo          janaf;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+Reading field U
+
+Creating turbulence model
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+fluxScheme: Kurganov
+
+Starting time loop
+
+Using dynamicCode for functionObject calcGradient at line 75 in "/home/nkaz/OpenFOAM/nkaz-v2406/foamCases/hsSphere_rcf/system/controlDict/functions/calcGradient"
+Creating new library in "dynamicCode/computeVelocityGradientMag/platforms/linux64GccDPInt32Opt/lib/libcomputeVelocityGradientMag_504afc1c9b2fbf4cc989378e7557dc2a602f591a.so"
+Invoking wmake libso /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/hsSphere_rcf/dynamicCode/computeVelocityGradientMag
+wmake libso /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/hsSphere_rcf/dynamicCode/computeVelocityGradientMag
+    dep: functionObjectTemplate.C
+    Ctoo: functionObjectTemplate.C

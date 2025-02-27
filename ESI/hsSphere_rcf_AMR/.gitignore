@@ -1,0 +1,12 @@
+# Ignore all directories
+*/               
+
+# Un-ignore the following directories
+!system/
+!0.orig/
+!constant/
+!images/
+
+# Re-ignore polyMesh
+constant/polyMesh
+

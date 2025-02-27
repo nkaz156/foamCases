@@ -1,0 +1,2308 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-86e126a7bc4d
+Exec   : foamRun -parallel
+Date   : Feb 26 2025
+Time   : 22:18:06
+Host   : "DESKTOP-D65JE2G"
+PID    : 570391
+I/O    : uncollated
+Case   : /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR
+nProcs : 8
+Slaves : 
+7
+(
+"DESKTOP-D65JE2G.570392"
+"DESKTOP-D65JE2G.570393"
+"DESKTOP-D65JE2G.570394"
+"DESKTOP-D65JE2G.570395"
+"DESKTOP-D65JE2G.570396"
+"DESKTOP-D65JE2G.570397"
+"DESKTOP-D65JE2G.570398"
+)
+
+Pstream initialised with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0.041
+
+Selecting fvMeshTopoChanger refiner
+Detected 18764 cells that are protected from refinement. Writing these to cellSet protectedCells.
+Selecting solver shockFluid
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       sutherland;
+    thermo          janaf;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Selecting thermophysical transport type laminar
+Selecting default laminar thermophysical transport model unityLewisFourier
+Courant Number mean: 0.039290451 max: 0.49059747
+Creating fvConstraints from "system/fvConstraints"
+
+Selecting finite volume constraint type limitTemperature
+    Name: limitTemperature
+    - selecting all cells
+    - selected 154515 cell(s) with volume 18.207291
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+
+Starting time loop
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.039290451 max: 0.49059747
+deltaT = 1.7482517e-06
+Time = 0.0410017s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013672985, Final residual = 7.0503318e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00057116356, Final residual = 6.3777781e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00056435991, Final residual = 6.4418662e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031344298, Final residual = 4.2873801e-16, No Iterations 5
+ExecutionTime = 0.513835 s  ClockTime = 1 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.040013556 max: 0.49962647
+deltaT = 1.7482517e-06
+Time = 0.0410035s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013560863, Final residual = 7.0610491e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00057276488, Final residual = 6.3529765e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00056610269, Final residual = 6.411536e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0001322922, Final residual = 4.275672e-16, No Iterations 5
+ExecutionTime = 0.633893 s  ClockTime = 1 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.04001366 max: 0.4924969
+deltaT = 1.7731379e-06
+Time = 0.0410053s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013738731, Final residual = 7.1712931e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00058047056, Final residual = 6.4327192e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00057375579, Final residual = 6.4748648e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00013305448, Final residual = 4.2814874e-16, No Iterations 5
+ExecutionTime = 0.764152 s  ClockTime = 1 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.040583245 max: 0.49305971
+deltaT = 1.7955422e-06
+Time = 0.0410071s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013914149, Final residual = 7.2137562e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00058758411, Final residual = 6.5179058e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00058078952, Final residual = 6.5852136e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00013431198, Final residual = 4.2807496e-16, No Iterations 5
+ExecutionTime = 0.897702 s  ClockTime = 1 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.041096036 max: 0.50815598
+deltaT = 1.7636498e-06
+Time = 0.0410088s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013672727, Final residual = 7.1144703e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00057713652, Final residual = 6.4603115e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00057051238, Final residual = 6.5141905e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00013159898, Final residual = 4.2719888e-16, No Iterations 5
+ExecutionTime = 1.027735 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.040366091 max: 0.50347678
+deltaT = 1.7511858e-06
+Time = 0.0410106s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013578384, Final residual = 7.1071587e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00057300466, Final residual = 6.4807778e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00056644188, Final residual = 6.5511367e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00013034666, Final residual = 4.2788707e-16, No Iterations 5
+ExecutionTime = 1.145026 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.040080815 max: 0.50294853
+deltaT = 1.7388752e-06
+Time = 0.0410123s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013489665, Final residual = 7.0924355e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00056881583, Final residual = 6.4251733e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00056227808, Final residual = 6.4954541e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00012910791, Final residual = 4.2643746e-16, No Iterations 5
+ExecutionTime = 1.26278 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.039799035 max: 0.49922592
+deltaT = 1.7388752e-06
+Time = 0.0410141s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013493982, Final residual = 7.074973e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0005685697, Final residual = 6.453285e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00056199805, Final residual = 6.5090322e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00012878713, Final residual = 4.2906421e-16, No Iterations 5
+ExecutionTime = 1.387153 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.039799014 max: 0.49398358
+deltaT = 1.7574728e-06
+Time = 0.0410158s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013643129, Final residual = 7.1187753e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00057452245, Final residual = 6.4670885e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0005676969, Final residual = 6.5118874e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00012978232, Final residual = 4.2801501e-16, No Iterations 5
+ExecutionTime = 1.514606 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.04022465 max: 0.490035
+deltaT = 1.7926863e-06
+Time = 0.0410176s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00013919838, Final residual = 7.2391366e-16, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00058573587, Final residual = 6.586658e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00057883541, Final residual = 6.618364e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00013206019, Final residual = 4.2673536e-16, No Iterations 5
+ExecutionTime = 1.637347 s  ClockTime = 2 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.041030599 max: 0.50757724
+Selected 90886 cells for refinement out of 154515.
+Refined from 154515 to 790717 cells.
+    - selecting all cells
+    - selected 790717 cell(s) with volume 18.207291
+Selected 34 split points out of a possible 91015.
+Unrefined from 790717 to 790479 cells.
+    - selecting all cells
+    - selected 790479 cell(s) with volume 18.207291
+deltaT = 1.7637201e-06
+Time = 0.0410194s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0012053897, Final residual = 1.517439e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0029710976, Final residual = 6.5995126e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0029640646, Final residual = 6.5950288e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0013859085, Final residual = 6.5831537e-16, No Iterations 5
+ExecutionTime = 5.319951 s  ClockTime = 6 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061704926 max: 0.50286523
+deltaT = 1.7511221e-06
+Time = 0.0410211s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0011201692, Final residual = 1.502394e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0026486398, Final residual = 6.5767996e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0026420224, Final residual = 6.6020331e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0012589322, Final residual = 6.5778412e-16, No Iterations 5
+ExecutionTime = 6.181299 s  ClockTime = 7 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061259008 max: 0.49485322
+deltaT = 1.7669264e-06
+Time = 0.0410229s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0010726166, Final residual = 1.5071496e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0024322856, Final residual = 6.6481002e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0024260395, Final residual = 6.7118727e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0011722682, Final residual = 6.6122266e-16, No Iterations 5
+ExecutionTime = 7.033107 s  ClockTime = 8 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061807002 max: 0.49454132
+deltaT = 1.7863077e-06
+Time = 0.0410247s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0010353275, Final residual = 1.523499e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0022619956, Final residual = 6.7373952e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0022557581, Final residual = 6.7599349e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0011016106, Final residual = 6.5713362e-16, No Iterations 5
+ExecutionTime = 7.910488 s  ClockTime = 9 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062480281 max: 0.49687712
+deltaT = 1.7961768e-06
+Time = 0.0410265s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00099696291, Final residual = 1.5312497e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0021105711, Final residual = 6.7931059e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0021044932, Final residual = 6.8279233e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0010359772, Final residual = 6.5598522e-16, No Iterations 5
+ExecutionTime = 8.745485 s  ClockTime = 9 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062821062 max: 0.50556051
+deltaT = 1.7732747e-06
+Time = 0.0410282s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00094484228, Final residual = 1.5157883e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0019488905, Final residual = 6.6550655e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0019431244, Final residual = 6.6753244e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0009622347, Final residual = 6.5515493e-16, No Iterations 5
+ExecutionTime = 9.583951 s  ClockTime = 10 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062016023 max: 0.50913026
+deltaT = 1.7414956e-06
+Time = 0.04103s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00089292024, Final residual = 1.4990133e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0018047531, Final residual = 6.5354872e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0017991822, Final residual = 6.5235467e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0008948214, Final residual = 6.5839282e-16, No Iterations 5
+ExecutionTime = 10.480577 s  ClockTime = 11 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060901006 max: 0.50040002
+deltaT = 1.7383746e-06
+Time = 0.0410317s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00085996658, Final residual = 1.4996568e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0017106016, Final residual = 6.5216394e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0017051205, Final residual = 6.544424e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00085032093, Final residual = 6.5583691e-16, No Iterations 5
+ExecutionTime = 11.308996 s  ClockTime = 12 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060788605 max: 0.49765736
+deltaT = 1.7446391e-06
+Time = 0.0410335s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00083429191, Final residual = 1.5022757e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0016383907, Final residual = 6.5536562e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0016327792, Final residual = 6.5678549e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00081515926, Final residual = 6.5458345e-16, No Iterations 5
+ExecutionTime = 12.140891 s  ClockTime = 13 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061004656 max: 0.48921548
+deltaT = 1.7799816e-06
+Time = 0.0410352s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0008241479, Final residual = 1.5177724e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0016016397, Final residual = 6.6918027e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.001595697, Final residual = 6.7063661e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00079632235, Final residual = 6.5578257e-16, No Iterations 5
+ExecutionTime = 13.013381 s  ClockTime = 14 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062237643 max: 0.50151673
+deltaT = 1.7734376e-06
+Time = 0.041037s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00079574511, Final residual = 1.517928e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0015330529, Final residual = 6.747212e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0015270215, Final residual = 6.7063342e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00076067934, Final residual = 6.5707341e-16, No Iterations 5
+ExecutionTime = 13.863282 s  ClockTime = 15 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062006184 max: 0.50813383
+deltaT = 1.7445229e-06
+Time = 0.0410388s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00075924634, Final residual = 1.4955302e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0014537605, Final residual = 6.6507433e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0014475837, Final residual = 6.6755671e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00071898971, Final residual = 6.5880559e-16, No Iterations 5
+ExecutionTime = 14.78571 s  ClockTime = 16 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060992831 max: 0.49789072
+deltaT = 1.7508781e-06
+Time = 0.0410405s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00073954721, Final residual = 1.5080455e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0014107209, Final residual = 6.646233e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0014046132, Final residual = 6.6732451e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00069513332, Final residual = 6.5847656e-16, No Iterations 5
+ExecutionTime = 15.666324 s  ClockTime = 17 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061212853 max: 0.48881223
+deltaT = 1.7900769e-06
+Time = 0.0410423s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00073380047, Final residual = 1.5332634e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0013973788, Final residual = 6.7366539e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0013912, Final residual = 6.7309453e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00068577996, Final residual = 6.57356e-16, No Iterations 5
+ExecutionTime = 16.609955 s  ClockTime = 17 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062581223 max: 0.49986872
+deltaT = 1.7900769e-06
+Time = 0.0410441s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00071144662, Final residual = 1.5292107e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0013557832, Final residual = 6.7216381e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0013496033, Final residual = 6.6815839e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00066216548, Final residual = 6.5404434e-16, No Iterations 5
+ExecutionTime = 17.506971 s  ClockTime = 18 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062579265 max: 0.4984215
+deltaT = 1.7934354e-06
+Time = 0.0410459s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0006904797, Final residual = 1.5391558e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0013201862, Final residual = 6.721569e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.001314102, Final residual = 6.668071e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0006412995, Final residual = 6.5617198e-16, No Iterations 5
+ExecutionTime = 18.415128 s  ClockTime = 19 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062694864 max: 0.50779071
+deltaT = 1.7636e-06
+Time = 0.0410477s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00065730721, Final residual = 1.5101374e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0012636647, Final residual = 6.6084427e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.001257652, Final residual = 6.5464111e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00061026711, Final residual = 6.579909e-16, No Iterations 5
+ExecutionTime = 19.28178 s  ClockTime = 19 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06165022 max: 0.50420793
+deltaT = 1.7474202e-06
+Time = 0.0410494s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00063053242, Final residual = 1.5015139e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0012209324, Final residual = 6.5882949e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0012149825, Final residual = 6.565066e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00058618457, Final residual = 6.5692476e-16, No Iterations 5
+ExecutionTime = 20.229255 s  ClockTime = 20 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061083108 max: 0.49959118
+deltaT = 1.7474202e-06
+Time = 0.0410512s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00061065846, Final residual = 1.5018285e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.001192078, Final residual = 6.6109187e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.001186207, Final residual = 6.6253187e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00056894747, Final residual = 6.541134e-16, No Iterations 5
+ExecutionTime = 21.084366 s  ClockTime = 21 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061081738 max: 0.49894805
+deltaT = 1.7506443e-06
+Time = 0.0410529s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00059283569, Final residual = 1.5028122e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0011676841, Final residual = 6.6245526e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0011616484, Final residual = 6.6072407e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00055380848, Final residual = 6.577141e-16, No Iterations 5
+ExecutionTime = 21.931011 s  ClockTime = 22 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061193169 max: 0.48916504
+deltaT = 1.7869784e-06
+Time = 0.0410547s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00058723372, Final residual = 1.5267115e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.001166571, Final residual = 6.655187e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0011602687, Final residual = 6.6718991e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00054983916, Final residual = 6.5492355e-16, No Iterations 5
+ExecutionTime = 22.798607 s  ClockTime = 23 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062462028 max: 0.50426718
+deltaT = 1.7702464e-06
+Time = 0.0410565s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00056543455, Final residual = 1.520206e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0011318465, Final residual = 6.560436e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0011255209, Final residual = 6.5973223e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00053011169, Final residual = 6.5914518e-16, No Iterations 5
+ExecutionTime = 23.699659 s  ClockTime = 24 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061876091 max: 0.50480886
+deltaT = 1.7505405e-06
+Time = 0.0410582s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00054523772, Final residual = 1.5094781e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010975911, Final residual = 6.473336e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010912273, Final residual = 6.5038837e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00051086494, Final residual = 6.600156e-16, No Iterations 5
+ExecutionTime = 24.543572 s  ClockTime = 25 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061186331 max: 0.49524561
+deltaT = 1.7669621e-06
+Time = 0.04106s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00053847621, Final residual = 1.51372e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010876872, Final residual = 6.5309712e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010813074, Final residual = 6.582289e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00050317607, Final residual = 6.5820944e-16, No Iterations 5
+ExecutionTime = 25.416002 s  ClockTime = 26 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061759431 max: 0.49315075
+deltaT = 1.7905215e-06
+Time = 0.0410618s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00053589139, Final residual = 1.5302964e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010830845, Final residual = 6.6412847e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010763544, Final residual = 6.6396405e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00049792764, Final residual = 6.5671481e-16, No Iterations 5
+ExecutionTime = 26.330521 s  ClockTime = 27 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06258207 max: 0.49758312
+deltaT = 1.7973818e-06
+Time = 0.0410636s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00053013852, Final residual = 1.536293e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010694087, Final residual = 6.671482e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010625717, Final residual = 6.7487403e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00048839681, Final residual = 6.5524282e-16, No Iterations 5
+ExecutionTime = 27.255188 s  ClockTime = 28 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062821095 max: 0.50552156
+deltaT = 1.7769182e-06
+Time = 0.0410653s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00051812874, Final residual = 1.5246586e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010410728, Final residual = 6.6452091e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010343004, Final residual = 6.7209656e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00047206032, Final residual = 6.5364065e-16, No Iterations 5
+ExecutionTime = 28.13035 s  ClockTime = 28 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062105195 max: 0.5085874
+deltaT = 1.7437668e-06
+Time = 0.0410671s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00050395282, Final residual = 1.4996274e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0010073918, Final residual = 6.5154703e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0010007559, Final residual = 6.5978336e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00045349959, Final residual = 6.5842721e-16, No Iterations 5
+ExecutionTime = 29.038379 s  ClockTime = 29 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060945924 max: 0.49989391
+deltaT = 1.7437668e-06
+Time = 0.0410688s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00050027175, Final residual = 1.4985494e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00099484683, Final residual = 6.5232434e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00098822667, Final residual = 6.6228771e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0004443734, Final residual = 6.5755481e-16, No Iterations 5
+ExecutionTime = 29.918043 s  ClockTime = 30 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060945392 max: 0.49885262
+deltaT = 1.7470384e-06
+Time = 0.0410706s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049816082, Final residual = 1.5002584e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00098551531, Final residual = 6.5235832e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00097877356, Final residual = 6.5846446e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0004365019, Final residual = 6.5763147e-16, No Iterations 5
+ExecutionTime = 30.824375 s  ClockTime = 31 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061059259 max: 0.49330957
+deltaT = 1.7703322e-06
+Time = 0.0410723s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00050178746, Final residual = 1.5226479e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00098892385, Final residual = 6.5454795e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0009820567, Final residual = 6.5872061e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00043391202, Final residual = 6.5808176e-16, No Iterations 5
+ExecutionTime = 31.671146 s  ClockTime = 32 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061872921 max: 0.49759278
+deltaT = 1.7771151e-06
+Time = 0.0410741s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00050078766, Final residual = 1.5190099e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00098386307, Final residual = 6.5722929e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00097708894, Final residual = 6.6128933e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00042752078, Final residual = 6.5707019e-16, No Iterations 5
+ExecutionTime = 32.546811 s  ClockTime = 33 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062109558 max: 0.50805291
+deltaT = 1.7469377e-06
+Time = 0.0410759s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048925071, Final residual = 1.5037039e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00095978517, Final residual = 6.541532e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00095304888, Final residual = 6.5855604e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00041279165, Final residual = 6.5696334e-16, No Iterations 5
+ExecutionTime = 33.4319 s  ClockTime = 34 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061054489 max: 0.49894873
+deltaT = 1.7502463e-06
+Time = 0.0410776s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048697705, Final residual = 1.502129e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00095498092, Final residual = 6.6010238e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00094824016, Final residual = 6.6433322e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00040661874, Final residual = 6.5705848e-16, No Iterations 5
+ExecutionTime = 34.323984 s  ClockTime = 35 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061169782 max: 0.48835947
+deltaT = 1.7910287e-06
+Time = 0.0410794s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049494258, Final residual = 1.5307055e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00097080559, Final residual = 6.6768971e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00096398824, Final residual = 6.7478598e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00040932302, Final residual = 6.5569521e-16, No Iterations 5
+ExecutionTime = 35.188976 s  ClockTime = 36 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062594782 max: 0.50001735
+deltaT = 1.787551e-06
+Time = 0.0410812s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049087991, Final residual = 1.5268049e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00096287264, Final residual = 6.6659176e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00095602128, Final residual = 6.6757922e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00040212955, Final residual = 6.571096e-16, No Iterations 5
+ExecutionTime = 36.095499 s  ClockTime = 37 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062472951 max: 0.50117641
+deltaT = 1.7806225e-06
+Time = 0.041083s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048582668, Final residual = 1.52293e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00095314452, Final residual = 6.6239233e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00094633691, Final residual = 6.6067126e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0003944719, Final residual = 6.6115742e-16, No Iterations 5
+ExecutionTime = 36.964019 s  ClockTime = 37 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062230545 max: 0.50252514
+deltaT = 1.77031e-06
+Time = 0.0410847s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004803581, Final residual = 1.5148948e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00094159155, Final residual = 6.5543309e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00093474538, Final residual = 6.5900385e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00038653287, Final residual = 6.5972083e-16, No Iterations 5
+ExecutionTime = 37.850548 s  ClockTime = 38 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061869904 max: 0.50644542
+deltaT = 1.7466608e-06
+Time = 0.0410865s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047158969, Final residual = 1.4935239e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0009230356, Final residual = 6.5709046e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091629197, Final residual = 6.5283354e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00037621878, Final residual = 6.5758112e-16, No Iterations 5
+ExecutionTime = 38.734565 s  ClockTime = 39 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061043189 max: 0.4993051
+deltaT = 1.7466608e-06
+Time = 0.0410882s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046987161, Final residual = 1.5070311e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00091703058, Final residual = 6.5624037e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091027819, Final residual = 6.5717177e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00037136734, Final residual = 6.5776778e-16, No Iterations 5
+ExecutionTime = 39.597273 s  ClockTime = 40 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06104301 max: 0.49883872
+deltaT = 1.7500133e-06
+Time = 0.04109s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046946451, Final residual = 1.511668e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0009130374, Final residual = 6.6289319e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090606831, Final residual = 6.6004709e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00036748013, Final residual = 6.5766197e-16, No Iterations 5
+ExecutionTime = 40.532787 s  ClockTime = 41 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061160041 max: 0.49019235
+deltaT = 1.7843273e-06
+Time = 0.0410918s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047771808, Final residual = 1.5283219e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00092545417, Final residual = 6.6767315e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091815985, Final residual = 6.718622e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00037023677, Final residual = 6.5869264e-16, No Iterations 5
+ExecutionTime = 41.424358 s  ClockTime = 42 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062359136 max: 0.50471168
+deltaT = 1.7669701e-06
+Time = 0.0410935s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047260906, Final residual = 1.5130219e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00091130114, Final residual = 6.6269271e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090395824, Final residual = 6.6746979e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00036247455, Final residual = 6.5797757e-16, No Iterations 5
+ExecutionTime = 42.350066 s  ClockTime = 43 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061752448 max: 0.50373778
+deltaT = 1.7532991e-06
+Time = 0.0410953s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046855215, Final residual = 1.505465e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008999526, Final residual = 6.5388467e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089269008, Final residual = 6.5862603e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00035574297, Final residual = 6.5791999e-16, No Iterations 5
+ExecutionTime = 43.405793 s  ClockTime = 44 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061274621 max: 0.49684952
+deltaT = 1.7635523e-06
+Time = 0.0410971s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047117703, Final residual = 1.5060575e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00090148665, Final residual = 6.5686966e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089424278, Final residual = 6.5887517e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00035404296, Final residual = 6.5796896e-16, No Iterations 5
+ExecutionTime = 44.303322 s  ClockTime = 45 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06163291 max: 0.49141854
+deltaT = 1.7915452e-06
+Time = 0.0410989s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047873435, Final residual = 1.5220877e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00091289522, Final residual = 6.6158625e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090560295, Final residual = 6.6427404e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00035607229, Final residual = 6.5624914e-16, No Iterations 5
+ExecutionTime = 45.231894 s  ClockTime = 46 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062611188 max: 0.49983728
+deltaT = 1.7915452e-06
+Time = 0.0411006s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047899589, Final residual = 1.5269493e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0009107589, Final residual = 6.7144904e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090365812, Final residual = 6.7149585e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00035266119, Final residual = 6.5539237e-16, No Iterations 5
+ExecutionTime = 46.110274 s  ClockTime = 47 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062611202 max: 0.50230775
+deltaT = 1.7809024e-06
+Time = 0.0411024s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047646221, Final residual = 1.5223706e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00090394951, Final residual = 6.6621903e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089710808, Final residual = 6.673861e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00034723401, Final residual = 6.5707459e-16, No Iterations 5
+ExecutionTime = 46.983717 s  ClockTime = 48 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062239273 max: 0.5086384
+deltaT = 1.7496585e-06
+Time = 0.0411042s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046848852, Final residual = 1.50624e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088716545, Final residual = 6.5609754e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00088055233, Final residual = 6.5484443e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00033814348, Final residual = 6.5757479e-16, No Iterations 5
+ExecutionTime = 47.852928 s  ClockTime = 49 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061147375 max: 0.5005403
+deltaT = 1.7462478e-06
+Time = 0.0411059s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046783313, Final residual = 1.4963839e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088463668, Final residual = 6.560149e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008781274, Final residual = 6.5309019e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00033459154, Final residual = 6.5803265e-16, No Iterations 5
+ExecutionTime = 48.716377 s  ClockTime = 50 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061028202 max: 0.49942098
+deltaT = 1.7462478e-06
+Time = 0.0411077s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046829866, Final residual = 1.502125e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088373992, Final residual = 6.539783e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087740687, Final residual = 6.5160816e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00033190132, Final residual = 6.5842344e-16, No Iterations 5
+ExecutionTime = 49.589068 s  ClockTime = 50 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061028227 max: 0.49536349
+deltaT = 1.7600249e-06
+Time = 0.0411094s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047235793, Final residual = 1.513293e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088978699, Final residual = 6.5984696e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00088333268, Final residual = 6.5927967e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00033185879, Final residual = 6.581948e-16, No Iterations 5
+ExecutionTime = 50.526679 s  ClockTime = 51 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061509736 max: 0.49509429
+deltaT = 1.774049e-06
+Time = 0.0411112s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047645915, Final residual = 1.5207956e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00089582687, Final residual = 6.6446081e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00088924673, Final residual = 6.6437803e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0003319705, Final residual = 6.6012413e-16, No Iterations 5
+ExecutionTime = 51.43955 s  ClockTime = 52 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061999881 max: 0.50747793
+deltaT = 1.7461662e-06
+Time = 0.0411129s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046947846, Final residual = 1.5012723e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088030281, Final residual = 6.5349874e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087372049, Final residual = 6.5872063e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032434345, Final residual = 6.5725621e-16, No Iterations 5
+ExecutionTime = 52.304242 s  ClockTime = 53 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061025466 max: 0.49828607
+deltaT = 1.7496103e-06
+Time = 0.0411147s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047078366, Final residual = 1.5018656e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008803971, Final residual = 6.5790615e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087363965, Final residual = 6.5587117e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032263221, Final residual = 6.5940294e-16, No Iterations 5
+ExecutionTime = 53.233957 s  ClockTime = 53 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06114588 max: 0.48822682
+deltaT = 1.7884905e-06
+Time = 0.0411165s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048167724, Final residual = 1.5260819e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008978771, Final residual = 6.6403027e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089077511, Final residual = 6.6653977e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032754567, Final residual = 6.5697705e-16, No Iterations 5
+ExecutionTime = 54.096532 s  ClockTime = 54 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06250473 max: 0.49837169
+deltaT = 1.7921183e-06
+Time = 0.0411183s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004831492, Final residual = 1.5335838e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00089750997, Final residual = 6.6580769e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089027042, Final residual = 6.6806825e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032616135, Final residual = 6.5615146e-16, No Iterations 5
+ExecutionTime = 54.988847 s  ClockTime = 55 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06263158 max: 0.50113672
+deltaT = 1.7848627e-06
+Time = 0.0411201s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048164484, Final residual = 1.5206961e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00089153845, Final residual = 6.6683335e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00088426933, Final residual = 6.6737575e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032282275, Final residual = 6.5805293e-16, No Iterations 5
+ExecutionTime = 55.95366 s  ClockTime = 56 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062378088 max: 0.50289578
+deltaT = 1.7740672e-06
+Time = 0.0411218s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047930948, Final residual = 1.5196485e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088385987, Final residual = 6.5876842e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087662678, Final residual = 6.6379657e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031897778, Final residual = 6.5826926e-16, No Iterations 5
+ExecutionTime = 56.852416 s  ClockTime = 57 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062000875 max: 0.50763492
+deltaT = 1.7458514e-06
+Time = 0.0411236s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047236272, Final residual = 1.5065756e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008677054, Final residual = 6.5120409e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086047297, Final residual = 6.5521706e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031218516, Final residual = 6.5661833e-16, No Iterations 5
+ExecutionTime = 57.732166 s  ClockTime = 58 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061014858 max: 0.4998222
+deltaT = 1.7458514e-06
+Time = 0.0411253s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047304446, Final residual = 1.5062094e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086577884, Final residual = 6.5452791e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085846739, Final residual = 6.6332432e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031057014, Final residual = 6.5807944e-16, No Iterations 5
+ExecutionTime = 58.572115 s  ClockTime = 59 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061014949 max: 0.49929182
+deltaT = 1.7458514e-06
+Time = 0.0411271s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047397176, Final residual = 1.5043215e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086420566, Final residual = 6.5412072e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085673008, Final residual = 6.6389436e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030901079, Final residual = 6.5934606e-16, No Iterations 5
+ExecutionTime = 59.47173 s  ClockTime = 60 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061015052 max: 0.48890742
+deltaT = 1.7851241e-06
+Time = 0.0411289s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048553466, Final residual = 1.5244063e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088237729, Final residual = 6.6219765e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087461955, Final residual = 6.7301959e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031444374, Final residual = 6.5891726e-16, No Iterations 5
+ExecutionTime = 60.298635 s  ClockTime = 61 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062387678 max: 0.50498132
+deltaT = 1.7670194e-06
+Time = 0.0411306s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048176642, Final residual = 1.5194422e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087269616, Final residual = 6.5663336e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086504211, Final residual = 6.616401e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030988022, Final residual = 6.5645492e-16, No Iterations 5
+ExecutionTime = 61.238578 s  ClockTime = 62 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061755061 max: 0.50448403
+deltaT = 1.7492426e-06
+Time = 0.0411324s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047803192, Final residual = 1.5023441e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086349403, Final residual = 6.5534309e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085571401, Final residual = 6.5901531e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030538907, Final residual = 6.6310641e-16, No Iterations 5
+ExecutionTime = 62.092882 s  ClockTime = 63 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061133901 max: 0.49616103
+deltaT = 1.7598871e-06
+Time = 0.0411341s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048201917, Final residual = 1.5119461e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086852545, Final residual = 6.5533852e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086056993, Final residual = 6.5926469e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030584199, Final residual = 6.5774152e-16, No Iterations 5
+ExecutionTime = 62.968783 s  ClockTime = 63 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061506017 max: 0.49272377
+deltaT = 1.7852875e-06
+Time = 0.0411359s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049006483, Final residual = 1.5255617e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088073072, Final residual = 6.7200547e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087266223, Final residual = 6.7714182e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030894609, Final residual = 6.6145649e-16, No Iterations 5
+ExecutionTime = 63.839433 s  ClockTime = 64 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06239385 max: 0.49735428
+deltaT = 1.7926953e-06
+Time = 0.0411377s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004931453, Final residual = 1.5371043e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088408038, Final residual = 6.8325989e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087608976, Final residual = 6.8760661e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030901192, Final residual = 6.5772592e-16, No Iterations 5
+ExecutionTime = 64.695664 s  ClockTime = 65 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062652865 max: 0.50166236
+deltaT = 1.7852721e-06
+Time = 0.0411395s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049205842, Final residual = 1.5311339e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087991455, Final residual = 6.8591609e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087211014, Final residual = 6.8680196e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030647313, Final residual = 6.5756631e-16, No Iterations 5
+ExecutionTime = 65.564183 s  ClockTime = 66 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06239356 max: 0.50821131
+deltaT = 1.7561248e-06
+Time = 0.0411413s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048473915, Final residual = 1.507844e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086496905, Final residual = 6.6877739e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085735279, Final residual = 6.6951577e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030031873, Final residual = 6.5882066e-16, No Iterations 5
+ExecutionTime = 66.465483 s  ClockTime = 67 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061375005 max: 0.50201872
+deltaT = 1.7489716e-06
+Time = 0.041143s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048335807, Final residual = 1.5016439e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086045647, Final residual = 6.6024096e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085292969, Final residual = 6.6788713e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029793485, Final residual = 6.6019064e-16, No Iterations 5
+ExecutionTime = 67.342806 s  ClockTime = 68 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06112511 max: 0.49994351
+deltaT = 1.7489716e-06
+Time = 0.0411448s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.000483844, Final residual = 1.5047552e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085930756, Final residual = 6.5966898e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085183438, Final residual = 6.6262022e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029685321, Final residual = 6.5704881e-16, No Iterations 5
+ExecutionTime = 68.230541 s  ClockTime = 69 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061125223 max: 0.49792581
+deltaT = 1.7561542e-06
+Time = 0.0411465s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048633035, Final residual = 1.5085342e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008615684, Final residual = 6.6060814e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085401236, Final residual = 6.6219574e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029701261, Final residual = 6.5549599e-16, No Iterations 5
+ExecutionTime = 69.100944 s  ClockTime = 70 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061376357 max: 0.49459081
+deltaT = 1.7744095e-06
+Time = 0.0411483s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004918669, Final residual = 1.523142e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086906775, Final residual = 6.6905506e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086138739, Final residual = 6.6629382e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029907457, Final residual = 6.5928271e-16, No Iterations 5
+ExecutionTime = 69.970017 s  ClockTime = 71 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062014468 max: 0.50771914
+deltaT = 1.7453208e-06
+Time = 0.04115s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048415842, Final residual = 1.5013626e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085331353, Final residual = 6.6854118e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084585347, Final residual = 6.6882768e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029328922, Final residual = 6.5905519e-16, No Iterations 5
+ExecutionTime = 70.850576 s  ClockTime = 71 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060997955 max: 0.49797066
+deltaT = 1.748912e-06
+Time = 0.0411518s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048537999, Final residual = 1.5037412e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085335191, Final residual = 6.7149783e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084591176, Final residual = 6.7374033e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029293988, Final residual = 6.5716616e-16, No Iterations 5
+ExecutionTime = 71.757424 s  ClockTime = 72 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061123595 max: 0.4872725
+deltaT = 1.7932818e-06
+Time = 0.0411536s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049781979, Final residual = 1.5354862e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008733299, Final residual = 6.8555028e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008658311, Final residual = 6.8902085e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029943619, Final residual = 6.5772008e-16, No Iterations 5
+ExecutionTime = 72.627085 s  ClockTime = 73 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062674414 max: 0.49979519
+deltaT = 1.7932818e-06
+Time = 0.0411554s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049811627, Final residual = 1.5299763e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087177652, Final residual = 6.7832064e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086454671, Final residual = 6.8231906e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029870026, Final residual = 6.5616029e-16, No Iterations 5
+ExecutionTime = 73.499176 s  ClockTime = 74 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062674559 max: 0.50078874
+deltaT = 1.7894825e-06
+Time = 0.0411572s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049728505, Final residual = 1.5270762e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008687018, Final residual = 6.7523321e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086168869, Final residual = 6.7912951e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029734744, Final residual = 6.5913213e-16, No Iterations 5
+ExecutionTime = 74.364499 s  ClockTime = 75 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062541915 max: 0.50361785
+deltaT = 1.7744132e-06
+Time = 0.0411589s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049344462, Final residual = 1.5150555e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086050162, Final residual = 6.6495066e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085361806, Final residual = 6.7170044e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029420977, Final residual = 6.5846511e-16, No Iterations 5
+ExecutionTime = 75.238838 s  ClockTime = 76 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062015387 max: 0.50744312
+deltaT = 1.7449623e-06
+Time = 0.0411607s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048537084, Final residual = 1.4962243e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008457006, Final residual = 6.5920832e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083890041, Final residual = 6.599811e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028874977, Final residual = 6.5712372e-16, No Iterations 5
+ExecutionTime = 76.102291 s  ClockTime = 77 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.060986217 max: 0.49890785
+deltaT = 1.7485977e-06
+Time = 0.0411624s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048643816, Final residual = 1.5009091e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084701051, Final residual = 6.6861229e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084028087, Final residual = 6.6938284e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028880503, Final residual = 6.5842416e-16, No Iterations 5
+ExecutionTime = 77.077411 s  ClockTime = 78 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061113406 max: 0.49838799
+deltaT = 1.7522558e-06
+Time = 0.0411642s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048731928, Final residual = 1.5038999e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084864892, Final residual = 6.774833e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084200979, Final residual = 6.8123084e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028891814, Final residual = 6.5885018e-16, No Iterations 5
+ExecutionTime = 77.957003 s  ClockTime = 79 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061241386 max: 0.49132668
+deltaT = 1.7821451e-06
+Time = 0.041166s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049532249, Final residual = 1.5287684e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086288285, Final residual = 6.942054e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085617134, Final residual = 6.9215674e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029332781, Final residual = 6.5581823e-16, No Iterations 5
+ExecutionTime = 78.883679 s  ClockTime = 80 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062286144 max: 0.50419311
+deltaT = 1.7670421e-06
+Time = 0.0411677s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049068778, Final residual = 1.5104411e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008556463, Final residual = 6.8685868e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084895464, Final residual = 6.911175e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029043781, Final residual = 6.547798e-16, No Iterations 5
+ExecutionTime = 79.752362 s  ClockTime = 81 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061758425 max: 0.50372748
+deltaT = 1.7521618e-06
+Time = 0.0411695s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048615987, Final residual = 1.5008462e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084847296, Final residual = 6.7471714e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084165514, Final residual = 6.7748097e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028755968, Final residual = 6.5969499e-16, No Iterations 5
+ExecutionTime = 80.639676 s  ClockTime = 82 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061238487 max: 0.49636278
+deltaT = 1.763322e-06
+Time = 0.0411712s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048875088, Final residual = 1.5090713e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085368205, Final residual = 6.6698272e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084675421, Final residual = 6.778329e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028885036, Final residual = 6.5927789e-16, No Iterations 5
+ExecutionTime = 81.600621 s  ClockTime = 82 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061628672 max: 0.4899947
+deltaT = 1.797747e-06
+Time = 0.041173s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049761471, Final residual = 1.5370127e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087022081, Final residual = 6.8581492e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086299162, Final residual = 6.8890514e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029401102, Final residual = 6.5554174e-16, No Iterations 5
+ExecutionTime = 82.492977 s  ClockTime = 83 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062831964 max: 0.49860515
+deltaT = 1.8016637e-06
+Time = 0.0411748s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049806345, Final residual = 1.5390043e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087170916, Final residual = 6.9301434e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008643709, Final residual = 6.9498318e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029423314, Final residual = 6.5491708e-16, No Iterations 5
+ExecutionTime = 83.433419 s  ClockTime = 84 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062968985 max: 0.50254783
+deltaT = 1.7899392e-06
+Time = 0.0411766s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049413701, Final residual = 1.5250531e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086562577, Final residual = 6.9128092e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085824626, Final residual = 6.9833622e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002919497, Final residual = 6.5241604e-16, No Iterations 5
+ExecutionTime = 84.373644 s  ClockTime = 85 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06255934 max: 0.50814269
+deltaT = 1.7593419e-06
+Time = 0.0411784s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048497771, Final residual = 1.5109217e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085002468, Final residual = 6.8186255e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008428096, Final residual = 6.8627128e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028666982, Final residual = 6.569313e-16, No Iterations 5
+ExecutionTime = 85.255811 s  ClockTime = 85 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061490071 max: 0.5015853
+deltaT = 1.7518394e-06
+Time = 0.0411801s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048217097, Final residual = 1.5074849e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084550306, Final residual = 6.8223965e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083816556, Final residual = 6.8051921e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002851335, Final residual = 6.5784358e-16, No Iterations 5
+ExecutionTime = 86.135976 s  ClockTime = 86 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061227968 max: 0.50054982
+deltaT = 1.7481041e-06
+Time = 0.0411819s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048049269, Final residual = 1.5050849e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084260621, Final residual = 6.8150533e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.000835384, Final residual = 6.8187557e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028423083, Final residual = 6.5833402e-16, No Iterations 5
+ExecutionTime = 87.077126 s  ClockTime = 87 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061097539 max: 0.4982312
+deltaT = 1.7518474e-06
+Time = 0.0411836s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048084466, Final residual = 1.5070832e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008433984, Final residual = 6.8496069e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083617295, Final residual = 6.8701603e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028454336, Final residual = 6.5527386e-16, No Iterations 5
+ExecutionTime = 87.981431 s  ClockTime = 88 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061228484 max: 0.49086261
+deltaT = 1.7824473e-06
+Time = 0.0411854s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048869524, Final residual = 1.5281257e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085697588, Final residual = 6.9357359e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084966784, Final residual = 6.9671626e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028930163, Final residual = 6.5694245e-16, No Iterations 5
+ExecutionTime = 88.879235 s  ClockTime = 89 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062298101 max: 0.50879147
+deltaT = 1.7480224e-06
+Time = 0.0411872s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047879251, Final residual = 1.5042098e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083978436, Final residual = 6.8650475e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083256315, Final residual = 6.9378759e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028357237, Final residual = 6.5659086e-16, No Iterations 5
+ExecutionTime = 89.771224 s  ClockTime = 90 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.061095048 max: 0.49851676
+deltaT = 1.7517897e-06
+Time = 0.0411889s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047933658, Final residual = 1.5072362e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084101149, Final residual = 6.9349399e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083361396, Final residual = 6.9603927e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028394885, Final residual = 6.5762569e-16, No Iterations 5
+ExecutionTime = 90.645267 s  ClockTime = 91 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.06122685 max: 0.48700642
+deltaT = 1.7984005e-06
+Time = 0.0411907s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00049140886, Final residual = 1.5332442e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086294446, Final residual = 7.1049527e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085536934, Final residual = 7.1225161e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029128238, Final residual = 6.5363311e-16, No Iterations 5
+ExecutionTime = 91.579019 s  ClockTime = 92 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062856081 max: 0.50041515
+deltaT = 1.7944129e-06
+Time = 0.0411925s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048974249, Final residual = 1.5357699e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086095625, Final residual = 7.142363e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085345063, Final residual = 7.1345544e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029054993, Final residual = 6.5566541e-16, No Iterations 5
+ExecutionTime = 92.460642 s  ClockTime = 93 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062716849 max: 0.50057444
+deltaT = 1.7904342e-06
+Time = 0.0411943s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00048800822, Final residual = 1.5340822e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085900296, Final residual = 7.0933188e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.000851664, Final residual = 7.1939345e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028981568, Final residual = 6.5600137e-16, No Iterations 5
+ExecutionTime = 93.345407 s  ClockTime = 94 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.062577926 max: 0.50272695
+Selected 3498 cells for refinement out of 790479.
+Refined from 790479 to 814965 cells.
+    - selecting all cells
+    - selected 814965 cell(s) with volume 18.207291
+Selected 15620 split points out of a possible 94166.
+Unrefined from 814965 to 705625 cells.
+    - selecting all cells
+    - selected 705625 cell(s) with volume 18.207291
+deltaT = 1.778577e-06
+Time = 0.0411961s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004907586, Final residual = 1.4300859e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00096185519, Final residual = 7.0658366e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00095295328, Final residual = 7.0157459e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00034418156, Final residual = 6.3553362e-16, No Iterations 5
+ExecutionTime = 97.195299 s  ClockTime = 98 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058937496 max: 0.50824099
+deltaT = 1.7476452e-06
+Time = 0.0411978s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047908965, Final residual = 1.4107201e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0009355716, Final residual = 6.9565001e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00092668637, Final residual = 6.8942867e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032817174, Final residual = 6.3269335e-16, No Iterations 5
+ExecutionTime = 97.982694 s  ClockTime = 99 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057912393 max: 0.49898594
+deltaT = 1.7476452e-06
+Time = 0.0411996s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047567175, Final residual = 1.4122125e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00092656073, Final residual = 6.9499388e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091761708, Final residual = 6.8777593e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0003239328, Final residual = 6.324322e-16, No Iterations 5
+ExecutionTime = 98.749241 s  ClockTime = 99 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057912232 max: 0.4978242
+deltaT = 1.7553103e-06
+Time = 0.0412013s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047461481, Final residual = 1.4211807e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00092261302, Final residual = 6.9938365e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091363086, Final residual = 6.9210072e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00032152876, Final residual = 6.354331e-16, No Iterations 5
+ExecutionTime = 99.523474 s  ClockTime = 100 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058166091 max: 0.49297731
+deltaT = 1.7787666e-06
+Time = 0.0412031s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047794241, Final residual = 1.4322569e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00092780675, Final residual = 7.1395071e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00091850742, Final residual = 7.0366894e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0003222904, Final residual = 6.3137417e-16, No Iterations 5
+ExecutionTime = 100.29215 s  ClockTime = 101 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058943226 max: 0.50430914
+deltaT = 1.7630253e-06
+Time = 0.0412049s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047101724, Final residual = 1.4222258e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0009133102, Final residual = 7.0571251e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090396784, Final residual = 6.9381364e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031630565, Final residual = 6.3210058e-16, No Iterations 5
+ExecutionTime = 101.05026 s  ClockTime = 102 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058421488 max: 0.5029369
+deltaT = 1.7513753e-06
+Time = 0.0412066s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046531979, Final residual = 1.4195924e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00090184666, Final residual = 6.9287424e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089231761, Final residual = 6.8519842e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031140728, Final residual = 6.326959e-16, No Iterations 5
+ExecutionTime = 101.86673 s  ClockTime = 102 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058035338 max: 0.4950586
+deltaT = 1.7669778e-06
+Time = 0.0412084s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046700454, Final residual = 1.424734e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00090490269, Final residual = 6.9957533e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089508717, Final residual = 6.9007819e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031155259, Final residual = 6.324832e-16, No Iterations 5
+ExecutionTime = 102.63979 s  ClockTime = 103 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058552279 max: 0.49195133
+deltaT = 1.7950251e-06
+Time = 0.0412102s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00047201665, Final residual = 1.4395448e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00091461604, Final residual = 7.1121102e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090469295, Final residual = 7.0885115e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031406733, Final residual = 6.3429438e-16, No Iterations 5
+ExecutionTime = 103.4122 s  ClockTime = 104 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059481612 max: 0.49960207
+deltaT = 1.7950251e-06
+Time = 0.041212s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00046974259, Final residual = 1.445422e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00091033815, Final residual = 7.1464909e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00090048613, Final residual = 7.2006534e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00031184392, Final residual = 6.3389638e-16, No Iterations 5
+ExecutionTime = 104.18393 s  ClockTime = 105 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059481565 max: 0.50060813
+deltaT = 1.7909455e-06
+Time = 0.0412138s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004664656, Final residual = 1.4364307e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00090418323, Final residual = 7.2185457e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00089463003, Final residual = 7.163648e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030910907, Final residual = 6.3452154e-16, No Iterations 5
+ExecutionTime = 104.94509 s  ClockTime = 106 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05934636 max: 0.50796056
+deltaT = 1.7628364e-06
+Time = 0.0412155s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00045709936, Final residual = 1.4282721e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088635084, Final residual = 7.0763083e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087719422, Final residual = 7.0668967e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030244538, Final residual = 6.3068866e-16, No Iterations 5
+ExecutionTime = 105.69735 s  ClockTime = 106 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058414902 max: 0.50215222
+deltaT = 1.754949e-06
+Time = 0.0412173s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00045317868, Final residual = 1.4176237e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087893365, Final residual = 7.0025655e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086990989, Final residual = 6.9906839e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029942634, Final residual = 6.3467355e-16, No Iterations 5
+ExecutionTime = 106.46516 s  ClockTime = 107 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058153529 max: 0.50113996
+deltaT = 1.7471144e-06
+Time = 0.041219s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00044933042, Final residual = 1.4134863e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087169149, Final residual = 6.8794264e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086298945, Final residual = 6.9253269e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.000296561, Final residual = 6.3297414e-16, No Iterations 5
+ExecutionTime = 107.20651 s  ClockTime = 108 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057893911 max: 0.49802914
+deltaT = 1.7510317e-06
+Time = 0.0412208s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004485996, Final residual = 1.4120606e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087060785, Final residual = 6.8493196e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086207255, Final residual = 6.8917131e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029579786, Final residual = 6.2916781e-16, No Iterations 5
+ExecutionTime = 107.97169 s  ClockTime = 109 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058023729 max: 0.49111073
+deltaT = 1.7790163e-06
+Time = 0.0412226s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00045404377, Final residual = 1.4290645e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088183691, Final residual = 7.0463284e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087306776, Final residual = 7.0071451e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029919885, Final residual = 6.3059505e-16, No Iterations 5
+ExecutionTime = 108.71956 s  ClockTime = 110 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058951061 max: 0.50716227
+deltaT = 1.7509687e-06
+Time = 0.0412243s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00044536808, Final residual = 1.418312e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086554311, Final residual = 6.9622283e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085684968, Final residual = 6.8957253e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029328967, Final residual = 6.3202084e-16, No Iterations 5
+ExecutionTime = 109.48914 s  ClockTime = 110 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058021663 max: 0.4987529
+deltaT = 1.7549302e-06
+Time = 0.0412261s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00044476237, Final residual = 1.4203804e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086537993, Final residual = 6.9827817e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085649786, Final residual = 6.9507954e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029277332, Final residual = 6.3440275e-16, No Iterations 5
+ExecutionTime = 110.24952 s  ClockTime = 111 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058152947 max: 0.48953909
+deltaT = 1.7914912e-06
+Time = 0.0412279s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00045244605, Final residual = 1.437163e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00088135069, Final residual = 7.2003273e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087224431, Final residual = 7.0502639e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029767072, Final residual = 6.3081676e-16, No Iterations 5
+ExecutionTime = 111.03072 s  ClockTime = 112 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059364482 max: 0.49921543
+deltaT = 1.7914912e-06
+Time = 0.0412297s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00045077357, Final residual = 1.4378447e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087958422, Final residual = 7.1891758e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00087044181, Final residual = 7.0820416e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029662244, Final residual = 6.3140951e-16, No Iterations 5
+ExecutionTime = 111.8597 s  ClockTime = 113 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059364497 max: 0.49965943
+deltaT = 1.7914912e-06
+Time = 0.0412315s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00044911685, Final residual = 1.432789e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00087809436, Final residual = 7.1113292e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086882345, Final residual = 7.015179e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029553317, Final residual = 6.3368961e-16, No Iterations 5
+ExecutionTime = 112.61231 s  ClockTime = 113 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059364524 max: 0.50314282
+deltaT = 1.7790503e-06
+Time = 0.0412332s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004443826, Final residual = 1.4315972e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.000870697, Final residual = 6.9896478e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00086141624, Final residual = 6.9844769e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029240192, Final residual = 6.3362642e-16, No Iterations 5
+ExecutionTime = 113.38611 s  ClockTime = 114 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058952301 max: 0.50874746
+deltaT = 1.7466303e-06
+Time = 0.041235s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043468003, Final residual = 1.4112373e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085370157, Final residual = 6.834229e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084448865, Final residual = 6.8484597e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002861198, Final residual = 6.3087996e-16, No Iterations 5
+ExecutionTime = 114.17393 s  ClockTime = 114 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05787803 max: 0.49905744
+deltaT = 1.7466303e-06
+Time = 0.0412367s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043322947, Final residual = 1.4122313e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085237639, Final residual = 6.9265681e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084304018, Final residual = 6.9617486e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028513077, Final residual = 6.333239e-16, No Iterations 5
+ExecutionTime = 114.93227 s  ClockTime = 115 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057878066 max: 0.49851238
+deltaT = 1.7506363e-06
+Time = 0.0412385s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043272692, Final residual = 1.4152872e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085311647, Final residual = 7.0462817e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084393805, Final residual = 7.0764382e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002848317, Final residual = 6.311821e-16, No Iterations 5
+ExecutionTime = 115.69355 s  ClockTime = 116 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05801085 max: 0.49491935
+deltaT = 1.7668835e-06
+Time = 0.0412402s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043529989, Final residual = 1.4253774e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085982547, Final residual = 7.1491146e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008505511, Final residual = 7.1449055e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028653889, Final residual = 6.3353174e-16, No Iterations 5
+ExecutionTime = 116.47559 s  ClockTime = 117 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05854928 max: 0.49978035
+deltaT = 1.7668835e-06
+Time = 0.041242s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043383179, Final residual = 1.4254162e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085852584, Final residual = 7.1083437e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084940411, Final residual = 7.1129459e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028568741, Final residual = 6.3275158e-16, No Iterations 5
+ExecutionTime = 117.23206 s  ClockTime = 117 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058549324 max: 0.50358616
+deltaT = 1.7505612e-06
+Time = 0.0412438s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004284041, Final residual = 1.4166218e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084937931, Final residual = 6.9497517e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008405516, Final residual = 7.027282e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028221742, Final residual = 6.3173e-16, No Iterations 5
+ExecutionTime = 117.98258 s  ClockTime = 118 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058008504 max: 0.49550047
+deltaT = 1.7628029e-06
+Time = 0.0412455s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00042986005, Final residual = 1.421925e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085420691, Final residual = 6.9293871e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.000845254, Final residual = 6.9721751e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028330939, Final residual = 6.3146496e-16, No Iterations 5
+ExecutionTime = 118.74225 s  ClockTime = 119 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058414217 max: 0.49324368
+deltaT = 1.7836398e-06
+Time = 0.0412473s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043334914, Final residual = 1.4319916e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086312945, Final residual = 6.9959553e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085413027, Final residual = 7.0506757e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002858559, Final residual = 6.3205651e-16, No Iterations 5
+ExecutionTime = 119.51789 s  ClockTime = 120 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059104759 max: 0.49777271
+deltaT = 1.7878765e-06
+Time = 0.0412491s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043287167, Final residual = 1.435362e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086417949, Final residual = 7.056225e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085507767, Final residual = 7.0284796e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028571215, Final residual = 6.3255393e-16, No Iterations 5
+ExecutionTime = 120.28982 s  ClockTime = 121 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05924521 max: 0.49682345
+deltaT = 1.796431e-06
+Time = 0.0412509s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00043342499, Final residual = 1.4361728e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086732014, Final residual = 7.2073625e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085799474, Final residual = 7.1273388e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028624409, Final residual = 6.3133206e-16, No Iterations 5
+ExecutionTime = 121.05894 s  ClockTime = 121 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059528739 max: 0.5071126
+deltaT = 1.7709497e-06
+Time = 0.0412527s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004257515, Final residual = 1.429133e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085418297, Final residual = 7.1337791e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084487297, Final residual = 7.0163033e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002814614, Final residual = 6.3469571e-16, No Iterations 5
+ExecutionTime = 121.88635 s  ClockTime = 122 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05868442 max: 0.50480499
+deltaT = 1.7502126e-06
+Time = 0.0412544s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004193294, Final residual = 1.4134665e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084341427, Final residual = 7.0678647e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083399566, Final residual = 6.9316183e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027746771, Final residual = 6.3444955e-16, No Iterations 5
+ExecutionTime = 122.64817 s  ClockTime = 123 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057997295 max: 0.49923051
+deltaT = 1.7502126e-06
+Time = 0.0412562s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041790857, Final residual = 1.4103895e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084246667, Final residual = 7.0000451e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083314396, Final residual = 6.9476955e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.000276742, Final residual = 6.313147e-16, No Iterations 5
+ExecutionTime = 123.43976 s  ClockTime = 124 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057997343 max: 0.50015769
+deltaT = 1.7461041e-06
+Time = 0.0412579s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041550606, Final residual = 1.4135673e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083972257, Final residual = 6.9750433e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083045317, Final residual = 6.934739e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027542984, Final residual = 6.3435886e-16, No Iterations 5
+ExecutionTime = 124.2108 s  ClockTime = 125 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057861255 max: 0.4899585
+deltaT = 1.7796025e-06
+Time = 0.0412597s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00042207654, Final residual = 1.4351722e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008549582, Final residual = 7.0267108e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084556914, Final residual = 6.9792973e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028003518, Final residual = 6.3057643e-16, No Iterations 5
+ExecutionTime = 124.99123 s  ClockTime = 125 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05897135 max: 0.50812826
+deltaT = 1.7501528e-06
+Time = 0.0412614s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041392708, Final residual = 1.4127491e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084015365, Final residual = 6.9375613e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083104188, Final residual = 6.8741654e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027486703, Final residual = 6.3271409e-16, No Iterations 5
+ExecutionTime = 125.75305 s  ClockTime = 126 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057995524 max: 0.49871045
+deltaT = 1.7543099e-06
+Time = 0.0412632s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041386393, Final residual = 1.4189878e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008414839, Final residual = 6.9864287e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083244312, Final residual = 6.9743753e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027491391, Final residual = 6.3298951e-16, No Iterations 5
+ExecutionTime = 126.51001 s  ClockTime = 127 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058133344 max: 0.49076292
+deltaT = 1.784044e-06
+Time = 0.041265s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041974224, Final residual = 1.436325e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085511608, Final residual = 7.1569012e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084593054, Final residual = 7.1681819e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027891679, Final residual = 6.343604e-16, No Iterations 5
+ExecutionTime = 127.29994 s  ClockTime = 128 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059118714 max: 0.49986739
+deltaT = 1.784044e-06
+Time = 0.0412668s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041879525, Final residual = 1.4393793e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085464645, Final residual = 7.2188148e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084555375, Final residual = 7.2110081e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027833073, Final residual = 6.3207292e-16, No Iterations 5
+ExecutionTime = 128.03862 s  ClockTime = 129 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059118787 max: 0.49641776
+deltaT = 1.7927679e-06
+Time = 0.0412686s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041989101, Final residual = 1.4401939e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085850018, Final residual = 7.2361033e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084934197, Final residual = 7.2681102e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027907911, Final residual = 6.3286057e-16, No Iterations 5
+ExecutionTime = 128.80439 s  ClockTime = 129 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059407955 max: 0.50338128
+deltaT = 1.779682e-06
+Time = 0.0412703s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041599165, Final residual = 1.4313539e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085189868, Final residual = 7.098645e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084299422, Final residual = 7.1108317e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027647429, Final residual = 6.3033916e-16, No Iterations 5
+ExecutionTime = 129.59798 s  ClockTime = 130 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058974414 max: 0.50901978
+deltaT = 1.7456211e-06
+Time = 0.0412721s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040717102, Final residual = 1.4075627e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083547678, Final residual = 6.9061541e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082675322, Final residual = 6.9257466e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027069105, Final residual = 6.2988035e-16, No Iterations 5
+ExecutionTime = 130.36234 s  ClockTime = 131 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057845807 max: 0.49980209
+deltaT = 1.7456211e-06
+Time = 0.0412738s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040627564, Final residual = 1.4096432e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083514625, Final residual = 6.8643738e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082655533, Final residual = 6.8834942e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027011173, Final residual = 6.285156e-16, No Iterations 5
+ExecutionTime = 131.11514 s  ClockTime = 132 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057845881 max: 0.49975972
+deltaT = 1.7456211e-06
+Time = 0.0412756s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004054687, Final residual = 1.4068078e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083475566, Final residual = 6.8915662e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082637032, Final residual = 6.8392283e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.000269619, Final residual = 6.3178106e-16, No Iterations 5
+ExecutionTime = 131.8768 s  ClockTime = 132 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057845968 max: 0.49633834
+deltaT = 1.758332e-06
+Time = 0.0412773s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040754244, Final residual = 1.418109e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084055547, Final residual = 7.0111662e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083207259, Final residual = 6.9138671e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027104299, Final residual = 6.3261224e-16, No Iterations 5
+ExecutionTime = 132.6507 s  ClockTime = 133 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058267241 max: 0.49714056
+deltaT = 1.7669302e-06
+Time = 0.0412791s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004087064, Final residual = 1.4222892e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084434757, Final residual = 7.0809696e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083573231, Final residual = 7.0242916e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027187097, Final residual = 6.3127345e-16, No Iterations 5
+ExecutionTime = 133.40062 s  ClockTime = 134 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058552228 max: 0.50384314
+deltaT = 1.7497755e-06
+Time = 0.0412808s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040396132, Final residual = 1.4135379e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083574393, Final residual = 6.9927564e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082713587, Final residual = 6.9800492e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026880525, Final residual = 6.3337997e-16, No Iterations 5
+ExecutionTime = 134.17022 s  ClockTime = 135 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057983816 max: 0.49706043
+deltaT = 1.7583318e-06
+Time = 0.0412826s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040524658, Final residual = 1.4148936e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083931686, Final residual = 7.0175268e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083047245, Final residual = 7.022069e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026959114, Final residual = 6.3562917e-16, No Iterations 5
+ExecutionTime = 134.93266 s  ClockTime = 136 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05826742 max: 0.491173
+deltaT = 1.7890259e-06
+Time = 0.0412844s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0004114815, Final residual = 1.4346752e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008534671, Final residual = 7.1263473e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084433725, Final residual = 7.1050012e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027381035, Final residual = 6.3001969e-16, No Iterations 5
+ExecutionTime = 135.71778 s  ClockTime = 136 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059284618 max: 0.49857386
+deltaT = 1.7935097e-06
+Time = 0.0412862s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00041171985, Final residual = 1.4399529e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085507328, Final residual = 7.1533758e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084584666, Final residual = 7.0867121e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027410494, Final residual = 6.3143127e-16, No Iterations 5
+ExecutionTime = 136.52165 s  ClockTime = 137 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059433276 max: 0.50226148
+deltaT = 1.7845421e-06
+Time = 0.041288s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040889606, Final residual = 1.436122e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085030412, Final residual = 7.0879281e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084094784, Final residual = 7.0714149e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027228812, Final residual = 6.3148494e-16, No Iterations 5
+ExecutionTime = 137.35971 s  ClockTime = 138 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059136187 max: 0.50443512
+deltaT = 1.7668296e-06
+Time = 0.0412897s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040410894, Final residual = 1.4173726e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084127768, Final residual = 7.0564208e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083217179, Final residual = 6.9950786e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026918582, Final residual = 6.3376048e-16, No Iterations 5
+ExecutionTime = 138.14887 s  ClockTime = 139 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058549303 max: 0.50582336
+deltaT = 1.745124e-06
+Time = 0.0412915s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039838694, Final residual = 1.4034851e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083038647, Final residual = 6.9791121e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008214302, Final residual = 6.9850487e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026549439, Final residual = 6.3221854e-16, No Iterations 5
+ExecutionTime = 138.93282 s  ClockTime = 140 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057830101 max: 0.49883903
+deltaT = 1.745124e-06
+Time = 0.0412932s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039776021, Final residual = 1.4041702e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008296652, Final residual = 6.9995922e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082094953, Final residual = 7.0047473e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026505704, Final residual = 6.2932502e-16, No Iterations 5
+ExecutionTime = 139.71548 s  ClockTime = 141 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057830181 max: 0.49978681
+deltaT = 1.745124e-06
+Time = 0.041295s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0003972128, Final residual = 1.4091183e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082917809, Final residual = 6.9802576e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082071222, Final residual = 6.9791118e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026466552, Final residual = 6.3020175e-16, No Iterations 5
+ExecutionTime = 140.4914 s  ClockTime = 141 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057830277 max: 0.49130614
+deltaT = 1.7758945e-06
+Time = 0.0412967s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040361451, Final residual = 1.4271247e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084331831, Final residual = 7.0587911e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083489275, Final residual = 7.0889364e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026888862, Final residual = 6.302516e-16, No Iterations 5
+ExecutionTime = 141.27887 s  ClockTime = 142 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058850051 max: 0.50831555
+deltaT = 1.7450477e-06
+Time = 0.0412985s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039612363, Final residual = 1.4079074e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082843016, Final residual = 6.9167875e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082033868, Final residual = 6.9553824e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026392427, Final residual = 6.3124108e-16, No Iterations 5
+ExecutionTime = 142.09485 s  ClockTime = 143 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057827948 max: 0.50004292
+deltaT = 1.7407176e-06
+Time = 0.0413002s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039466327, Final residual = 1.4095325e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082601245, Final residual = 6.8262971e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081813138, Final residual = 6.8327472e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026287404, Final residual = 6.2886849e-16, No Iterations 5
+ExecutionTime = 142.87502 s  ClockTime = 144 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057684555 max: 0.4863322
+deltaT = 1.7851236e-06
+Time = 0.041302s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040426404, Final residual = 1.4338457e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084675048, Final residual = 7.0376291e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083868333, Final residual = 7.0126978e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026918879, Final residual = 6.3300201e-16, No Iterations 5
+ExecutionTime = 143.66416 s  ClockTime = 145 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059156194 max: 0.49718177
+deltaT = 1.7943016e-06
+Time = 0.0413038s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040587553, Final residual = 1.4396639e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085075489, Final residual = 7.0762613e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084278661, Final residual = 7.1476326e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00027023375, Final residual = 6.2897298e-16, No Iterations 5
+ExecutionTime = 144.44628 s  ClockTime = 145 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059460427 max: 0.49988874
+deltaT = 1.7943016e-06
+Time = 0.0413056s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040541614, Final residual = 1.4370114e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008504485, Final residual = 7.1507588e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084254565, Final residual = 7.2263686e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026991097, Final residual = 6.3051017e-16, No Iterations 5
+ExecutionTime = 145.22094 s  ClockTime = 145 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059460512 max: 0.50547585
+deltaT = 1.7714151e-06
+Time = 0.0413074s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039984114, Final residual = 1.4286816e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083922001, Final residual = 7.0990578e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083148209, Final residual = 7.1808203e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026611048, Final residual = 6.3209809e-16, No Iterations 5
+ExecutionTime = 146.00689 s  ClockTime = 146 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058702181 max: 0.50867323
+deltaT = 1.7402596e-06
+Time = 0.0413091s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039236644, Final residual = 1.40797e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082378455, Final residual = 6.9158146e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081630983, Final residual = 7.0361599e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026105511, Final residual = 6.3047272e-16, No Iterations 5
+ExecutionTime = 146.78614 s  ClockTime = 147 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057669812 max: 0.50019321
+deltaT = 1.7358871e-06
+Time = 0.0413109s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039091019, Final residual = 1.3979756e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082104698, Final residual = 6.8847271e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081349847, Final residual = 6.9612345e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026002559, Final residual = 6.2838898e-16, No Iterations 5
+ExecutionTime = 147.58258 s  ClockTime = 148 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057524985 max: 0.49763811
+deltaT = 1.7402706e-06
+Time = 0.0413126s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039154135, Final residual = 1.4007275e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082222034, Final residual = 6.9198911e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081479461, Final residual = 6.9519227e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026032507, Final residual = 6.292299e-16, No Iterations 5
+ExecutionTime = 148.35568 s  ClockTime = 149 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05767034 max: 0.49586428
+deltaT = 1.753589e-06
+Time = 0.0413143s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039411952, Final residual = 1.411887e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082776734, Final residual = 6.9297299e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082018176, Final residual = 6.9721818e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026198082, Final residual = 6.3066778e-16, No Iterations 5
+ExecutionTime = 149.1035 s  ClockTime = 149 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058111764 max: 0.49964964
+deltaT = 1.753589e-06
+Time = 0.0413161s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039384377, Final residual = 1.4058423e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082694642, Final residual = 6.9660875e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081942012, Final residual = 6.9921599e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026166633, Final residual = 6.2985352e-16, No Iterations 5
+ExecutionTime = 149.90105 s  ClockTime = 150 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058111848 max: 0.50192012
+deltaT = 1.7446421e-06
+Time = 0.0413178s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039151002, Final residual = 1.4079251e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00082209316, Final residual = 6.9134763e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00081464978, Final residual = 6.9164352e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002601104, Final residual = 6.3045538e-16, No Iterations 5
+ExecutionTime = 150.65695 s  ClockTime = 151 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.057815441 max: 0.4931274
+deltaT = 1.7672411e-06
+Time = 0.0413196s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039631381, Final residual = 1.4202e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083204786, Final residual = 6.9940991e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082457149, Final residual = 6.9850757e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026319918, Final residual = 6.3106651e-16, No Iterations 5
+ExecutionTime = 151.43562 s  ClockTime = 152 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.058564438 max: 0.49218511
+deltaT = 1.7952186e-06
+Time = 0.0413214s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040240661, Final residual = 1.436785e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008446435, Final residual = 7.0900538e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008372242, Final residual = 7.0648796e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026707382, Final residual = 6.3056223e-16, No Iterations 5
+ExecutionTime = 152.20756 s  ClockTime = 153 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.05949168 max: 0.49947562
+deltaT = 1.7952186e-06
+Time = 0.0413232s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040224312, Final residual = 1.436622e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084435982, Final residual = 7.0443631e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083703108, Final residual = 7.0437691e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026685253, Final residual = 6.3263346e-16, No Iterations 5
+ExecutionTime = 153.02866 s  ClockTime = 153 s
+
+regIOobject::readIfModified() : 
+    Re-reading object controlDict from file "/home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR/system/controlDict"
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+Courant Number mean: 0.059491787 max: 0.50140399
+deltaT = 1.7857451e-06
+Time = 0.041325s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00040000579, Final residual = 1.4244186e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083966756, Final residual = 6.9849582e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083235743, Final residual = 6.9372923e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00026518488, Final residual = 6.3002445e-16, No Iterations 5
+ExecutionTime = 153.95024 s  ClockTime = 154 s
+
+--> FOAM Warning : functionObjects::multiply multiply cannot find fields 1(cellVols)
+End
+
+Finalising parallel run
