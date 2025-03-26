@@ -1,0 +1,84 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+topoChanger
+{
+    type            refiner;
+
+    libs            ("libfvMeshTopoChangers.so");
+
+    mover           none;
+
+    // How often to refine
+    refineInterval  100;
+
+    // Field to be refinement on
+    field           magGradP;
+
+    // Refine field in between lower..upper
+    lowerRefineLevel 3e4;
+    upperRefineLevel 1e20;
+    //unRefineLevel    2e4;
+
+    // Have slower than 2:1 refinement
+    nBufferLayers   1;
+
+    // Refine cells only up to maxRefinement levels
+    maxRefinement   1;
+
+    maxCells        1000000;
+    // Stop refinement if maxCells reached
+
+    // Write the refinement level as a volScalarField
+    dumpLevel       false;
+
+    correctFluxes(
+        // (phi U);
+    ); 
+    preservePatches (
+        (procBoundary* processor)
+    );
+}
+
+distributor
+{
+    type            distributor;
+
+    libs            ("libfvMeshDistributors.so");
+
+    redistributionInterval  500;
+}
+
+// distributor
+// {
+//     type          loadBalancer;
+//     libs          ("libfvMeshDistributors.so");
+//     redistributionInterval 10;
+//     multiConstraint true;
+//     maxImbalance  0.1;
+// }
+
+// distributor
+// {
+//     type            loadBalancer;
+
+//     libs            ("libfvMeshDistributors.so");
+
+//     multiConstraint true;
+//     redistributionInterval  20;
+// }
+
+// ************************************************************************* //

@@ -1,0 +1,142 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-86e126a7bc4d
+Exec   : decomposePar
+Date   : Mar 03 2025
+Time   : 18:43:08
+Host   : "DESKTOP-D65JE2G"
+PID    : 157691
+I/O    : uncollated
+Case   : /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/test
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Calculating distribution of cells
+
+Selecting decomposer scotch
+
+Finished decomposition in 0.143376 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 6878
+    Number of faces shared with processor 1 = 476
+    Number of faces shared with processor 2 = 228
+    Number of processor patches = 2
+    Number of processor faces = 704
+    Number of boundary faces = 1328
+
+Processor 1
+    Number of cells = 6879
+    Number of faces shared with processor 0 = 476
+    Number of faces shared with processor 2 = 378
+    Number of processor patches = 2
+    Number of processor faces = 854
+    Number of boundary faces = 1306
+
+Processor 2
+    Number of cells = 6759
+    Number of faces shared with processor 0 = 228
+    Number of faces shared with processor 1 = 378
+    Number of faces shared with processor 3 = 519
+    Number of faces shared with processor 6 = 190
+    Number of faces shared with processor 7 = 7
+    Number of processor patches = 5
+    Number of processor faces = 1322
+    Number of boundary faces = 1388
+
+Processor 3
+    Number of cells = 6868
+    Number of faces shared with processor 2 = 519
+    Number of faces shared with processor 6 = 90
+    Number of faces shared with processor 7 = 217
+    Number of processor patches = 3
+    Number of processor faces = 826
+    Number of boundary faces = 1472
+
+Processor 4
+    Number of cells = 6840
+    Number of faces shared with processor 5 = 440
+    Number of processor patches = 1
+    Number of processor faces = 440
+    Number of boundary faces = 1764
+
+Processor 5
+    Number of cells = 6760
+    Number of faces shared with processor 4 = 440
+    Number of faces shared with processor 6 = 197
+    Number of faces shared with processor 7 = 203
+    Number of processor patches = 3
+    Number of processor faces = 840
+    Number of boundary faces = 1356
+
+Processor 6
+    Number of cells = 6760
+    Number of faces shared with processor 2 = 190
+    Number of faces shared with processor 3 = 90
+    Number of faces shared with processor 5 = 197
+    Number of faces shared with processor 7 = 719
+    Number of processor patches = 4
+    Number of processor faces = 1196
+    Number of boundary faces = 1358
+
+Processor 7
+    Number of cells = 6747
+    Number of faces shared with processor 2 = 7
+    Number of faces shared with processor 3 = 217
+    Number of faces shared with processor 5 = 203
+    Number of faces shared with processor 6 = 719
+    Number of processor patches = 4
+    Number of processor faces = 1146
+    Number of boundary faces = 1334
+
+Number of processor faces = 3664
+Max number of cells = 6879 (0.9928245% above average 6811.375)
+Max number of processor patches = 5 (66.666667% above average 3)
+Max number of faces between processors = 1322 (44.323144% above average 916)
+
+Time = 0s
+
+Decomposing FV fields
+
+    Decomposing volScalarFields
+
+        alphat
+        nut
+        p
+        T
+        k
+        omega
+        cellLevel
+
+    Decomposing volVectorFields
+
+        U
+
+Decomposing point fields
+
+    Decomposing pointScalarFields
+
+        pointLevel
+
+End
+

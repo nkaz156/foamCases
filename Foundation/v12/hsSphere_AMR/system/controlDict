@@ -22,9 +22,9 @@ startFrom       latestTime;
 
 startTime       0;
 
-stopAt          writeNow;//endTime; //writeNow;
+stopAt          endTime; //pswriteNow;
 
-endTime         0.051;
+endTime         0.071;
 
 deltaT          6e-8;
 

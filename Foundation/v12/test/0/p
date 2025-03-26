@@ -1,0 +1,56 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2406                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include "freestreamConditions"
+pOut            $pInf; //12100;
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform $pOut;
+
+boundaryField
+{
+    inlet1
+    {
+        type            fixedValue;
+        value           uniform $pOut;
+    }
+    outlet1
+    {
+        /* type            fixedValue;
+        value           uniform $pOut; */
+        //type            zeroGradient;
+        type            waveTransmissive;
+        gamma           $gamma;
+
+    }
+    farfield
+    {
+        type            zeroGradient;
+    }
+    sphere
+    {
+        type            zeroGradient;
+    }
+    "symmetry*"
+    {
+        type            symmetryPlane;
+    }
+
+    #includeEtc "caseDicts/setConstraintTypes"
+}
+
+
+// ************************************************************************* //

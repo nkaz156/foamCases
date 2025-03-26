@@ -1,0 +1,27 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system/functions";
+    object      functions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#includeFunc "gradU"
+#includeFunc "magGradU"
+#includeFunc "gradP"
+#includeFunc "magGradP"
+#includeFunc "MachNo"
+//#include writeCellVolumes
+//#include multiply         // Intent: multiply selected gradient by cell volume to bias refinement to larger cells. 
+// Not possible with given functions and not super important since this is capturing shocks pretty well
+
+
+// ************************************************************************* //

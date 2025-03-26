@@ -1,0 +1,244 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 12-86e126a7bc4d
+Exec   : foamRun -parallel
+Date   : Feb 27 2025
+Time   : 00:07:46
+Host   : "DESKTOP-D65JE2G"
+PID    : 714942
+I/O    : uncollated
+Case   : /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR
+nProcs : 8
+Slaves : 
+7
+(
+"DESKTOP-D65JE2G.714943"
+"DESKTOP-D65JE2G.714944"
+"DESKTOP-D65JE2G.714945"
+"DESKTOP-D65JE2G.714946"
+"DESKTOP-D65JE2G.714947"
+"DESKTOP-D65JE2G.714948"
+"DESKTOP-D65JE2G.714949"
+)
+
+Pstream initialised with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0.0415229
+
+Selecting fvMeshTopoChanger refiner
+Detected 18764 cells that are protected from refinement. Writing these to cellSet protectedCells.
+Selecting fvMeshDistributor distributor
+Selecting distributor ptscotch
+Selecting solver shockFluid
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       sutherland;
+    thermo          janaf;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+Selecting thermophysical transport type laminar
+Selecting default laminar thermophysical transport model unityLewisFourier
+Courant Number mean: 0.058215168 max: 0.48609759
+Creating fvConstraints from "system/fvConstraints"
+
+Selecting finite volume constraint type limitTemperature
+    Name: limitTemperature
+    - selecting all cells
+    - selected 715152 cell(s) with volume 18.207291
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+
+Starting time loop
+
+Courant Number mean: 0.058215168 max: 0.48609759
+deltaT = 1.793609e-06
+Time = 0.0415247s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039717339, Final residual = 1.4110239e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085644276, Final residual = 6.5262712e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008470044, Final residual = 6.4921e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00065784776, Final residual = 6.2788312e-16, No Iterations 5
+ExecutionTime = 2.869062 s  ClockTime = 3 s
+
+Courant Number mean: 0.059741237 max: 0.49884029
+deltaT = 1.793609e-06
+Time = 0.0415265s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039303825, Final residual = 1.4118287e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085862981, Final residual = 6.5073102e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084927365, Final residual = 6.49158e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0003025585, Final residual = 6.2749202e-16, No Iterations 5
+ExecutionTime = 3.655443 s  ClockTime = 4 s
+
+Courant Number mean: 0.059741426 max: 0.49377824
+deltaT = 1.8142252e-06
+Time = 0.0415283s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039709599, Final residual = 1.421352e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086804263, Final residual = 6.5449362e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085877086, Final residual = 6.5851608e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00030210368, Final residual = 6.2592985e-16, No Iterations 5
+ExecutionTime = 4.441034 s  ClockTime = 4 s
+
+Courant Number mean: 0.060428151 max: 0.50190196
+deltaT = 1.8072742e-06
+Time = 0.0415301s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039555341, Final residual = 1.4165135e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086479635, Final residual = 6.5271749e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085542874, Final residual = 6.5605362e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029847746, Final residual = 6.2517768e-16, No Iterations 5
+ExecutionTime = 5.193507 s  ClockTime = 5 s
+
+Courant Number mean: 0.060196705 max: 0.50375308
+deltaT = 1.7934782e-06
+Time = 0.0415319s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039259442, Final residual = 1.4136662e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00085792977, Final residual = 6.5070143e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084875009, Final residual = 6.5051127e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00029425229, Final residual = 6.256818e-16, No Iterations 5
+ExecutionTime = 5.950986 s  ClockTime = 6 s
+
+Courant Number mean: 0.059737258 max: 0.50678506
+deltaT = 1.7664068e-06
+Time = 0.0415337s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00038675205, Final residual = 1.3910755e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008450032, Final residual = 6.4271123e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083573741, Final residual = 6.3811198e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002880553, Final residual = 6.2790951e-16, No Iterations 5
+ExecutionTime = 6.721371 s  ClockTime = 7 s
+
+Courant Number mean: 0.05883562 max: 0.50462698
+deltaT = 1.7465595e-06
+Time = 0.0415354s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00038242928, Final residual = 1.3840973e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083514154, Final residual = 6.3829312e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082600806, Final residual = 6.3378367e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.0002832109, Final residual = 6.3025976e-16, No Iterations 5
+ExecutionTime = 7.471329 s  ClockTime = 7 s
+
+Courant Number mean: 0.058174602 max: 0.49716251
+deltaT = 1.7531503e-06
+Time = 0.0415372s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.0003838445, Final residual = 1.3868821e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00083795741, Final residual = 6.3642833e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00082876482, Final residual = 6.3328437e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028270741, Final residual = 6.2879896e-16, No Iterations 5
+ExecutionTime = 8.230521 s  ClockTime = 8 s
+
+Courant Number mean: 0.05839416 max: 0.49765921
+deltaT = 1.7598163e-06
+Time = 0.0415389s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00038513126, Final residual = 1.3908565e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084080873, Final residual = 6.3749834e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008314009, Final residual = 6.4244273e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028230856, Final residual = 6.2770722e-16, No Iterations 5
+ExecutionTime = 8.981063 s  ClockTime = 9 s
+
+Courant Number mean: 0.058616231 max: 0.49914397
+deltaT = 1.7598163e-06
+Time = 0.0415407s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00038507494, Final residual = 1.3944507e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.000840276, Final residual = 6.3999181e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083101478, Final residual = 6.4974508e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028091085, Final residual = 6.2782797e-16, No Iterations 5
+ExecutionTime = 9.714323 s  ClockTime = 10 s
+
+Courant Number mean: 0.058616276 max: 0.49705611
+deltaT = 1.7665848e-06
+Time = 0.0415425s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00038635589, Final residual = 1.3978414e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00084309308, Final residual = 6.4461927e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00083377931, Final residual = 6.5159457e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028068609, Final residual = 6.2849874e-16, No Iterations 5
+ExecutionTime = 10.47996 s  ClockTime = 10 s
+
+Courant Number mean: 0.058841776 max: 0.49160875
+deltaT = 1.794296e-06
+Time = 0.0415442s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039228505, Final residual = 1.4114525e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0008558009, Final residual = 6.4745676e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00084657529, Final residual = 6.6158866e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028387429, Final residual = 6.2857187e-16, No Iterations 5
+ExecutionTime = 11.235522 s  ClockTime = 11 s
+
+Courant Number mean: 0.05976484 max: 0.49304618
+deltaT = 1.8157417e-06
+Time = 0.0415461s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039688233, Final residual = 1.4274322e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086566387, Final residual = 6.5628944e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.00085657727, Final residual = 6.6723544e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028618755, Final residual = 6.2376264e-16, No Iterations 5
+ExecutionTime = 11.988184 s  ClockTime = 12 s
+
+Courant Number mean: 0.060479219 max: 0.50065352
+deltaT = 1.8085077e-06
+Time = 0.0415479s
+
+diagonal:  Solving for rho, Initial residual = 0, Final residual = 0, No Iterations 0
+smoothSolver:  Solving for Ux, Initial residual = 0.00039525868, Final residual = 1.4147444e-15, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.00086205315, Final residual = 6.5088579e-17, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0008533314, Final residual = 6.5916787e-17, No Iterations 3
+smoothSolver:  Solving for e, Initial residual = 0.00028408905, Final residual = 6.2657515e-16, No Iterations 5
+ExecutionTime = 12.764641 s  ClockTime = 13 s
+
+Courant Number mean: 0.060238334 max: 0.49935335
+Selected 3921 cells for refinement out of 715152.
+Refined from 715152 to 742599 cells.
+    - selecting all cells
+    - selected 742599 cell(s) with volume 18.207291
+Selected 2933 split points out of a possible 84893.
+Unrefined from 742599 to 722068 cells.
+    - selecting all cells
+    - selected 722068 cell(s) with volume 18.207291
+Redistributing mesh with imbalance 2.6566177

@@ -46,17 +46,17 @@ topoChanger
     dumpLevel       false;
 
     correctFluxes(
-        (phi U);
+        // (phi U);
     ); 
 }
 
-// distributor
-// {
-//     type          distributor;
-//     libs          ("libfvMeshDistributors.so");
-//     redistributionInterval 100;
-//     maxImbalance  0.1;
-// }
+distributor
+{
+    type          distributor;
+    libs          ("libfvMeshDistributors.so");
+    redistributionInterval 100;
+    maxImbalance  0.1;
+}
 
 
 // ************************************************************************* //

@@ -1,0 +1,17 @@
+Thu Feb 27 19:59:35 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamCloneCase.py hsSphere_AMR hsSphere_AMR_qtr  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12  |  Cloned to hsSphere_AMR_qtr 
+Thu Feb 27 20:09:09 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Thu Feb 27 20:39:48 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamPrepareCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 12:17:10 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --dry-run .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 12:44:54 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 13:31:29 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 13:39:05 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 13:39:48 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamPrepareCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 13:40:50 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 13:48:36 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 19:07:02 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 19:08:33 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py --verbose-clear .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 20:48:42 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 20:51:00 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 21:11:50 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Fri Feb 28 21:52:52 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamClearCase.py .  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  
+Sat Mar  1 00:00:34 2025 by nkaz in DESKTOP-D65JE2G :Application: pyFoamCloneCase.py . ../test  | with cwd /home/nkaz/OpenFOAM/nkaz-v2406/foamCases/Foundation/v12/hsSphere_AMR_qtr  |  Cloned to ../test 

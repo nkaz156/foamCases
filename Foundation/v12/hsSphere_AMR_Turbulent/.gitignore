@@ -1,9 +1,14 @@
 # Ignore all directories
 */               
+#ignore PyFoam and Slurm output:
+PyFoam*
+*.out
+*.slurm
 
 # Un-ignore the following directories
 !system/
 !0.orig/
+!0.org/
 !constant/
 !images/
 
